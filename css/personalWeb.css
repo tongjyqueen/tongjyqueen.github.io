@@ -1,0 +1,221 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;list-style:none;}
+
+/*选项卡部分开始*/
+.index{width:100%;position:relative;}
+#ulIndex{position:absolute;left:0;top:0;width:3192px;height:650px;/*background:url(../images/sky4.jpg);*/}
+.cardBody{float:left;width:1000px;}
+
+/*选项卡部分结束*/
+
+
+
+
+/*首页开始*/
+.box{position:absolute;left:0;top:0;width:1000px;height:550px;margin:0 auto;padding-top:100px;overflow:hidden;}
+
+.bg_box{position:absolute;left:0;top:0;width:100%;height:300px;}
+
+.box .bg_box_night{position:absolute;left:0;top:0;width:100%;height:300px;background:url(../images/home-black-bg.jpg);z-index:-5;}
+.box .bg_stars{position:absolute;left:0;top:0;width:100%;height:300px;background:url(../images/space-stars.png);z-index:-5;}
+.box .bg_blurredstars{position:absolute;left:-5%;top:0;width:100%;height:300px;background:url(../images/stars-blurred.png);z-index:-5;}
+.box .bg_moon{position:absolute;left:900px;top:30px;width:95px;height:120px;background:url(../images/moon.png);z-index:-5;}
+
+.box .bg_box_day{position:absolute;left:0;top:0;width:100%;height:300px;background:url(../images/sky2.png);background-size:cover;z-index:-5;opacity:0;}
+.box .bg_sun{position:absolute;left:500px;top:200px;width:163px;height:163px;background:url(../images/sun.png);z-index:-5;}
+.box .cloud1{position:absolute;left:-300px;top:-20px;width:680px;height:260px;background:url(../images/1.png);z-index:-5;}
+.box .cloud2{position:absolute;left:600px;top:-150px;width:860px;height:470px;background:url(../images/3.png);z-index:-5;}
+
+
+/*top开始*/
+ 
+
+ul.nav{position:absolute;left:1%;top:30px;width:650px;color:#fff;z-index:20;transform-style: preserve-3d;opacity:0;display:none;z-index:99999;}
+ul.nav li{float:left;margin-left:35px;width:122px;height:124px;transition:all 2s ease-in-out;position:relative;transform-style:preserve-3d;perspective: 900px;-webkit-perspective: 900px;}
+ul.nav li .pre{position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;box-shadow:0 0 0 10px rgba(255,255,255,.4);opacity:1;transition:all .6s linear;transform-origin:50% 0%;background:url(../images/top-nav.png);}
+ul.nav li .pre h2{margin-top:35px;height:50px;font-size:22px;line-height:50px;text-align:center;color:#fff;font-weight:bold;text-shadow:2px 2px 2px rgba(255,255,255,.6);}
+
+ul.nav li .back a{position:absolute;left:0;top:0;width:100%;height:100%;text-decoration:none;}
+ul.nav li .back a h2{margin-top:35px;height:50px;font-size:22px;line-height:50px;text-align:center;color:#333;font-weight:bold;text-shadow:2px 2px 2px rgba(204,51,51,.6);}
+
+ul.nav li .back{position:absolute;left:0;top:0;width:100%;height:100%;text-align:center;border-radius:50%;text-align:center;opacity:0;transition:all .6s linear;transform: translate3d(0,0,-150px) rotate3d(1,0,0,90deg);transform-origin:50% 0%;background:url(../images/top-nav.png);}
+
+ul.nav li.li1 .pre{background-position:2px 0;}
+ul.nav li.li1 .back{background-position:0 -129px;}
+ul.nav li.li2 .pre{background-position:-129px 0;}
+ul.nav li.li2 .back{background-position:-129px -126px;}
+ul.nav li.li3 .pre{background-position:-257px 0;}
+ul.nav li.li3 .back{background-position:-258px -129px;}
+ul.nav li.li4 .pre{background-position:-387px 0;}
+ul.nav li.li4 .back{background-position:-387px -129px;}
+
+
+ul.nav li:hover .pre{transform:translate3d(0,150px,0) rotate3d(1,0,0,-90deg);opacity:0.2;}
+ul.nav li:hover .back{transform:rotate3d(1,0,0,0deg);opacity:1;}
+/*top结束*/
+
+/*house开始*/
+.box .house{position:relative;width:100%;height:650px;background:url(../images/bg.jpg);margin:90px auto;}
+.box .house .house_light{position:absolute;left:100px;top:0;width:200px;height:201px;transform-style: preserve-3d;z-index:4;}
+.box .house .house_light div{float:left;width:50px;height:201px;background:url(../images/lights-sprite.png);margin-left:-20px;transform:rotateZ(0deg);transition:all 2s ease-in-out;transform-origin:8% 0%;}
+.box .house .house_light div.light1{background-position:0 0;width:45px;-webkit-animation:light1 4s ease-in-out infinite;position:relative;z-index:2;-moz-animation:light1 4s ease-in-out infinite;/*-ms-animation:light1 4s ease-in-out infinite;*/}
+.box .house .house_light div.light2{background-position:-50px 0;margin-left:-25px;-webkit-animation:light2 6s ease-in-out infinite;-moz-animation:light2 4s ease-in-out infinite;}
+.box .house .house_light div.light3{background-position:-100px 0;margin-left:-25px;-webkit-animation:light3 5s ease-in-out infinite;-moz-animation:light3 4s ease-in-out infinite;}
+.box .house .house_light div.light4{background-position:-150px 0;margin-left:-25px;-webkit-animation:light4 2s ease-in-out infinite;-moz-animation:light4 4s ease-in-out infinite;}
+/*house结束*/
+
+/*床铺开始*/
+.box .house .bed{position:absolute;right:360px;top:90px;width:369px;height:525px;background:url(../images/bed.png);}
+/*cat开始*/
+.box .bed .cat{position:absolute;left:42px;top:73px;width:189px;height:187px;background:url(../images/cat.png);}
+.box .bed .bed_sheet{position:absolute;left:0;top:0;width:100%;height:100%;background:url(../images/bed-sheet.png);z-index:2;}
+.box .bed .cat_foot{position:absolute;left:42px;top:140px;width:180px;height:270px;background:url(../images/cat1.png);}
+
+
+/*cat结束*/
+
+/*床铺结束*/
+
+/*桌子开始*/
+.box .house .desk{position:absolute;left:200px;top:130px;width:253px;height:115px;background:url(../images/coffee-table.png);}
+.box .house .desk .tree{position:absolute;right:15px;top:-70px;width:46px;height:94px;background:url(../images/tree-small.png);background-size:contain;}
+.box .house .desk .cup{position:absolute;right:45px;top:18px;width:29px;height:34px;background:url(../images/cup.png);}
+.box .house .desk .book{position:absolute;left:55px;top:-10px;width:48px;height:59px;background:url(../images/book.png);background-size:contain;}
+
+/*桌子结束*/
+/*闹钟开始*/
+
+.box .house .clock{position:absolute;right:200px;top:15px;width:82px;height:82px;background:url(../images/clock-face.png);}
+.box .house .hours{position:absolute;right:0;top:0;width:82px;height:82px;background:url(../images/clock-hand1.png);transform:rotateZ(-130deg);}
+.box .house .minutes{position:absolute;right:0;top:0;width:82px;height:82px;background:url(../images/clock-hand.png);transform:rotateZ(0deg);}
+/*闹钟结束*/
+/*床头柜开始*/
+.box .house .pattern{position:absolute;right:90px;top:96px;width:126px;height:300px;background:url(../images/side-table.png);}
+/*床头柜结束*/ 
+
+/*主题板开始*/
+.box .mainboard{position:absolute;right:-800px;top:300px;/*right:260px;top:300px;*/width:669px;height:342px;background:url(../images/pattern-cat-paw.jpg);}
+.box .mainboard .border{position:absolute;left:-19px;top:-22px;width:713px;height:385px;background:url(../images/slider-frame-christmas.png);background-size:contain;}
+.box .mainboard .cat_left{position:absolute;left:-133px;bottom:0;width:130px;height:160px;background:url(../images/sprite-global.png) -747px -530px;}
+.box .mainboard .img_top{position:absolute;top:-36px;left:-20px;}
+.box .mainboard .img_left{position:absolute;left:-19px;top:40px;}
+.box .mainboard .img_right{position:absolute;top:-26px;right:-34px;}
+.box .mainboard .img_bottom{position:absolute;left:-42px;bottom:-21px;}
+.box .mainboard .text{position:absolute;left:20%;top:20%;z-index:3;font-size:30px;color:rgba(204,204,204,1);text-shadow:2px 2px 5px 2px rgba(51,51,51,.6);}
+/*主题板结束*/
+
+
+@-moz-keyframes light1{
+	0%{transform:rotateZ(-4deg);}
+	50%{transform:rotateZ(4deg);}
+	100%{transform:rotateZ(-4deg);}
+}
+@-moz-keyframes light2{
+	0%{transform:rotateZ(7deg);}
+	50%{transform:rotateZ(-7deg);}
+	100%{transform:rotateZ(7deg);}
+}
+@-moz-keyframes light3{
+	0%{transform:rotateZ(6deg);}
+	50%{transform:rotateZ(-6deg);}
+	100%{transform:rotateZ(6deg);}
+}
+@-moz-keyframes light4{
+	0%{transform:rotateZ(3deg);}
+	50%{transform:rotateZ(-3deg);}
+	100%{transform:rotateZ(3deg);}
+}
+@-webkit-keyframes light1{
+	0%{transform:rotateZ(-4deg);}
+	50%{transform:rotateZ(4deg);}
+	100%{transform:rotateZ(-4deg);}
+}
+@-webkit-keyframes light2{
+	0%{transform:rotateZ(7deg);}
+	50%{transform:rotateZ(-7deg);}
+	100%{transform:rotateZ(7deg);}
+}
+@-webkit-keyframes light3{
+	0%{transform:rotateZ(6deg);}
+	50%{transform:rotateZ(-6deg);}
+	100%{transform:rotateZ(6deg);}
+}
+@-webkit-keyframes light4{
+	0%{transform:rotateZ(3deg);}
+	50%{transform:rotateZ(-3deg);}
+	100%{transform:rotateZ(3deg);}
+}
+/*首页结束*/
+
+/*skill 技能掌握开始*/
+.skill{position:absolute;left:0;top:0;width:1000px;height:665px;/*background:url(../images/sky4.jpg) no-repeat;background-size:cover;*/overflow:hidden;}
+
+.skill img.skill_clound{position:absolute;left:0;top:0;}
+
+.skill ul.skillControll{position:absolute;width:850px;height:500px;left:400px;top:200px;}
+.skill ul.skillControll li{position:absolute;left:0;top:0;width:150px;height:150px;float:left;border-radius:50%;transition: all .8s ease-in-out;}
+.skill ul.skillControll li span{position:absolute;left:0;top:0;width:150px;height:150px;float:left;border-radius:50%;background-image:radial-gradient(rgba(255,255,255,.2) 30%,rgba(204,153,255,.8));box-shadow:0 0 4px 4px rgba(255,102,255,.3);}
+
+.skill ul.skillControll li.li1{left:0;top:0;}
+.skill ul.skillControll li.li2{left:230px;top:0;}
+.skill ul.skillControll li.li3{left:460px;top:0;}
+.skill ul.skillControll li.li4{left:0;top:200px;}
+.skill ul.skillControll li.li5{left:230px;top:230px;}
+.skill ul.skillControll li.li6{left:460px;top:200px;}
+
+.skill ul.skillControll li.li2 span{background-image:radial-gradient(rgba(255,255,255,.2) 30%,rgba(255,255,102,.8));box-shadow:0 0 4px 4px rgba(255,255,255,.3);}
+.skill ul.skillControll li.li3 span{background-image:radial-gradient(rgba(255,255,255,.2) 30%,rgba(255,102,255,.8));box-shadow:0 0 4px 4px rgba(204,153,255,.6);}
+.skill ul.skillControll li.li4 span{background-image:radial-gradient(rgba(255,255,255,.2) 30%,rgba(51,255,102,.8));box-shadow:0 0 4px 4px rgba(255,255,255,.3);}
+.skill ul.skillControll li.li5 span{background-image:radial-gradient(rgba(255,255,255,.2) 30%,rgba(153,51,204,.8));box-shadow:0 0 4px 4px rgba(204,153,255,.6);}
+.skill ul.skillControll li.li6 span{background-image:radial-gradient(rgba(255,255,255,.2) 30%,rgba(0,0,153,0.6));box-shadow:0 0 4px 4px rgba(204,153,255,.6);}
+
+
+.skill ul.skillControll li .rotate_out{position: absolute;left: 0;top: 0;width:140px;height:140px;border: 5px solid #F39;border-right-color: #6FF;border-bottom-color: #FF9;border-radius: 50%;transition: all 1.5s ease-in-out;z-index:7;opacity:0;filter:alpha(opacity:0);}
+.skill ul.skillControll li .rotate_in {position: absolute;left: 0;top: 0;width: 120px;height: 120px;border: 5px solid #66C;border-radius: 50%;border-top: 5px solid #0FF;border-right: 5px solid #F6F;transition: all 3s ease-in-out;opacity:0;filter:alpha(opacity:0);}
+
+.skill ul.skillControll li .rotate_img{margin-top:20px;border-radius:50%;text-align:center;}
+.skill ul.skillControll li .rotate_img img {position:relative;width: 150px;border-radius:50%;margin-top:-30px;}
+
+.skill ul.skillControll li .rotate_con {position: absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;text-align: center;opacity:0;filter: alpha(opacity:0);transition: all 1s ease-in-out;z-index: 6;background:rgba(51,51,51,0.8);transform:scale(0);}
+.skill ul.skillControll li .rotate_con p {padding:30px 29px;width: 96px;text-align: center;line-height: 16px;color: #fff;font-size: 13px;}
+
+.skill ul.skillControll li:hover{border-radius:0;}
+.skill ul.skillControll li:hover .rotate_out{transform:rotateZ(360deg);opacity:1;filter:alpha(opacity:100%);border-radius:0;}
+.skill ul.skillControll li:hover .rotate_in{transform:rotateZ(-760deg);opacity:1;filter:alpha(opacity:100%);border-radius:0;}
+.skill ul.skillControll li:hover .rotate_con{transform:scale(1);opacity:1;filter: alpha(opacity:100%);border-radius:0;}
+
+/*skill 技能掌握结束*/
+
+/*showreel开始*/
+.showreel{position:absolute;left:0;top:0;width:1000px;height:665px;/*background:url(../images/sky4.jpg) no-repeat;background-size:cover;*/overflow:hidden;}
+.showreel img.showreel_clound{position:absolute;left:0;top:0;}
+
+.showreel ol.showreel_nav{position:absolute;width:50%;height:75px;right:-1%;top:50px;}
+.showreel ol.showreel_nav li{position:relative;float:left;width:170px;height:65px;background:url(../images/bg-red-button.png) no-repeat;background-size:contain;margin-right:30px;overflow:hidden;}
+.showreel ol.showreel_nav li.moveBox{position:absolute;left:0;top:0;z-index:2;height:58px;border-radius: 6px;background:rgba(255,153,255,.3);box-shadow:5px 7px 7px rgba(204,51,51,.6);}
+
+
+.showreel ol.showreel_nav li .img1{position:absolute;left:0;top:0;width:400px;}
+.showreel ol.showreel_nav li h4{position:relative;width:100%;height:65px;line-height:60px;text-align:center;color:#FF9;text-shadow:5px 5px 2px rgba(255,204,153,.5);font-size:22px;z-index:3;}
+
+.showreel ul.showreel_body{position:absolute;width:80%;height:450px;left:10%;top:175px;}
+.showreel ul.showreel_body .border{position:absolute;left:0;top:0;width:100%;height:100%;}
+.showreel ul.showreel_body li.showreel_body_li{position:absolute;left:0;top:0;width:100%;height:100%;}
+
+.showreel ul.showreel_body li.showreel_body_li ol{position:absolute;left:2%;top:3%;width:100%;height:100%;}
+.showreel ul.showreel_body li.showreel_body_li ol li{float:left;margin:20px 0 0 20px;width:150px;height:150px;background:#FFC;border:2px solid #3F9;overflow:hidden;}
+.showreel ul.showreel_body li.showreel_body_li ol li span{ position:absolute;left:-150px;top:0;width:150px; height:150px; background:pink;}
+
+.showreel ul.showreel_body li.showreel_body_li ol li span a{float:left;width:150px;height:150px;text-decoration:none;color:#333;}
+/*showreel结束*/
+
+/*contactMe开始*/
+.contactMe{position:absolute;left:0;top:0;width:1000px;height:665px;/*background:url(../images/sky4.jpg) no-repeat;background-size:cover;*/overflow:hidden;}
+.contactMe img.showreel_clound{position:absolute;left:0;bottom:0;}
+.contactMe .contant_mess{position:absolute;bottom:-120px;left:40%;width:1000px;height:700px;background:url(../images/tablet-preview.png);background-size:contain;}
+.contactMe .contant_mess ul{position:absolute;top:120px;left:230px;width:245px;height:200px;height:400px;}
+.contactMe .contant_mess ul li{width:245px;height:50px;line-height:50px;border-bottom:2px dotted #FFC;font-size:18px;color:#FFF;margin-bottom:10px;}
+.contactMe .walkingsheep{position:absolute;left:0;bottom:40px;width:120px;height:87px;}
+.contactMe .walkingsheep .sheep{position:absolute;left:0;bottom:0px;width:118px;height:87px;background:url(../images/walking-sheep.png);}
+/*contactMe结束*/
