@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<title>css3文字模糊</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
+
+ul{width:860px;height:300px;margin:30px auto;border:2px solid #036;padding:18px;background:#ccc;}
+ul li{float:left;width:250px;height:230px;margin:10px;color:#333;background:#fff;font-size:12px;line-height:16px;padding:5px;transition:all 0.6s ease-in-out;}
+.formal{float:left;width:250px;height:230px;margin:10px;color:#333;background:#fff;font-size:12px;line-height:16px;padding:5px;transition:all 0.6s ease-in-out;}
+
+.active{box-shadow:5px 5px 7px rgba(153,0,0,.6);transform:scale(1.2);}
+.dim{text-shadow:0 0 16px rgba(0,0,0,0.8);box-shadow:0 0 10px 20px rgba(204,204,204,.8);transform:scale(0.8);}
+</style>
+<script>
+window.onload = function(){
+	
+   document.title = "css3文字模糊效果--童剑瑛";
+   var aLi = document.getElementsByTagName("li");
+   
+   for(var i = 0; i < aLi.length; i++){
+	   aLi[i].onmouseover = function(){
+		   for(var i = 0; i < aLi.length; i++){
+			   aLi[i].className = "dim";
+		   }
+		   this.className = "active";
+	   };
+	   
+	   aLi[i].onmouseout = function(){
+		   for(var i = 0; i < aLi.length; i++){
+			   aLi[i].className = "formal";
+		   }
+	   };
+  }
+	
+};
+</script>
+
+</head>
+
+
+<body>
+<ul>
+   <li>
+      <h3>一鸣惊人</h3>
+      <div>战国时代，齐国有一个名叫淳于髡的人。他的口才很好，也很会说话。他常常用一些有趣的隐语，来规劝君主，使君王不但不生气，而且乐于接受。
+　　当时齐国的威王，本来是一个很有才智的君主，但是，在他即位以后，却沈迷于酒色，不管国家大事，每日只知饮酒作乐，而把宜切正事都交给大臣去办理，自己则不闻不问。因此，政治不上轨道，官吏们贪污失职，再加上各国的诸侯也都趁机来侵犯，使得齐国濒临灭亡的边缘。
+　　虽然，齐国的一些爱国之人都很担心，但是，却都因为畏惧齐王，所以没其实齐威王室一个很聪明的人他很<div style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden;">喜欢说些隐语，来表现自己的智慧，虽然他不喜欢听别人的劝告，但如果劝告得法的话，他还是会接受的。淳于髡知道这点后，便想了一个计策，准备找个机会来劝告齐威王。
+　　有一天，淳于髡见到了齐威王，就对他说：“大王，为陈有一个谜语想请您猜一猜：其国有汁大鸟，住在大王的宫廷中，已经整整三年了，可是他既不振翅飞翔，也不发生名叫，只是毫无目的的蜷夫着，大王您猜，这是一只什么鸟呢？”有人赶出来劝谏。
+     </div>
+     </div>
+   </li>
+   <li>
+      <h3>天衣无缝</h3>
+      <div>古时候，有个叫郭翰的先生，他能诗善画，性格诙谐，喜欢开玩笑。盛夏的一个夜晚，他在树下乘凉，但见长天如碧，白云舒卷，明月高挂，清风徐来，满院飘香。这时，一位长得异常美丽的仙女含笑站在郭翰面前。
+　　郭翰很有礼貌地问：“小姐，您是谁？从哪来？”
+　　仙女说：“我是织女，从天上来。”
+　　郭翰问：“你从天上来，能谈谈天上的事情吗？”
+　　仙女问：“你想知道什么？”
+　　郭翰说：“我什么都想知道。”
+　　仙女说：“这可难了，你让我从哪说起呀？”
+　　郭翰说：“人们都说仙人聪明，你就随便说说<div style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden;">吧。”
+　　仙女说：“天上四季如春，夏无酷暑，冬无严寒；绿树常青，花开不谢。枝头百鸟合鸣，水中游鱼可见。没有疾病，没有战争，没有赋税，总之，人间的一切苦难天上都没有。”</div>
+   </div>
+   </li>
+   <li>
+      <h3>天衣无缝</h3>
+      <div>古时候，有个叫郭翰的先生，他能诗善画，性格诙谐，喜欢开玩笑。盛夏的一个夜晚，他在树下乘凉，但见长天如碧，白云舒卷，明月高挂，清风徐来，满院飘香。这时，一位长得异常美丽的仙女含笑站在郭翰面前。
+　　郭翰很有礼貌地问：“小姐，您是谁？从哪来？”
+　　仙女说：“我是织女，从天上来。”
+　　郭翰问：“你从天上来，能谈谈天上的事情吗？”
+　　仙女问：“你想知道什么？”
+　　郭翰说：“我什么都想知道。”
+　　仙女说：“这可难了，你让我从哪说起呀？”
+　　郭翰说：“人们都说仙人聪明，你就随便说说<div style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden;">吧。”
+　　仙女说：“天上四季如春，夏无酷暑，冬无严寒；绿树常青，花开不谢。枝头百鸟合鸣，水中游鱼可见。没有疾病，没有战争，没有赋税，总之，人间的一切苦难天上都没有。”</div>
+   </div>
+   </li>
+</ul>
+
+</body>
+</html>

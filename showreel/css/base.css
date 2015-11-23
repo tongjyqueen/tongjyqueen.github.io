@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'微软雅黑';color:#333; line-height:100%;}
+h1,h2,h3,h4,h5,h6{font-size:100%; font-weight:normal;}
+a{color:#666; text-decoration:none;}
+a:hover{color:#73abc9;}
+a img{border:none;}
+i,em,u{ font-style: normal; text-decoration:none;}
+li,ul,ol{list-style:none;}
+button,input,select,textarea{font-size:100%;}
+table{border-collapse:collapse; border-spacing:0;}
+strong,b{ font-weight:normal;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+body{font-family: "Microsoft Yahei", Geneva, sans-serif; font-size:12px;}
+
+
+

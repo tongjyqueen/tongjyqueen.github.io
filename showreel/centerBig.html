@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>居中放大</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
+
+a{color:#fff;text-decoration:none;}
+.fl{float:left;}
+.clearfix:after{content:"";clear:both;display:block;}
+.box{width:655px;border:1px solid red;margin:30px auto;background:#FFF;}
+li{position:relative;width:200px;height:202px;margin:12px 0 0 12px;}
+img{width:200px;height:202px;transition:1s;}
+</style>
+<script>
+window.onload=function(){
+	document.title = "居中放大--童剑瑛";
+
+	  var oLi=document.getElementsByTagName('li');
+	  var oImg=document.getElementsByTagName('img');
+	  
+	  for(var i=0;i<oLi.length;i++){
+		  
+		  oImg[i].onmouseover=function(){
+			  
+			  for(var i=0;i<oLi.length;i++){
+				  
+				  oImg[i].width='200px';
+			  }
+			  this.style.width='300px';
+			  this.style.height='300px';
+			  this.style.position='absolute';
+              this.style.zIndex='999';
+			  this.style.top='-50px';
+			  this.style.left='-50px';
+			  this.style.borderColor='#fff';
+			  this.style.borderWidth='10px';
+			  this.style.borderStyle='solid';
+			  
+		}
+		 oImg[i].onmouseout=function(){
+			  
+			  for(var i=0;i<oLi.length;i++){
+
+				  oImg[i].style.zIndex='2';
+				  oImg[i].style.top='0';
+				  oImg[i].style.left='0';
+				  oImg[i].style.width='200px';
+				  oImg[i].style.height='202px';
+				  oImg[i].style.border='none';
+			  }
+			  
+		}
+		  
+	 }
+	
+}
+</script>
+</head>
+
+<body>
+<div class="box clearfix">
+  <ul>
+      <li class="fl"><img src="images/cat2 (1).jpg"/></li>
+      <li class="fl"><img src="images/cat2 (2).jpg" /></li>
+      <li class="fl"><img src="images/cat2 (3).jpg" /></li>
+      <li class="fl"><img src="images/cat2 (4).jpg" /></li>
+      <li class="fl"><img src="images/cat2 (5).jpg" /></li>
+      <li class="fl"><img src="images/cat2 (6).jpg" /></li>
+      <li class="fl"><img src="images/cat2 (7).jpg" /></li>
+      <li class="fl"><img src="images/cat2 (1).jpg" /></li>
+      <li class="fl"><img src="images/cat2 (2).jpg" /></li>
+  
+  </ul>
+</div>
+</body>
+</html>

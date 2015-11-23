@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>正则校验</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
+div{width:500px;height:200px;background:#FFC;margin:30px auto;padding:50px;}
+input{height:30px;}
+strong{color:#999;font-weight:normal;}
+</style>
+<script>
+window.onload = function(){
+  document.title = "正则校验--童剑瑛";
+  var oTxt1 = document.getElementById('txt1');
+  var oS1 = document.getElementById('s1');
+  var oTxt2 = document.getElementById('txt2');
+  var oS2 = document.getElementById('s2');
+  
+  oTxt1.focus();
+  oTxt1.onblur = function(){
+	  var re = /^(0[1-9]\d{1,2}\-)?[1-9]\d{6,7}$/; 
+	  if(re.test(oTxt1.value)){
+		  oS1.innerHTML = '合法';
+		  oS1.style.color = 'green';
+	  } else {
+		  oS1.innerHTML = '非法';
+		  oS1.style.color = 'red';
+	  } 
+  };
+  
+  
+  
+  oTxt2.onblur = function(){
+	  //343848bjj@qq.com.cn
+	  // \w+@([0-9]|[a-z]){2,3}\.[a-z](\.[a-z]{2})?
+	  var re = /^\w+@([0-9]|[a-z]){2,6}\.[a-z]{2,3}(\.[a-z]{2})?$/; 
+	  if(re.test(oTxt2.value)){
+		  oS2.innerHTML = '合法';
+		  oS2.style.color = 'green';
+	  } else {
+		  oS2.innerHTML = '非法';
+		  oS2.style.color = 'red';
+	  } 
+  };
+  
+  
+  
+};	  
+</script>
+</head>
+
+<body>
+<div>
+<br />
+<br />
+
+请输入座机号：<input type="text" id="txt1" />
+<strong>如：021-1234567</strong>
+<span id="s1"></span>
+<br />
+<br />
+<br />
+
+请输入邮箱：<input type="text" id="txt2" />
+<strong>1234567@sina.com</strong>
+
+<span id="s2"></span>
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>3D旋转正方体</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
+#stage{width: 500px;height: 500px;position: relative;margin: 0 auto;-webkit-perspective:800px ;transform-style: preserve-3d;transform-origin:center center;}
+#var{width: 500px;height: 500px;position: absolute;margin: 0 auto;transform-style: preserve-3d;-webkit-transform: rotateY(0deg);transition:1s all linear;}
+.div1{position: absolute;left: 50%;top:50%;margin-left: -100px;margin-top: -100px;width: 198px;height: 198px;border: 1px solid white;position: absolute;transform-style: preserve-3d;color:white;text-align: center;line-height: 198px;font-size: 40px;}
+div.div1:nth-child(1){-webkit-transform: rotateY(90deg) translateZ(100px);background:url(images/19.jpg);}
+div.div1:nth-child(2){-webkit-transform: rotateY(180deg) translateZ(100px);background:url(images/1.jpg);}
+div.div1:nth-child(3){-webkit-transform: rotateY(270deg) translateZ(100px);background:url(images/21.jpg);}
+div.div1:nth-child(4){-webkit-transform: rotateY(360deg) translateZ(100px);background:url(images/2.jpg);}
+div.div1:nth-child(5){-webkit-transform: rotateX(90deg) translatez(100px);background:url(images/20.jpg);}
+div.div1:nth-child(6){-webkit-transform: rotateX(270deg) translatez(100px);background:url(images/3.jpg);}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	document.title = "3D旋转正方体--童剑瑛";
+	var oVar = document.getElementById('var');
+	var n=0;
+	setInterval(function(){
+		n++;
+			oVar.style.transform = "rotateY("+(-n*60)+"deg) rotateX("+(n*60)+"deg) "
+	},1000)
+}
+
+</script>
+</head>
+<body>
+	<div id="stage">
+		<div id="var">
+	 		<div class="div1">1</div>
+	 		<div class="div1">2</div>
+	 		<div class="div1">3</div>
+	 		<div class="div1">4</div>
+	 		<div class="div1">5</div>
+	 		<div class="div1">6</div>
+		</div>
+	</div>
+</body>
+</html>

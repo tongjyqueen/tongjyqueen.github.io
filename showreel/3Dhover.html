@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="3D划入效果 - zhinengshe.com" />
+<meta name="copyright" content="3D划入效果 - zhinengshe.com" />
+<title>3D划入效果</title>
+<style>
+<style>
+#div1{position: relative;height: 252px;width: 1000px;margin: 50px auto;padding:10px;transform-style: preserve-3d;}
+#div2{height: 252px;border-radius: 30px;width:1000px;position: absolute;background:url(images/spring.png) 0 -400px;color:white;font-size:30px;font-weight:bold;transition:all 0.8s;text-align: center;line-height: 110px;-webkit-transform:perspective(800px) rotateY(0deg) rotateX(0deg);box-shadow:5px 5px 5px rgba(0,0,0,.8);}
+#left{width:500px;height: 252px; position: absolute;left: 0;top: 0; z-index: 10;}
+#right{width:500px;height: 252px; border-radius: 30px;position: absolute;right: 0;top: 0; z-index: 10;transition:all 0.8s;}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	document.title = "3D划入效果--童剑瑛";
+	var oDiv = document.getElementById('div2');
+	var oDiv1 = document.getElementById('left');
+	var oDiv2 = document.getElementById('right');
+
+	oDiv2.onmouseover=function(){
+		oDiv.style.WebkitTransform = "perspective(800px) rotateY(30deg) rotateX(50deg)";
+	}
+	oDiv1.onmouseover=function(){
+		oDiv.style.WebkitTransform = "perspective(800px) rotateY(-30deg) rotateX(50deg)";
+		oDiv2.style.boxShadow = "9px 0 9px rgba(0,0,0,.8)";
+	}
+	
+	oDiv2.onmouseout = oDiv1.onmouseout = function(){
+		oDiv.style.WebkitTransform = "perspective(800px) rotateY(0deg) rotateX(0deg)";
+		oDiv2.style.boxShadow = "0 0 0 rgba(0,0,0,.8)";
+	}
+}
+</script>
+</head>
+
+<body>
+
+<div id="div1">
+  <div id="div2"><div id="left"></div>春天的气息<div id="right"></div></div>  
+</div>
+ 
+</body>
+</html>

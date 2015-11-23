@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="移入效果 - zhinengshe.com" />
+<meta name="copyright" content="移入效果 - zhinengshe.com" />
+<title>移入效果</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
+#ul1{width:80%;margin:0 auto;}
+#ul1 li{width:220px;height:220px;margin:10px;float:left;}
+#ul1 .last{width:184px;height:184px;border-radius:50%;padding:18px;box-shadow:inset 0 0 0 18px rgba(255,255,255,.4);}
+#ul1 .see{position:relative;width:124px;height:184px;border-radius:50%;padding:0 30px;transform-style: preserve-3d;perspective:700px;background:#f9f9f9 url(images/bg.jpg);}
+#ul1 .center{position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;text-align:center;background:rgba(230, 132, 107,0.4);transition:all .4s ease-in-out;}
+#ul1 .center h2{height:80px;font-size:28px;line-height:110px;color:#fff;font-weight:bold;}
+#ul1 .center p{border-top:1px solid #fff;color:#fff;margin:0 auto;}
+#ul1 .center p i{display:block;color:#fff;line-height:24px;margin-top:10px;}
+#ul1 .center p a{color:#fff;font-size:12px;}
+#ul1 .pre{position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;transform-origin:0% 70%;transition:all .4s ease-in-out;z-index:999;}
+
+#ul1 .no1 .last{background:url(images/16.jpg) no-repeat;}
+#ul1 .no1 .last .pre{background:url(images/16.jpg) no-repeat center center;}
+#ul1 .no2 .last{background:url(images/17.jpg) no-repeat;}
+#ul1 .no2 .last .pre{background:url(images/17.jpg) no-repeat center center;}
+
+#ul1 li:hover .pre{transform:rotate3d(1,1,0,-120deg);z-index:999;}
+#ul1 li:hover .center{background:rgba(230, 132, 107,.6);}
+
+#ul2 {width:80%;height:220px;margin:10px auto;}
+#ul2 li{width:220px;height:220px;margin:20px;float:left;position:relative;transform-style:preserve-3d;perspective: 900px;-webkit-perspective: 900px;}
+
+#ul2 .pre{position:absolute;left:0;top:0;width:220px;height:220px;border-radius:50%;box-shadow:inset 0 0 0 18px rgba(0,0,0,.4);background-size:cover;opacity:1;transition:all .6s linear;transform-origin:50% 0%;}
+
+#ul2 .back{position:absolute;left:0;top:0;width:100%;height:100%;text-align:center;border-radius:50%;text-align:center;background:rgba(0, 0, 0, 1);opacity:0;transition:all .6s linear;transform: translate3d(0,0,-280px) rotate3d(1,0,0,90deg);transform-origin:50% 0%;}
+
+#ul2 h2{height:110px;font-size:36px;line-height:140px;color:#fff;font-weight:bold;}
+#ul2 p{width:130px;border-top:1px solid #fff;color:#fff;margin:0 auto;}
+#ul2 i{display:block;color:#fff;line-height:24px;margin-top:10px;}
+#ul2 a{color:#fff;font-size:14px;}
+
+#ul2 li:hover .pre{transform:translate3d(0,280px,0) rotate3d(1,0,0,-90deg);opacity:0;}
+#ul2 li:hover .back{transform:rotate3d(1,0,0,0deg);opacity:1;}
+
+#ul2 .no1 .pre{background:url(images/19.jpg) no-repeat;}
+#ul2 .no2 .pre{background:url(images/20.jpg) no-repeat;}
+
+#ul3{width:80%;height:500px;margin:30px auto;}
+#ul3 li{width:220px;height:220px;margin:20px;background-size:cover;border-radius:50%;box-shadow:inset 0 0 0 18px rgba(255,255,255,.8);transition:all .6s ease-in-out;float:left;margin-right:5%;}
+
+#ul3 div{height:180px;border-radius:50%;text-align:center;padding:40px 25px 0;background:rgba(63, 147, 147, 0.6);transform:scale(0);transition:all .6s ease-in-out;opacity:0;}
+#ul3 h2{font-size:36px;line-height:47px;color:#fff;font-weight:bold;height:100px;}
+#ul3 p{transition:all .6s ease-in-out .6s;opacity:0;border-top:1px solid #fff;}
+#ul3 i{display:block;color:#fff;line-height:24px;margin-top:10px;}
+#ul3 a{color:#fff;font-size:14px;}
+#ul3 li:hover div{transform:scale(1);opacity:1;}
+#ul3 li:hover p{opacity:1;}
+#ul3 li:hover{box-shadow:inset 0 0 0 0 rgba(255,255,255,0);}
+#ul3 a:hover{color:#FF0;}
+
+#ul3 .no1{background:url(images/1.jpg) no-repeat;}
+#ul3 .no2{background:url(images/2.jpg) no-repeat;}
+</style>
+<script>
+document.title = "移入效果--童剑瑛";
+</script>
+
+</head>
+
+<body>
+<ul id="ul1">
+  <li class="no1">
+    <div class="last">
+      <div class="see">
+        <div class="center">
+            <h2>服饰意识</h2>
+            <p>
+              <i>by 邓肯</i>
+              <a href="javascript:;">View on Dribbble</a>
+            </p>
+         </div>
+         <div class="pre"></div>
+      </div>
+    </div> 
+  </li>
+  <li class="no2">
+    <div class="last">
+      <div class="see">
+        <div class="center">
+            <h2>心动</h2>
+            <p>
+              <i>by Brian Hurst</i>
+              <a href="javascript:;">View on Dribbble</a>
+            </p>
+         </div>
+         <div class="pre"></div>
+      </div>
+    </div> 
+  </li>
+  
+
+</ul>
+
+<ul id="ul2">
+  <li class="no1">
+        <div class="pre"></div>
+        <div class="back">
+            <h2>猫眼识人</h2>
+            <p>
+              <i>by 喵喵</i>
+              <a href="javascript:;">View on Dribbble</a>
+            </p>
+        </div>
+     </li>
+     <li class="no2">
+        <div class="pre"></div>
+        <div class="back">
+            <h2>说你呢</h2>
+            <p>
+              <i>by Zoe Ingram</i>
+              <a href="javascript:;">View on Dribbble</a>
+            </p>
+        </div>
+     </li>
+     
+</ul>
+
+<ul id="ul3">
+   <li class="no1">
+      <div>
+          <h2>用你所拥有的</h2>
+          
+          <p>
+            <i>by 邓肯</i>
+            <a href="javascript:;">View on Dribbble</a>
+          </p>
+      </div>
+   </li>
+   <li class="no2">
+      <div>
+          <h2>污渍原因</h2>
+          
+          <p>
+            <i>by 安东</i>
+            <a href="javascript:;">View on Dribbble</a>
+          </p>
+      </div>
+   </li>
+  
+</ul>
+</body>
+</html>

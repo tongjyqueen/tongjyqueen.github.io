@@ -1,0 +1,1267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全站</title>
+<link href="css/nuomi.css" rel="stylesheet" type="text/css" />
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<script>
+window.onload=function(){
+	var aDiv=document.getElementById('effe');
+	var aP=aDiv.getElementsByTagName('p')[0];
+	var aA=aP.getElementsByTagName('a');
+	var oLi=aDiv.getElementsByTagName('li');
+		for( var i=0; i<aA.length; i++){
+			aA[i].index=i;
+			aA[i].onmouseover=function(){
+				for( var j=0; j<aA.length; j++){
+					aA[j].className='';
+					oLi[j].className='clearfix';
+					}
+				this.className='action';
+				oLi[this.index].className='clearfix show';
+				}
+			}
+			
+	var bDiv=document.getElementById('pic');
+	var bSpan=bDiv.getElementsByTagName('span')[0];
+	var bA=bSpan.getElementsByTagName('a');
+	var bP=bDiv.getElementsByTagName('p');
+		for( var i=0; i<bA.length; i++){
+			bA[i].index=i;
+			bA[i].onmouseover=function(){
+				for( var j=0; j<bA.length; j++){
+					bA[j].className='';
+					bP[j].className='clearfix';
+					}
+				this.className='action';
+				bP[this.index].className='show';
+				}
+			}
+			
+			
+	}
+
+</script>
+</head>
+
+<body>
+<div class="top">
+	<div class="top_content">
+    	<p>北京</p>
+        <p><a href="#">[ 切换城市 ]</a></p>
+        <ul class="top_right">
+        	<li><a href="#">我的订单</a></li><i>|</i>
+            <li class="my">
+            		<a href="#">我的糯米</a><u class="triangle"></u>
+                	<span class="mymi">
+                        <em><a href="#">我的订单</a></em>
+                        <em><a href="#">选座订单</a></em>
+                        <em><a href="#">我的收藏</a></em>
+                        <em><a href="#">我的评价</a></em>
+                        <em><a href="#">账户余额</a></em>
+                        <em><a href="#">我的代金卷</a></em>
+                        <em><a href="#">我的红包</a></em>
+                        <em><a href="#">账户设置</a></em>
+                        <em><a href="#">我的百度</a></em>
+                        <span class="cross"></span>
+                	</span>
+            </li><i>|</i>
+            <li><a href="#">登录</a></li><i>|</i>
+            <li><a href="#">注册</a></li>
+        </ul>
+    </div>
+</div>
+<div class="logo_column clearfix">
+	<div class="logo"><a href="#">百度糯米</a></div>
+    <div class="search clearfix">
+    	<input type="text" placeholder="小吃快餐" class="search_a" />
+        <a href="#" class="search_b">搜索</a>
+        <p><a href="#">蛋糕</a><a href="#">甜点饮品</a><a href="#">冰雪大世界</a><a href="#">审美造型</a><a href="#">温都水城</a></p>
+    </div>
+    <div class="promise"><a href="#"></a></div>
+</div>
+<div class="nav_out">
+	<div class="nav clearfix">
+    	<div class="nav_left">
+        	<a href="#" class="all">全部团购分类</a>
+            <div class="subnav">
+            	<ul class="subnav_ul">
+                	<li class="subnav_li1">
+                    	<h6><a href="#">美食</a></h6>
+                        <p>
+                            <a href="#">精选品牌</a>
+                            <a href="#">自助餐小吃</a>
+                            <a href="#">快餐</a>
+                        </p>
+                        <div class="food">
+                        	<span class="food_subset"></span>
+                            <div class="clearfix">
+                            	<a href="#" class="powder">精选品牌</a><i>|</i>
+                                <a href="#">今日新单</a><i>|</i>
+                                <a href="#">小吃快餐</a><i>|</i>
+                                <a href="#">火锅</a><i>|</i>
+                                <a href="#">蛋糕</a><i>|</i>
+                                <a href="#">甜点饮品</a>
+                                <a href="#">咖啡厅/酒吧/茶室</a><i>|</i>
+                                <a href="#">烧烤/烤肉</a><i>|</i>
+                                <a href="#">自助餐</a><i>|</i>
+                                <a href="#">干锅/香锅</a><i>|</i>
+                                <a href="#">海鲜</a><i>|</i>
+                                <a href="#">聚会宴请</a>
+                                <a href="#">辣味美食</a><i>|</i>
+                                <a href="#">其他美食</a>
+                            </div>
+                            <div class="clearfix">
+                            	<a href="#">全部中餐</a><i>|</i>
+                                <a href="#">川菜</a><i>|</i>
+                                <a href="#">北京菜</a><i>|</i>
+                                <a href="#">湘菜</a><i>|</i>
+                                <a href="#">烤鱼</a><i>|</i>
+                                <a href="#">东北菜</a><i>|</i>
+                                <a href="#">麻辣烫</a><i>|</i>
+                                <a href="#">粤菜</a>
+                                <a href="#">创意菜/私房菜</a><i>|</i>
+                                <a href="#">西北菜</a><i>|</i>
+                                <a href="#">新疆/清真菜</a><i>|</i>
+                                <a href="#">烤鸭</a><i>|</i>
+                                <a href="#">江浙菜</a><i>|</i>
+                                <a href="#">鲁菜</a><i>|</i>
+                                <a href="#">徽菜</a>
+                                <a href="#">山西菜</a><i>|</i>
+                                <a href="#">云南菜</a><i>|</i>
+                                <a href="#">内蒙菜</a><i>|</i>
+                                <a href="#">素食</a><i>|</i>
+                                <a href="#">湖北菜</a><i>|</i>
+                                <a href="#">贵州菜</a><i>|</i>
+                                <a href="#">河南菜</a><i>|</i>
+                                <a href="#">江西菜</a>
+                                <a href="#">台湾菜</a><i>|</i>
+                                <a href="#">闽菜</a><i>|</i>
+                                <a href="#">河北菜</a><i>|</i>
+                                <a href="#">客家菜</a><i>|</i>
+                                <a href="#">天津菜</a><i>|</i>
+                                <a href="#">海南菜</a><i>|</i>
+                                <a href="#">其他中餐</a>
+                            </div>
+                            <div class="clearfix">
+                            	<a href="#">西餐</a><i>|</i>
+                                <a href="#">韩国料理</a><i>|</i>
+                                <a href="#">日本料理</a><i>|</i>
+                                <a href="#">披萨</a><i>|</i>
+                                <a href="#">东南亚菜</a><i>|</i>
+                                <a href="#">中东菜</a><i>|</i>
+                                <a href="#">其他异国餐饮</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="subnav_li2">
+                    	<h6><a href="#">电影</a></h6>
+                        <p>
+                            <a href="#">在线订座</a>
+                            <a href="#">电影票团购</a>
+                        </p>
+                        <div class="food">
+                        	<span class="food_subset"></span>
+                            <div class="clearfix">
+                            	<h3><a href="#">精选品牌</a></h3>
+                                <a href="#">博物馆奇妙夜3</a><i>|</i>
+                                <a href="#">智取威虎山</a><i>|</i>
+                                <a href="#">十万个冷笑话</a><i>|</i>
+                                <a href="#">微爱之渐入佳境</a><i>|</i>
+                                <a href="#">王牌</a>
+                                <a href="#">一步之遥</a><i>|</i>
+                                <a href="#">斑马总动员</a><i>|</i>
+                                <a href="#">重返20岁</a><i>|</i>
+                                <a href="#">匆匆那年</a><i>|</i>
+                                <a href="#">闯堂兔2疯狂马戏团</a>
+                                <a href="#">龙骑侠</a><i>|</i>
+                                <a href="#">末日浩劫</a><i>|</i>
+                                <a href="#">还魂之迷失曼谷</a><i>|</i>
+                                <a href="#">鸣梁海战</a><i>|</i>
+                                <a href="#">推拿</a><i>|</i>
+                                <a href="#">天河</a><i>|</i>
+                                <a href="#">有一天</a>
+                            </div>
+                            <div class="clearfix">
+                            	<h3><a href="#">热门院线</a></h3>
+                                <a href="#">北京橙天嘉禾吉彩影城</a><i>|</i>
+                                <a href="#">中影国际影城北京千禧街店</a><i>|</i>
+                                <a href="#">北京紫光影城</a>
+                                <a href="#">星美国际影城(北京回龙观店)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="subnav_li3">
+                    	<h6><a href="#">休闲娱乐</a></h6>
+                        <p>
+                            <a href="#">KTV</a>
+                            <a href="#">滑雪/滑冰</a>
+                            <a href="#">温泉洗浴</a>
+                        </p>
+                        <div class="food">
+                        	<span class="food_subset"></span>
+                            <div class="clearfix">
+                            	<a href="#">今日新单</a><i>|</i>
+                                <a href="#">足疗按摩</a><i>|</i>
+                                <a href="#">KTV</a><i>|</i>
+                                <a href="#">温泉洗浴</a><i>|</i>
+                                <a href="#">运动健身</a><i>|</i>
+                                <a href="#">滑雪/滑冰</a><i>|</i>
+                                <a href="#">采摘</a>
+                                <a href="#">景点郊游</a><i>|</i>
+                                <a href="#">密室逃脱</a><i>|</i>
+                                <a href="#">DIY手工</a><i>|</i>
+                                <a href="#">游泳</a><i>|</i>
+                                <a href="#">演出/展览</a><i>|</i>
+                                <a href="#">游乐园/水上乐园</a>
+                                <a href="#">桌游</a><i>|</i>
+                                <a href="#">4D/5D电影</a><i>|</i>
+                                <a href="#">录音棚</a><i>|</i>
+                                <a href="#">真人CS</a><i>|</i>
+                                <a href="#">电玩/游戏币</a><i>|</i>
+                            	<a href="#">文化艺术</a>
+                                <a href="#">卡丁车</a><i>|</i>
+                                <a href="#">其他娱乐</a><i>|</i>
+                                <a href="#">其他养生保健</a><i>|</i>
+                                <a href="#">其他娱乐活动</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="subnav_li4">
+                    	<h6><a href="#">网购</a></h6>
+                        <p>
+                            <a href="#">食品保健</a>
+                            <a href="#">家居家纺</a>
+                            <a href="#">个护化妆</a>
+                        </p>
+                        <div class="food">
+                        	<span class="food_subset"></span>
+                            <div class="clearfix">
+                            	<a href="#">糯米优选</a><i>|</i>
+                                <a href="#">服装/内衣</a><i>|</i>
+                                <a href="#">食品保健</a><i>|</i>
+                                <a href="#">家居家纺</a><i>|</i>
+                                <a href="#">鞋/箱包</a><i>|</i>
+                                <a href="#">数码家电</a>
+                                <a href="#">个护化妆</a><i>|</i>
+                                <a href="#">母婴玩具</a><i>|</i>
+                                <a href="#">手表饰品</a><i>|</i>
+                                <a href="#">运动户外</a><i>|</i>
+                                <a href="#">图书杂志</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="subnav_li5">
+                    	<h6><a href="#">生活服务</a></h6>
+                        <p>
+                            <a href="#">丽人</a>
+                            <a href="#">配镜</a>
+                            <a href="#">体检</a>
+                        </p>
+                        <div class="food">
+                        	<span class="food_subset"></span>
+                            <div class="clearfix">
+                            	<a href="#">今日新单</a><i>|</i>
+                                <a href="#">丽人</a><i>|</i>
+                                <a href="#">鲜花</a><i>|</i>
+                                <a href="#">体检</a><i>|</i>
+                                <a href="#">汽车养护</a><i>|</i>
+                                <a href="#">儿童摄影</a><i>|</i>
+                                <a href="#">口腔</a><i>|</i>
+                                <a href="#">配镜</a>
+                                <a href="#">个性写真</a><i>|</i>
+                                <a href="#">教育培训</a><i>|</i>
+                                <a href="#">亲子</a><i>|</i>
+                                <a href="#">洗衣店</a><i>|</i>
+                                <a href="#">本地购物</a><i>|</i>
+                                <a href="#">婚纱摄影</a><i>|</i>
+                                <a href="#">证件照</a>
+                                <a href="#">驾校/陪练</a><i>|</i>
+                                <a href="#">宠物服务</a><i>|</i>
+                                <a href="#">照片冲印</a><i>|</i>
+                            	<a href="#">照片冲印</a><i>|</i>
+                                <a href="#">婚庆服务</a><i>|</i>
+                                <a href="#">服装定制</a>
+                                <a href="#">租车</a><i>|</i>
+                                <a href="#">家政服务</a><i>|</i>
+                                <a href="#">其他生活服务</a>
+                            </div>
+                        </div>                     
+                    </li>
+                    <li class="subnav_li6">
+                    	<h6><a href="#">酒店</a></h6>
+                        <p>
+                            <a href="#">北京</a>
+                            <a href="#">上海</a>
+                            <a href="#">广州</a>
+                        </p>
+                    </li>
+                    <li class="subnav_li7">
+                    	<h6><a href="#">旅游</a></h6>
+                        <p>
+                            <a href="#">温泉洗浴</a>
+                            <a href="#">景点郊游</a>
+                            <a href="#">采摘</a>
+                        </p>
+                        <div class="food">
+                        	<span class="food_subset"></span>
+                            <div class="clearfix">
+                            	<a href="#">本地游/周边游</a><i>|</i>
+                                <a href="#">景点郊游</a><i>|</i>
+                                <a href="#">温泉洗浴</a><i>|</i>
+                                <a href="#">采摘</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="subnav_li8">
+                    	<h6><a href="#">丽人</a></h6>
+                        <p>
+                            <a href="#">美发</a>
+                            <a href="#">自助餐小吃</a>
+                            <a href="#">快餐</a>
+                        </p>
+                        <div class="food">
+                        	<span class="food_subset"></span>
+                            <div class="clearfix">
+                            	<a href="#">化妆</a><i>|</i>
+                                <a href="#">美甲</a><i>|</i>
+                                <a href="#">美容SPA</a><i>|</i>
+                                <a href="#">美发</a><i>|</i>
+                                <a href="#">其他丽人</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav_center">
+        	<span class="little_triangle"></span>
+            <a href="#" class="action">首页</a>
+            <a href="#">精选品牌</a>
+            <a href="#">电影
+            	<span class="reservation"></span>
+            </a>
+            <a href="#">酒店</a>
+            <a href="#">今日新单</a>
+            <a href="#">外卖</a>
+            <a href="#">购物</a>
+        </div>
+        <ul class="nav_right">
+        	<li class="download"><a href="#">下载手机版</a></li>
+            <li class="browse">
+            	<a href="#">最近浏览</a>
+                    <span class="reord">
+                    	<i><a href="#"><img src="img/nm003.jpg" /></a></i>
+                    	<em>成天嘉禾单人电影票</em>
+                        <b>￥33</b>
+                        <u><a href="#">清空浏览记录</a></u>
+                    </span>
+                
+            	<u class="triangle"></u>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <div class="content_all clearfix">
+    	<div class="big_content_left">
+    		<div class="content_left"></div>
+        	<div class="content_center">
+        	<ul class="reqion clearfix">
+            	<li>
+                	<i>热门团购：</i>
+                    <a href="#">电影</a>
+                    <a href="#" class="powder">自助餐</a>
+                    <a href="#">KTV</a>
+                    <a href="#" class="powder">火锅</a>
+                    <a href="#">蛋糕</a>
+                    <a href="#" class="powder">酒店</a>
+                    <a href="#">小吃快餐</a>
+                    <a href="#">西餐</a>
+                    <a href="#">川菜</a>
+                    <a href="#" class="powder">家居家纺</a>
+                    <a href="#">烧烤</a>
+                    <a href="#">韩国料理</a>
+                </li>
+                <li class="sjs">
+                	<i>全部区域：</i>
+                    <a href="#">地铁附近</a>
+                    <a href="#">朝阳区</a>
+                    <a href="#">海淀区</a>
+                    <a href="#">丰台区</a>
+                    <a href="#">西城区</a>
+                    <a href="#">东城区</a>
+                    <a href="#">昌平区</a>
+                    <a href="#">通州区</a>
+                    <a href="#">大兴区</a>
+                    <a href="#">房山区</a>
+                    <a href="#">顺义区</a>
+                    <span class="triangle"></span>
+                    <div class="sjs_show">
+                    	<i>全部区域：</i>
+                        <a href="#">地铁附近</a>
+                        <a href="#">朝阳区</a>
+                        <a href="#">海淀区</a>
+                        <a href="#">丰台区</a>
+                        <a href="#">西城区</a>
+                        <a href="#">东城区</a>
+                        <a href="#">昌平区</a>
+                        <a href="#">通州区</a>
+                        <a href="#">大兴区</a>
+                        <a href="#">房山区</a>
+                        <a href="#">顺义区</a>
+                        <span></span>
+                        <a href="#">石景山区</a>
+                        <a href="#">怀柔区</a>
+                        <a href="#">延庆县</a>
+                        <a href="#">平谷区</a>
+                        <a href="#">门头沟区</a>
+                        <a href="#">密云县</a>
+                        <span class="triangle"></span>
+                    </div>
+                </li>
+                <li>
+                	<i>热门商圈：</i>
+                    <a href="#">通州区</a>
+                    <a href="#">望京</a>
+                    <a href="#">中关村</a>
+                    <a href="#">五道口</a>
+                    <a href="#">亚运村</a>
+                    <a href="#">回龙观</a>
+                    <a href="#">清河</a>
+                    <a href="#">朝外大街</a>
+                    <a href="#">方庄</a>
+                    <a href="#">顺义</a>
+                    <a href="#">三元桥</a>
+                </li>
+            </ul>
+        	<div class="effect" id="effe">
+                <div class="effect_a clearfix show" >
+                	<span>&nbsp;</span>
+                    <h3>本周精选</h3>
+                    <p>
+                    	<a href="#" class="action"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </p>
+                </div>
+                <ul>
+                    <li class="clearfix show">
+                        <div class="ski show">
+                            <a href="#"><img src="img/nm027.jpg" /></a>
+                            <div class="ski_txt show">
+                                <b><a href="#">铁木真</a></b>
+                                <u>涮烤午/晚餐自助1位！海鲜肉类样样齐全，糯米独家！节假日通用！</u>
+                                <span>￥33</span>
+                            </div >
+                            <span class="envelopes"></span>
+                        </div>
+                        <div class="ski show mr">
+                            <a href="#"><img src="img/nm028.jpg" /></a>
+                            <div class="ski_txt clearfix show">
+                                <b><a href="#">铁木真</a></b>
+                                <u>涮烤午/晚餐自助1位！海鲜肉类样样齐全，糯米独家！节假日通用！</u>
+                                <span>￥33</span>
+                            </div >
+                            <span class="about"></span>
+                        </div>
+                    </li>
+					<li class="clearfix">
+                        <div class="ski show">
+                            <a href="#"><img src="img/nm029.jpg" /></a>
+                            <div class="ski_txt show">
+                                <b><a href="#">铁木真</a></b>
+                                <u>涮烤午/晚餐自助1位！海鲜肉类样样齐全，糯米独家！节假日通用！</u>
+                                <span>￥33</span>
+                            </div >
+                            <span class="envelopes"></span>
+                        </div>
+                        <div class="ski show mr">
+                            <a href="#"><img src="img/nm030.jpg" /></a>
+                            <div class="ski_txt clearfix show">
+                                <b><a href="#">铁木真</a></b>
+                                <u>涮烤午/晚餐自助1位！海鲜肉类样样齐全，糯米独家！节假日通用！</u>
+                                <span>￥33</span>
+                            </div >
+                            <span class="about"></span>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="ski show">
+                            <a href="#"><img src="img/nm027.jpg" /></a>
+                            <div class="ski_txt show">
+                                <b><a href="#">铁木真</a></b>
+                                <u>涮烤午/晚餐自助1位！海鲜肉类样样齐全，糯米独家！节假日通用！</u>
+                                <span>￥33</span>
+                            </div >
+                            <span class="envelopes"></span>
+                        </div>
+                        <div class="ski show mr">
+                            <a href="#"><img src="img/nm031.jpg" /></a>
+                            <div class="ski_txt clearfix show">
+                                <b><a href="#">铁木真</a></b>
+                                <u>涮烤午/晚餐自助1位！海鲜肉类样样齐全，糯米独家！节假日通用！</u>
+                                <span>￥33</span>
+                            </div >
+                            <span class="about"></span>
+                        </div>
+                    </li>
+                    <li class="clearfix"><a href="#"><img src="img/nm025.jpg" /></a></li>
+                    <li class="clearfix"><a href="#"><img src="img/nm026.jpg" /></a></li>
+                  </ul>
+            </div>
+        </div>
+        	<div class="select">
+            	<div class="select_top">
+                	<p>
+                    	<i>03</i>
+                    	<i>37</i>
+                     	<i>44</i>
+                    </p>
+                    <a href="#">更多></a>
+                </div>
+                <div class="select_centent">
+                	<div class="select_c_l"></div>
+                	<div class="select_c_r"></div>
+                    <div class="select_c_b"></div>
+                    <ul class="clearfix">
+                    	<li>
+                            <div class="duck">
+                                    <a href="#"><img src="img/nm043.jpg" /></a>
+                                <div class="duck_txt clearfix">
+                                    <b><a href="#">大鸭梨烤鸭店</a></b>
+                                    <span><u>¥63</u><i>¥<em>100</em></i></span>
+                                </div >
+                            </div>
+                        </li>
+                    	<li>
+                            <div class="duck">
+                                    <a href="#"><img src="img/nm044.jpg" /></a>
+                                <div class="duck_txt clearfix">
+                                    <b><a href="#">大鸭梨烤鸭店</a></b>
+                                    <span><u>¥63</u><i>¥<em>100</em></i></span>
+                                </div >
+                            </div>
+                        </li>
+                        <li>
+                            <div class="duck">
+                                    <a href="#"><img src="img/nm045.jpg" /></a>
+                                <div class="duck_txt clearfix">
+                                    <b><a href="#">大鸭梨烤鸭店</a></b>
+                                    <span><u>¥63</u><i>¥<em>100</em></i></span>
+                                </div >
+                            </div>
+                        </li>
+                        <li>
+                            <div class="duck">
+                                    <a href="#"><img src="img/nm046.jpg" /></a>
+                                <div class="duck_txt clearfix">
+                                    <b><a href="#">大鸭梨烤鸭店</a></b>
+                                    <span><u>¥63</u><i>¥<em>100</em></i></span>
+                                </div >
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          <div class="sales clearfix">
+           	<p class="sales_l">
+           	  <i>默认</i>
+                <a href="#">销量<span class="sales_span1"></span></a>
+                <a href="#">价格<span class="sales_span2"></span></a>
+                <a href="#">折扣<span class="sales_span3"></span></a>
+                <a href="#">最新发布<span class="sales_span3"></span></a><span class="sales_span6"></span>
+                <a href="#"><span class="sales_span4"></span>免预约</a>
+                <a href="#"><span class="sales_span4"></span>代金券</a>
+                <a href="#"><span class="sales_span4"></span>全网低<span class="sales_span5"></span>价</a>
+              </p>
+            <p class="sales_r">
+            	<a href="#"><span class="sales_span7"></span></a><em>1</em><u>/509</u><a href="#"><span class="sales_span8"></span></a>
+            </p>
+          </div>
+          <div class="merchants">
+          <ul class="clearfix">
+          	<li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+          	<li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+          	<li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                    <span class="hundred">满100减10</span>
+                </div> 
+            </li>
+            <li>
+            	<div class="cwt">
+                	<div class="cwtborder"></div>
+                    <div class="cwt_img">
+                        <a href="#"><img src="img/nm021.jpg" /></a>
+                            <div class="box">
+                            <div class="opa_box"></div>
+                            <div class="opa_txt">商圈：西红门 大钟寺 虎坊桥 北太平庄 万寿路 公主坟 三元桥 北下关 安贞 广外大街 魏公村 崇文门 木樨地 酒仙桥 五道口</div>
+                            </div>
+                    </div>
+                    <div class="cwt_txt clearfix">
+                        <b><a href="#">【4店通用】橙天嘉禾影城</a></b>
+                        <u>单人影票（含3D）！专业影音放映，尊享视听盛宴，地理位置优越，繁华商圈！</u>
+                        <span class="clearfix"><i class="price1">￥33</i><i class="price2">价值</i><i class="price3">￥120</i></span>
+                        <em>已售49098</em>
+                    </div >
+                    <span class="about"></span>
+                    <span class="envelopes"></span>
+                    <span class="package"></span>
+                    <span class="line"></span>
+                </div> 
+            </li>
+          </ul>
+          </div>
+        </div>
+        <div class="content_right">
+        	<div class="right_pic" id="pic"> 
+            	<p class="show"><a href="#"><img src="img/nm032.jpg" /></a></p>
+            	<p><a href="#"><img src="img/nm033.jpg" /></a></p>
+                <span class="right_pic_a clearfix">
+                	<a href="#" class="action"></a>
+                    <a href="#"></a>
+                </span>
+            </div>
+            <h4>热门专题</h4>
+            <ul class="hot">
+            	<li class="hot1">
+                	<h5><a href="#">跨年聚餐</a></h5>
+                    <p class="hot_tex1"><a href="#">闺蜜基友约起来</a></p>
+                    <p class="hot_tex2"><a href="#"><i>9521609</i>人团购</a></p>
+                </li>
+                <li class="hot2">
+                	<h5><a href="#">跨年聚餐</a></h5>
+                    <p class="hot_tex1"><a href="#">闺蜜基友约起来</a></p>
+                    <p class="hot_tex2"><a href="#"><i>9521609</i>人团购</a></p>
+                </li>
+                <li class="hot3">
+                	<h5><a href="#">跨年聚餐</a></h5>
+                    <p class="hot_tex1"><a href="#">闺蜜基友约起来</a></p>
+                    <p class="hot_tex2"><a href="#"><i>9521609</i>人团购</a></p>
+                </li>
+                <li class="hot4">
+                	<h5><a href="#">跨年聚餐</a></h5>
+                    <p class="hot_tex1"><a href="#">闺蜜基友约起来</a></p>
+                    <p class="hot_tex2"><a href="#"><i>9521609</i>人团购</a></p>
+                </li>
+                <li class="hot5">
+                	<h5><a href="#">跨年聚餐</a></h5>
+                    <p class="hot_tex1"><a href="#">闺蜜基友约起来</a></p>
+                    <p class="hot_tex2"><a href="#"><i>9521609</i>人团购</a></p>
+                </li>
+            </ul>
+            <h4>热门排行榜</h4>
+            <ul class="hot_rank">
+            	<li>
+                    <div class="ranking">
+                            <a href="#"><img src="img/nm039.jpg" /></a>
+                        <div class="ranking_txt clearfix">
+                            <b><a href="#">【九毛九山西面馆】价值100元全场通用电子现金券！</a></b>
+                            <span><u>¥89.99</u><i>¥100</i></span>
+                        </div >
+                        <span class="strip">1</span>
+                    </div>
+                </li>
+            	<li>
+                    <div class="ranking">
+                            <a href="#"><img src="img/nm040.jpg" /></a>
+                        <div class="ranking_txt clearfix">
+                            <b><a href="#">【九毛九山西面馆】价值100元全场通用电子现金券！</a></b>
+                            <span><u>¥89.99</u><i>¥100</i></span>
+                        </div >
+                        <span class="strip">2</span>
+                    </div>
+                </li>
+            	<li>
+                    <div class="ranking">
+                            <a href="#"><img src="img/nm041.jpg" /></a>
+                        <div class="ranking_txt clearfix">
+                            <b><a href="#">【九毛九山西面馆】价值100元全场通用电子现金券！</a></b>
+                            <span><u>¥89.99</u><i>¥100</i></span>
+                        </div >
+                        <span class="strip">3</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+          <div class="page_top">
+             <span>共 <i>45740</i> 条/每页90条</span>
+          </div>
+          <div class="page_bottom clearfix">
+          	<p>
+          	<a href="#" class="current">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a href="#" class="page_sj"></a>
+            </p>
+          </div>        
+    </div>
+</div>
+<div class="foot">
+	<div class="footer">
+    	<ul class="clearfix">
+        	<li>
+            	<h4>用户帮助</h4>
+            	<a href="#">常见团购问题</a>
+                <a href="#">开放API</a>
+            </li>
+            <li>
+            	<h4>手机百度糯米</h4>
+            	<a href="#">百度糯米触屏版</a>
+                <a href="#">下载手机版</a>
+            </li>
+            <li>
+            	<h4>商务合作</h4>
+            	<a href="#">友情链接</a>
+                <a href="#">市场合作</a>
+            </li>
+            <li>
+            	<h4>公司信息</h4>
+            	<a href="#">关于百度糯米</a>
+                <a href="#">百度糯米新浪微博</a>
+                <a href="#">人人网公共主页</a>
+                <a href="#">违规投诉&廉政举报</a>
+            </li>
+            <li class="foot_right">
+				<h3>4006-888-887</h3>
+                <p>客服电话 免长途费周一至周日 9:00-22:00</p>
+                <a href="#"></a>
+            </li>
+        </ul>
+        <div class="foot_b_t clearfix">
+        	<p class="foot_b_t1"></p>
+            <p class="foot_b_t2"></p>
+            <p class="foot_b_t3"></p>
+        </div>
+        <div class="foot_b_b">
+        <p>©2014 nuomi.com  <a href="#">京ICP证060807号京公网安备</a> 京公网安备11010802014106号 <a href="#">工商注册号110000450203508</a> <a href="#">互联网药品信息服务资格证编号（京-经营性-2011-0009）</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
