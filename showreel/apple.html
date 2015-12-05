@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>仿苹果图标++扇形展开</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+
+body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
+
+#div1{position:fixed;left:0;bottom:20%;width:100%;text-align:center;}
+img{width:64px;}
+
+input{position:absolute;left:105px;top:275px;width:50px;height:50px;z-index:2;}
+#div2 {position:absolute;left:50px;top:100px;width:300px; height:300px;border-radius:50%;}
+.sBox {position:absolute;left:0;top:0;width:50px; height:50px;border-radius:50%;background:#3CF;margin-left:-25px;margin-top:-25px;}
+</style>
+<script>
+window.onload=function(){
+	
+	document.title = "仿苹果图标++扇形展开--童剑瑛";
+	
+	var oDiv=document.getElementById('div1');
+	var aImg=oDiv.getElementsByTagName('img');
+	
+	document.onmousemove=function(ev){
+		
+		var oEvt=ev||event;
+		//alert(aImg.length)
+		for(var i=0;i<aImg.length;i++){
+			var a=aImg[i].offsetLeft-oEvt.clientX+aImg[i].offsetWidth/2;
+			var b=aImg[i].offsetTop-oEvt.clientY+aImg[i].offsetHeight/2+oDiv.offsetTop;
+			var dis=Math.sqrt(a*a+b*b);
+			
+			//console.log(b)
+			
+			var scale=1-dis/300;
+			if(scale<0.5) scale=0.5;
+			aImg[i].style.width=128*scale+'px';
+			
+		}
+		
+	};
+	
+	var bBox=document.getElementById('div2');
+	var oBtn=document.getElementById('btn');
+	var r=bBox.offsetWidth/2;
+	var count=5;
+	
+	for(var i=0;i<count;i++){
+		var sBox=document.createElement('div');
+		sBox.className='sBox';
+		document.body.appendChild(sBox);
+		setPos(sBox,0);
+		sBox.rotate=0;
+	}
+	
+	oBtn.onclick=function(){
+		var aBox=document.getElementsByClassName('sBox');
+		this.disabled=true;
+		
+		if(oBtn.value=='展开'){
+			for(var i=0;i<aBox.length;i++){
+		       move(aBox[i],i*(90/(count-1)));	
+		    }
+			oBtn.value='收起';
+		}else{
+			for(var i=0;i<aBox.length;i++){
+		       move(aBox[i],0);	
+		    }
+		    oBtn.value='展开';
+		}
+		
+		
+	};
+	
+	function move(obj,iTarget){
+		var start=obj.rotate;
+		
+		var dis=iTarget-start;
+		var count=Math.round(1000/30);
+		var n=0;
+		
+		clearInterval(obj.timer);
+		
+		obj.timer=setInterval(function(){
+			n++;
+			var a=1-n/count;
+			var cur=start+dis*(1-a*a*a);
+			
+			setPos(obj,cur);
+			obj.rotate=cur;
+			
+			if(n==count){
+			  clearInterval(obj.timer);
+			  oBtn.disabled=false;
+			}
+		},30);
+		
+	}
+	
+	function setPos(obj,deg){
+		var a=Math.sin(d2a(deg))*r;
+		var b=Math.cos(d2a(deg))*r;
+		
+		obj.style.left=bBox.offsetLeft+r+a+'px';
+		obj.style.top=bBox.offsetTop+r-b+'px';
+    }
+	
+	function d2a(n){
+		return n*Math.PI/180;   //角度转弧度
+	}
+	
+	
+};
+</script>
+
+
+</head>
+
+<body>
+<div id="div1">
+   <img src="images/img2/1.png" />
+   <img src="images/img2/2.png" />
+   <img src="images/img2/3.png" />
+   <img src="images/img2/4.png" />
+   <img src="images/img2/5.png" />
+</div>
+<input id="btn" value="展开" type="button">
+<div id="div2">
+</div>
+</body>
+</html>

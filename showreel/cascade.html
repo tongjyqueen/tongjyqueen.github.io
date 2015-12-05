@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>瀑布流</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+body{background:url(images/bg_main.jpg);height:600px;}
+
+#div1{width:1200px;margin:0 auto;}
+#div1 ul{width:320px;margin-right:20px;background:#FFC;float:left;}
+#div1 ul li{width:320px;margin-bottom:10px;background:#CF9;}
+
+</style>
+<script>
+window.onload=function(){
+	
+	document.title = "瀑布流--童剑瑛";
+	
+	var oDiv=document.getElementById('div1');
+	var aUl=oDiv.children;
+	
+	//1 创建li
+	function createLi(){
+		
+		var oLi=document.createElement('li');
+		
+		oLi.style.height=parseInt(50+Math.random()*(300-50))+'px';
+		
+		return oLi;
+		
+	}
+	
+	//2 找最小高度的ul 插入li  插入多个li
+	/*function findUl(){
+		
+		var minUlHeight=9999;
+		var minUlIndex=-1;
+		for(var j=0;j<aUl.length;j++){
+			if(aUl[j].offsetHeight<minUlHeight){
+				minUlHeight=aUl[j].offsetHeight;
+				minUlIndex=j;
+			}
+		}
+		return minUlIndex;
+    }*/
+	
+	function insertToUl(num){
+		
+		for(var i=0;i<num;i++){
+			var minUlHeight=9999;
+			var minUlIndex=-1;
+			for(var j=0;j<aUl.length;j++){
+				if(aUl[j].offsetHeight<minUlHeight){
+					minUlHeight=aUl[j].offsetHeight;
+					minUlIndex=j;
+				}
+		     }
+            aUl[minUlIndex].appendChild(createLi());
+		}
+		
+	}
+	
+	insertToUl(12);
+	
+	//3 滚动到底 再次插入多个li
+	window.onscroll=window.onresize=function(){
+		
+		var scrTop=document.documentElement.scrollTop||document.body.scrollTop;
+		var clientH=document.documentElement.clientHeight;
+		var bodyH=document.body.scrollHeight;
+		
+		if(scrTop+clientH>=bodyH){
+			//alert('到底了');
+			insertToUl(12);
+		
+		 }
+	};
+	
+}
+
+</script>
+</head>
+
+<body>
+<div id="div1">
+  <ul></ul>
+  <ul></ul>
+  <ul></ul>
+</div>
+
+</body>
+</html>

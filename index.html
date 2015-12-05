@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<title>童剑瑛的个人网站</title>
 <link rel="stylesheet" type="text/css" href="css/personalWeb.css" />
 <style>
 /**/
@@ -55,7 +55,7 @@ document.title = "童剑瑛的个人网站";
 <!--top结束-->
   <ul id="ulIndex">
     <!--首页开始-->
-    <li class="box cardBody" style="display:none">
+    <li class="box cardBody" style="display:block">
     <!--背景开始-->
         <div class="bg_box">
             <div class="bg_box_night">
@@ -124,10 +124,28 @@ document.title = "童剑瑛的个人网站";
     <!--首页结束-->
     
     <!--skill开始-->
-    <li class="skill cardBody" style="display:none">
+    <li class="skill cardBody" style="display:none;">
         <img src="images/1.png" class="skill_clound"/>
         <img src="images/3.png" class="skill_clound"/>
         
+       <div class="skin">
+          <div class="square" id="square">
+              <div class="z_front"></div>
+              <div class="z_back"></div>
+              <div class="z_right"></div>
+              <div class="z_left"></div>
+              <div class="z_top"></div>
+              <div class="z_bottom"></div>
+  
+              <span class="s_front"></span>
+              <span class="s_back"></span>
+              <span class="s_right"></span>
+              <span class="s_left"></span>
+              <span class="s_top"></span>
+              <span class="s_bottom"></span>
+          </div>   
+          <div class="skinClick">换肤盒>>点击盒子换肤</div>
+       </div>
         <ul class="skillControll" id="skillControll"> 
             <li class="li1"> 
                <span>
@@ -137,7 +155,7 @@ document.title = "童剑瑛的个人网站";
                     
                     <div class="rotate_img"><img src="images/img4.png"></div>
                     <div class="rotate_con">
-                        <p>精通HTML、HTML5，能够书写语义合理，结构清晰，易维护的HTML结构</p>
+                        <p>熟练使用HTML、HTML5，能够书写语义合理，结构清晰，易维护的HTML结构</p>
                     </div>
                 </span>
             </li>
@@ -149,7 +167,7 @@ document.title = "童剑瑛的个人网站";
                 
                 <div class="rotate_img"><img src="images/img1.1.png"></div>
                 <div class="rotate_con">
-                    <p>精通CSS、CSS3，能够还原视觉设计，并兼容业界承认的主流浏览器</p>
+                    <p>熟练使用CSS、CSS3，能够还原视觉设计，并兼容业界承认的主流浏览器</p>
                 </div>
                 </span>
             </li>
@@ -161,7 +179,7 @@ document.title = "童剑瑛的个人网站";
                 
                 <div class="rotate_img"><img src="images/img5.png"></div>
                 <div class="rotate_con">
-                    <p>精通JavaScript,能够自主编写JS实现相关的前台功能</p>
+                    <p>熟练使用原生JS,能够自主编写JS实现相关的前台功能</p>
                 </div>
                 </span>
             </li>
@@ -173,7 +191,7 @@ document.title = "童剑瑛的个人网站";
                 
                 <div class="rotate_img"><img src="images/img3.png"></div>
                 <div class="rotate_con">
-                    <p>熟悉jQuery等相关类库的使用，有一定的了解</p>
+                    <p>熟练使用jQuery等相关类库的使用</p>
                 </div>
                 </span>
             </li>
@@ -185,7 +203,7 @@ document.title = "童剑瑛的个人网站";
                 
                 <div class="rotate_img"><img src="images/img6.png"></div>
                 <div class="rotate_con">
-                    <p>熟悉AJAX和JSONP的数据交互机制，能够手写AJAX和JSONP的取数函数</p>
+                    <p>熟悉AJAX和JSONP的数据交互机制，能够手写AJAX和JSONP获取函数</p>
                 </div>
                </span>
             </li>
@@ -197,7 +215,7 @@ document.title = "童剑瑛的个人网站";
                 
                 <div class="rotate_img"><img src="images/img2.png"></div>
                 <div class="rotate_con">
-                    <p>对PHP和JAVA语言有一定的了解，便于和后台人员沟通</p>
+                    <p>对面向对象、PHP有一定的了解，便于和后台人员沟通</p>
                 </div>
                 </span>
             </li>
@@ -207,7 +225,7 @@ document.title = "童剑瑛的个人网站";
     <!--skill结束-->
     
     <!--showreel开始-->
-    <li class="showreel">
+    <li class="showreel" style="display:none">
         <img src="images/1.png" class="showreel_clound"/>
         <img src="images/3.png" class="showreel_clound"/>
         <img src="images/3.png" class="showreel_clound"/>
@@ -226,46 +244,42 @@ document.title = "童剑瑛的个人网站";
             </li>
             <li class="moveBox"></li>
         </ol>
-        <ul class="showreel_body">
+        <ul class="showreel_body" id="showreel_body2">
             <img src="images/border.png" class="border" />
-            <li class="showreel_body_li">
+            <li class="showreel_body_li showreel_body_li1" >
                <ol>
-                  <li><span><a href="showreel/css3filter.html" target="_blank">模糊文字</a></span></li>
-                  <li><span><a href="showreel/clock.html" target="_blank" >时钟</a></span></li>
-                  <li><span><a href="showreel/3Dhover.html" target="_blank" >3D划入效果</a></span></li>
-                  <li><span><a href="showreel/hover.html" target="_blank" >移入效果</a></span></li>
-                  <li><span><a href="showreel/baidunuo.html" target="_blank">全站</a></span></li>
-                  <li><span><a href="showreel/centerBig.html" target="_blank" >居中放大</a></span></li>
-                  <li><span><a href="showreel/3Dtranslate.html" target="_blank">3D旋转正方体</a></span></li>
+                  <li><span><a href="showreel/css3filter.html" target="_blank">模糊文字</a></span></span><img src="images/css3filter.png" /></li>
+                  <li><span><a href="showreel/clock.html" target="_blank" >时钟</a></span><img src="images/clock.png" /></li>
+                  <li><span><a href="showreel/3Dhover.html" target="_blank" >3D划入效果</a></span></span><img src="images/3Dtranslate.png" /></li>
+                  <li><span><a href="showreel/hover.html" target="_blank" >移入效果</a></span><img src="images/hover.png" /></li>
+                  <li><span><a href="showreel/baidunuo.html" target="_blank">全站</a></span><img src="images/baidunuo.png" /></li>
+                  <li><span><a href="showreel/centerBig.html" target="_blank" >居中放大</a></span><img src="images/centerBig.png" /></li>
+                  <li><span><a href="showreel/3Dtranslate.html" target="_blank">3D旋转正方体</a></span><img src="images/3Dtranslate.png" /></li>
                </ol>
             </li>
-            <li class="showreel_body_li"  style="z-index:-5;">
-               <ol>
-                  <li><span><a href="showreel/wufenchange.html" target="_blank">无缝切换</a></span></li>
-                  <li><span><a href="showreel/fenkuaimove.html" target="_blank">分块运动</a></span></li>
-                  <li><span><a href="javascript:;">照片墙</a></span></li>
-                  <li><span><a href="javascript:;">放大镜</a></span></li>
-                  <li><span><a href="javascript:;">拉勾网特效</a></span></li>
-                  <li><span><a href="javascript:;">拖拽+弹性碰撞</a></span></li>
-                  <li><span><a href="javascript:;">距离</a></span></li>
-                  <li><span><a href="javascript:;">正则校验+jsonp</a></span></li>
-                  <li><span><a href="javascript:;">瀑布流</a></span></li>
-                  <li><span><a href="javascript:;">自定义滚动条</a></span></li>
-                  <li><span><a href="javascript:;">圆旋转</a></span></li>
-                  <li><span><a href="javascript:;">简易日历</a></span></li>
-                  <li><span><a href="javascript:;">3D图片轮换</a></span></li>
-                  <li><span><a href="javascript:;">仿chrom图标</a></span></li>
-                  <li><span><a href="javascript:;"></a></span></li>
+            <li class="showreel_body_li showreel_body_li2" style="z-index:-5;">
+               <ol id="showreel_body_li2" style="opacity:0;">
+                  <li><span><a href="showreel/wufenchange.html" target="_blank">无缝切换</a></span><img src="images/qq.png" /></li>
+                  <li><span><a href="showreel/fenkuaimove.html" target="_blank">分块运动</a></span><img src="images/qq.png" /></li>
+                  <li><span><a href="showreel/3DpicTransform.html" target="_blank">3D图片轮换</a></span><img src="images/qq.png" /></li>             
+                  <li><span><a href="showreel/Loupe.html" target="_blank">放大镜+简易日历</a></span><img src="images/qq.png" /></li>
+                  <li><span><a href="showreel/fangChromPic.html" target="_blank">仿chrom图标</a></span><img src="images/qq.png" /></li>
+                  <li><span><a href="showreel/DragElastic.html" target="_blank">拖拽+弹性碰撞</a></span><img src="images/qq.png" /></li>
+                  <li><span><a href="showreel/apple.html" target="_blank">仿苹果图标+扇形展开</a></span><img src="images/qq.png" /></li>
+                  <li><span><a href="showreel/zhengzecheck.html" target="_blank">正则校验+jsonp</a></span><img src="images/qq.png" /></li>
+                  <li><span><a href="showreel/cascade.html" target="_blank">瀑布流</a></span><img src="images/qq.png" /></li>
                </ol>
             </li>
-            <li class="showreel_body_li"  style="z-index:-5;">
-                <ol>
-                  <li><span><a href="javascript:;">jsonp</a></span></li>
-                  <li><span><a href="javascript:;">jsonp</a></span></li>
-                  <li><span><a href="javascript:;">jsonp</a></span></li>
-                  <li><span><a href="javascript:;">jsonp</a></span></li>
-                  <li><span><a href="javascript:;">jsonp</a></span></li>
-                  <li><span><a href="javascript:;">jsonp</a></span></li>
+            <li class="showreel_body_li showreel_body_li3"  style="z-index:-5;">
+                <ol style="opacity:0;">
+                  <li><span><a href="showreel/simplePRINT.html" target="_blank">简易画板</a></span><img src="images/simplePRINT.jpg" /></li>
+                  <li><span><a href="showreel/canvasHudu.html" target="_blank">canvas时钟/倒计时</a></span><img src="images/canvasHudu.gif" /></li>
+                  <li><span><a href="showreel/3DPicH5.html" target="_blank">3D图片展示</a></span><img src="images/3DPicH5.png" /></li>
+                  <li><span><a href="showreel/explode.html" target="_blank">爆炸旋转切换效果</a></span><img src="images/explode.png" /></li>
+                  <li><span><a href="showreel/piano.html" target="_blank">简易钢琴</a></span><img src="images/piano.png" /></li>
+                  <li><span><a href="showreel/pieChart.html" target="_blank">SVG动态饼图</a></span><img src="images/pie.png" /></li>
+                  <li><span><a href="showreel/fishing.html" target="_blank">Canvas捕鱼达人</a></span><img src="images/fishing.png" /></li>
+                  <li><span><a href="showreel/juhuasuan.html" target="_blank">仿聚划算手机端</a></span><img src="images/juhuasuan.png" /></li>
                </ol>
             </li>
         </ul>
@@ -279,10 +293,12 @@ document.title = "童剑瑛的个人网站";
         <img src="images/3.png" class="showreel_clound"/>
         <img src="images/bg-landscape.png" style="position:absolute;bottom:0;left:-100px"/>
         <div class="contant_mess">
+           <img src="images/tablet-preview.png" style="width:1000px;height:700px;" />
            <ul>
+              <canvas id="c1" width="276" height="409"></canvas>
               <li><h3>姓名：童剑瑛</h3></li>
               <li><h3>联系方式：18321178717</h3></li>
-              <li><h3>邮箱：xxxxxx</h3></li>
+              <li><h3>邮箱：tjyqueen@sina.cn</h3></li>
            </ul>
            
         </div>

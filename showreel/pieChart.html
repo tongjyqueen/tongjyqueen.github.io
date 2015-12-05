@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="动态饼图" />
+<meta name="copyright" content="动态饼图" />
+<title>动态饼图--童剑瑛</title>
+<style>
+body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
+
+</style>
+<script src="JS/raphael.js"></script>
+<script>
+function d2a(n){
+	return n*Math.PI/180;
+}
+
+window.onload=function (){
+	 document.title = "动态饼图--童剑瑛";
+     var oPage=Raphael(0,0,800,600);
+	 //var oPage = Raphael(0,0,800,600);
+	 
+	 var data=[322, 34, 98, 236, 184];
+	 var sum=0;	
+	 
+	 for(var i = 0; i < data.length; i++){
+		 sum += data[i];
+	 }
+	 
+	 var ang = [];
+	 for(var i = 0; i < data.length; i++){
+		 
+		 ang[i] = 360*data[i]/sum;
+	 }
+	 
+	 var cx = 400, cy = 300, r = 200;
+	 var arrPie=[];
+	 var now=0;
+	for(var i=0;i<ang.length;i++)
+	{
+		pie(now, now+ang[i]);
+		now+=ang[i];
+	}
+	
+
+	 function pie(s,e){
+		 
+		 var path = oPage.path();
+		 //alert(path)
+		 arrPie.push(path);
+		 
+		 var x1 = cx + Math.sin(d2a(s))*r,y1 = cy - Math.cos(d2a(s))*r;
+		 var x2 = cx + Math.sin(d2a(e))*r,y2 = cy - Math.cos(d2a(e))*r;
+		 
+		 path.attr("path",[
+		     "M",cx,cy,
+			 "L",x1,y1,
+			 "A",r,r,0,(e-s>180)?1:0,1,x2,y2,
+		     "Z"
+		 ].join(" "));
+		 
+		 path.attr({fill:"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",stroke:"none"});
+		 
+		 path.hover(function(){
+			 r += 20;
+			 set();
+	     },function(){
+			 r -= 20;
+			 set(); 
+			 
+			 for(var i=0;i<arrPie.length;i++){
+				arrPie[i].animate({opacity: 1}, 700, 'elastic');
+			}
+			 
+		 });
+		 
+		 function set(){
+			 
+			 var x1 = cx + Math.sin(d2a(s))*r,y1 = cy - Math.cos(d2a(s))*r;
+			 var x2 = cx + Math.sin(d2a(e))*r,y2 = cy - Math.cos(d2a(e))*r;
+			 
+			 for(var i = 0; i < arrPie.length; i++){
+				arrPie[i].animate({opacity:0.6},700,"elastic"); 
+			 }
+			 
+			 path.animate({"path":[
+				 "M",cx,cy,
+				 "L",x1,y1,
+				 "A",r,r,0,(e-s>180)?1:0,1,x2,y2,
+				 "Z"
+			 ].join(" "),opacity:1},700,"elastic");
+			 
+		 }
+		 
+	 }
+	
+};
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
+
+
+
+
+
+

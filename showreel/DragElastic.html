@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="拖拽+弹性碰撞" />
+<meta name="copyright" content="拖拽+弹性碰撞" />
+<title>拖拽+弹性碰撞</title>
+<style>
+body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
+
+#box{position:absolute;left:500px;top:300px;width:103px; height:100px;background:url(images/bird3.png);background-size:cover;}
+.box{position:absolute;left:0;top:0;width:2px; height:2px; background:#000;}
+
+#Box div{background-size:cover;}
+#div1{width:50px;height:50px;position:absolute;left:80px;top:80px;background:#F0F;display:block;background:url(images/buffer1.png);}
+#div1 span{position:absolute;left:0;bottom:0;}
+
+
+#div2{width:40px;height:40px;position:absolute;left:70px;top:70px;background:#F3F;background:url(images/buffer1.png);display:block;}
+#div3{width:30px;height:30px;position:absolute;left:60px;top:60px;background:#F6F;background:url(images/buffer1.png);display:block;}
+#div4{width:20px;height:20px;position:absolute;left:50px;top:50px;background:#F9F;background:url(images/buffer1.png);display:block;}
+#div5{width:10px;height:10px;position:absolute;left:46px;top:46px;background:#FCF;background:url(images/buffer1.png);display:block;}
+
+</style>
+<script>
+window.onload = function(){
+	document.title = "拖拽+弹性碰撞--童剑瑛";
+	var oDiv = document.getElementById("box");
+	var speedX = 0;
+	var speedY = 0;
+	var lastX = 0;
+	var lastY = 0;
+	
+	oDiv.onmousedown = function(ev){
+		
+		var oEvent = ev || event;
+		var disX = oEvent.clientX - oDiv.offsetLeft;
+		var disY = oEvent.clientY - oDiv.offsetTop;
+		
+		document.onmousemove = function(ev){
+			
+			var oEvent = ev || event;
+			
+			oDiv.style.left = oEvent.clientX - disX + "px";
+			oDiv.style.top = oEvent.clientY - disY + "px";
+			
+			speedX = oDiv.offsetLeft - lastX;
+			speedY = oDiv.offsetTop - lastY;
+			
+			lastX = oDiv.offsetLeft;
+			lastY = oDiv.offsetTop;
+		};
+		document.onmouseup = function(){
+			document.onmousemove = null;
+			document.onmouseup = null;
+			oDiv.releaseCapture && oDiv.releaseCapture();
+			
+			move(oDiv);
+		};
+		
+		oDiv.setCapture && oDiv.setCapture();
+		return false;
+	};
+	
+	function move(obj){
+		
+		var timer = null;
+		
+		clearInterval(timer);
+		
+		timer = setInterval(function(){
+			
+		    speedY += 1;
+			
+			var l = obj.offsetLeft + speedX;
+			var t = obj.offsetTop + speedY;
+		
+			if(l >= document.documentElement.clientWidth - obj.offsetWidth){
+				oDiv.style.background = "url(images/bird.png)";
+				oDiv.style.backgroundSize = "cover";
+				speedX *= -0.7;
+				speedY *= 0.7;
+			   l = document.documentElement.clientWidth - obj.offsetWidth;
+			} else if (l <= 0){
+				oDiv.style.background = "url(images/bird2.png)";
+				oDiv.style.backgroundSize = "cover";
+				speedX *= -0.7;
+				speedY *= 0.7;
+				l = 0;
+			}
+			
+			if(t >= document.documentElement.clientHeight - obj.offsetHeight){
+				speedY *= -0.7;
+				speedX *= 0.7;
+			    t = document.documentElement.clientHeight - obj.offsetHeight;
+			} else if (t <= 0){
+				speedY *= -0.7;
+				speedX *= 0.7;
+				t = 0;
+			}
+			
+			
+			obj.style.left = l + "px";
+			obj.style.top = t + "px";
+			
+			if(Math.abs(speedX) < 1){
+				speedX = 0;
+			}
+			if(Math.abs(speedY) < 1){
+				speedY = 0;
+			}
+			
+			if(speedX == 0 && speedY == 0 && t == document.documentElement.clientHeight - obj.offsetHeight){
+				clearInterval(timer);
+			}
+			
+		},30);
+		
+	}
+	
+	
+	var oBox=document.getElementById('Box');
+	var oDiv1=document.getElementById('div1');
+	var oDiv2=document.getElementById('div2');
+	var oDiv3=document.getElementById('div3');
+	var oDiv4=document.getElementById('div4');
+	var oDiv5=document.getElementById('div5');
+	 
+	oBox.onmousedown = function(ev){
+		
+		var oEvent = ev || event;
+		var disX = oEvent.clientX - oDiv.offsetLeft;
+		var disY = oEvent.clientY - oDiv.offsetTop;
+		
+		document.onmousemove=function(ev){
+			
+			var oEvt=ev||evt;
+			
+			oDiv1.style.display = 'block';
+			oDiv1.style.left = oEvt.clientX+'px';
+			oDiv1.style.top =oEvt.clientY+'px';
+			
+			setTimeout(function(){
+				
+				oDiv2.style.display='block';
+			    oDiv2.style.left=oEvt.clientX+(-10)+'px';
+			    oDiv2.style.top =oEvt.clientY+(-10)+'px';
+				
+			},100);
+			setTimeout(function(){
+				
+				oDiv3.style.display='block';
+			    oDiv3.style.left=oEvt.clientX+(-20)+'px';
+			    oDiv3.style.top =oEvt.clientY+(-20)+'px';
+				
+			},200);
+			
+			setTimeout(function(){
+				
+				oDiv4.style.display='block';
+			    oDiv4.style.left=oEvt.clientX+(-30)+'px';
+			    oDiv4.style.top =oEvt.clientY+(-30)+'px';
+				
+			},300);
+			setTimeout(function(){
+				
+				oDiv5.style.display='block';
+			    oDiv5.style.left=oEvt.clientX+(-35)+'px';
+			    oDiv5.style.top =oEvt.clientY+(-35)+'px';
+				
+			},400);
+			
+		};
+		document.onmouseup = function(){
+			document.onmousemove = null;
+			document.onmouseup = null;
+			oDiv.releaseCapture && oDiv.releaseCapture();
+			
+		};
+		
+		oDiv.setCapture && oDiv.setCapture();
+		return false;
+	};
+};
+</script>
+</head>
+
+<body>
+
+<div id="box">
+  <span>扔我扔我</span>
+</div>
+
+<div id="Box">
+    
+    <div id="div1"><span>拖我</span></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+</div>
+</body>
+</html>

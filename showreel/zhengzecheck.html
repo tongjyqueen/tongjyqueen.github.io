@@ -6,17 +6,39 @@
 <style>
 *{margin:0;padding:0;list-style:none;}
 body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
-div{width:500px;height:200px;background:#FFC;margin:30px auto;padding:50px;}
+div{width:500px;height:310px;background:#FFC;margin:30px auto;padding:50px;}
 input{height:30px;}
 strong{color:#999;font-weight:normal;}
+li{margin-top:10px;}
 </style>
+<script src="JS/jsonp2.js"></script>
 <script>
 window.onload = function(){
-  document.title = "正则校验--童剑瑛";
+  document.title = "正则校验+jsonp--童剑瑛";
   var oTxt1 = document.getElementById('txt1');
   var oS1 = document.getElementById('s1');
   var oTxt2 = document.getElementById('txt2');
   var oS2 = document.getElementById('s2');
+  
+  var oIpt=document.getElementById('ipt1');
+  var oBtn=document.getElementById('btn1');	
+  var oUl=document.getElementById('ul1');	
+	oBtn.onclick=function(){
+		//接口：http://virtual.paipai.com/extinfo/GetMobileProductInfo?mobile=13923121860&amount=10000&callname=abc
+	    jsonp({
+		   url: 'http://virtual.paipai.com/extinfo/GetMobileProductInfo',
+		   data: {mobile: oIpt.value, amount: 10000},
+		   success: function(json){
+			   oUl.children[0].children[0].innerHTML = json.mobile;
+			   oUl.children[1].children[0].innerHTML = json.province;
+			   oUl.children[2].children[0].innerHTML = json.cityname;
+			   oUl.children[3].children[0].innerHTML = json.isp;
+		   },
+		   error: function(){},
+		   callbackkey: 'callname',
+		   timeout: 3000	
+		});	
+	};
   
   oTxt1.focus();
   oTxt1.onblur = function(){
@@ -67,7 +89,17 @@ window.onload = function(){
 <strong>1234567@sina.com</strong>
 
 <span id="s2"></span>
+<br />
+<br />
 
+请输入手机号：<input type="text" id="ipt1">
+<input type="button" value="查询归属地" id="btn1">
+<ul id="ul1">
+	<li>号码：<span></span></li>
+	<li>省份：<span></span></li>
+	<li>城市：<span></span></li>
+	<li>运营商：<span></span></li>
+</ul>
 
 
 </div>

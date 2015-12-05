@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="canvas时钟/倒计时--童剑瑛 - DJS.com" />
+<meta name="copyright" content="canvas时钟/倒计时--童剑瑛 - DJS.com" />
+<title>canvas时钟/倒计时--童剑瑛</title>
+<style>
+*{margin:0;padding:0;}
+body{ background:#000;}
+#c1{ background:#fff;}
+
+#DJS { position: absolute;right:0;top:0;width: 600px; height: 600px;/* background: url(images/bg1.jpg) no-repeat;*/ overflow:hidden;}
+
+#fill_in { font-size: 14px; color: #ccc; font-weight: bold; position: absolute; top: 108px; left: 136px; }
+#fill_in input { background: #ccc; border: 0;border-radius:10%; text-align: center; font-weight: bold; font-size: 14px; color: #ccc; float: left; overflow: hidden;height: 18px; line-height: 18px; color: #666; position: relative; top: 2px; outline:none;}
+#fill_in span { float: left; padding-top: 4px; text-align:center; }
+#fill_in .long_text { width: 80px;  }
+#fill_in .text { width: 50px; }
+#fill_in .title { width: 60px; }
+#fill_in .space1 { width: 36px; }
+#fill_in .space2 { width: 28px; }
+#fill_in .space3 { padding-left: 8px; }
+
+.go { position: absolute; top: 155px; left: 237px; width: 150px; height: 150px; background:pink;text-align:center;line-height:150px;font-size:30px;font-weight:bold;color:#F03;border-radius:50%;}
+.go:hover { background: red; color:#fff;}
+.active {position: absolute; top: 155px; left: 237px; width: 150px; height: 150px;filter:alpha(opacity:0); opacity:0;}
+
+#target { width: 100%; text-align: center; color: #ccc; font-weight: bold; position: absolute; left: 0; top: 336px; font-family: arial; }
+#target strong { color: #fef58c; }
+
+#date { position: absolute; top: 392px; right: 92px; color: #fc3; font-size: 48px; font-family: arial; font-weight: bold; }
+#date p { position: absolute; top: 0; }
+#day { right: 340px; }
+#hour { right: 236px; }
+#min { right: 102px; }
+#sec { right: 0; }
+
+h1 { position: absolute; bottom: 0; right: 0; }
+h1 a { position: absolute; right: 40px; bottom: 30px; width: 292px; height: 72px; }
+
+
+</style>
+<script>
+function fillZero(n){
+	
+   return n<10 ? "0" + n : "" +n;
+}
+function d2a(n){
+	return n*Math.PI/180;
+}
+window.onload = function(){
+  document.title = "canvas时钟/倒计时--童剑瑛";
+	
+  var oDiv=document.getElementById('fill_in');
+  var aIpt=oDiv.getElementsByTagName('input');
+  var oDate=document.getElementById('date');
+  var oDay=document.getElementById('day');
+  var oHour=document.getElementById('hour');
+  var oMin=document.getElementById('min');
+  var oSec=document.getElementById('sec');
+  var oP=document.getElementById('target');
+  var oGo=document.getElementById('go');
+  var oT= null;
+  var timer=null;
+  
+  
+
+  oGo.onclick=function(){
+	var tY=aIpt[0].value-0;
+	var tM=aIpt[1].value-1;
+	var tD=aIpt[2].value-0;
+	var target=new Date();
+	target.setFullYear(tY,tM,tD);
+	target.setHours(0,0,0);
+	oT=target.getTime();
+	timer=setInterval(tick,1000);  
+	
+	oP.innerHTML = "现在距离 -<strong>"+tY+"年"+(tM+1)+"月"+tD+"日</strong>-还剩：";
+
+	
+   };
+  
+  function tick(){
+	  var now=new Date();
+	  var s=parseInt((oT-now.getTime())/1000);
+	  
+	  var oD=fillZero(parseInt(s/86400));
+	  oDay.innerHTML=oD;
+	  s%=86400;
+	  var oH=fillZero(parseInt(s/3600));
+	  oHour.innerHTML=oH;
+	  s%=3600;
+	  var oM=fillZero(parseInt(s/60));
+	  oMin.innerHTML=oM;
+	  var oS=fillZero(s%60)
+	  oSec.innerHTML=oS;
+  
+  }
+	
+	
+	
+	var oC = document.getElementById("c1");
+	var gd = oC.getContext("2d");
+	 
+    var cx = 300;
+	var cy = 200;
+	
+	function drawArc(cx,cy,r,start,end,color){
+		
+		start -= 90;
+		end -= 90;
+		
+		gd.beginPath();
+		gd.lineWidth = "20";
+		gd.strokeStyle = color;
+		gd.arc(cx,cy,r,d2a(start),d2a(end),false);
+	    gd.stroke();
+	}
+	
+	setInterval(function(){
+		
+		gd.clearRect(0,0,oC.width,oC.height);
+		
+		var oDate = new Date();
+		var h = oDate.getHours();
+		var m = oDate.getMinutes();
+		var s = oDate.getSeconds();
+		var ms = oDate.getMilliseconds();
+
+		drawArc(cx,cy,80,0,h%12*30 + m/60*30,"#f0f");
+		drawArc(cx,cy,100,0,m*6 + s/60*6,"#ff0");
+		
+		
+		drawArc(cx,cy,120,0,s*6 + ms/1000*6,"#0ff");
+		drawArc(cx,cy,140,0,ms*360/1000,"#00f");
+		
+		var str = fillZero(h) + ":" + fillZero(m) +":" + fillZero(s);
+		var w = gd.measureText(str).width;
+         console.log(str);
+		gd.font = "bold 30px kaiti";
+		gd.fillStyle = "#bad";
+		gd.fillText(str,cx - w/2,cy + 15);
+		
+	},16);
+	
+	var oBtn = document.getElementById("btn");
+	
+	oBtn.onclick = function(){
+		var url = oC.toDataURL("image/jpeg");
+		
+		//var oImg = new Image();
+		//oImg.src = url;
+		//document.body.appendChild(oImg);
+		//alert(url)
+		window.open(url);
+	};
+	
+};
+
+</script>
+</head>
+
+<body>
+<input id="btn" value="导出图片" type="button">
+<canvas id="c1" width="600" height="600"></canvas>
+
+<div id="DJS">
+    <div id="fill_in">
+        <span class="title">请输入：</span>
+        <input type="text" class="long_text" value="2016" />
+        <span class="space1">年</span>
+        <input type="text" class="text" value="12" />
+        <span class="space2">月</span>
+        <input type="text" class="text" value="25" />
+        <span class="space3">日</span>
+    </div>
+
+    <a href="javascript:;" id="go" class="go">Go</a>
+
+    <p id="target">
+        现在距离 -
+        <strong>2016年12月25日</strong>
+        - 还剩：
+    </p>
+
+    <div id="date">
+        <p id="day">00</p>
+        <p id="hour">00</p>
+        <p id="min">00</p>
+        <p id="sec">00</p>
+    </div>
+
+</div>
+
+
+</body>
+</html>

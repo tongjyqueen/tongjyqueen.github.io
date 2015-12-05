@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>放大镜</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
+#div1{width:300px;height:300px;position:relative;margin-left:50px;}
+#div1 img{width:300px;height:300px;}
+#mark{width:80px;height:80px;position:absolute;left:0;top:0;background:#FF9;display:none;}
+#div2{width:300px;height:300px;position:absolute;left:370px;top:0;overflow:hidden;display:none;}
+#img{position:absolute;left:0;top:0;}
+
+</style>
+<script src="JS/myCalendar3.js"></script>
+<script>
+window.onload=function(){
+	document.title = "放大镜--童剑瑛";
+	
+
+  function fillZero(n){
+	  return n<10?'0'+n :''+n;
+  }
+
+	
+	
+	var oDiv1=document.getElementById('div1');
+	var oMark=document.getElementById('mark');
+	var oDiv2=document.getElementById('div2');
+	var oImg=document.getElementById('img');
+	
+	oDiv1.onmouseover=function(ev){
+		var oEvt=ev||event;
+		var formObj=oEvt.fromElement||oEvt.relatedTarget;
+		if(formObj&&oDiv1.contains(formObj)){
+			return;
+		}
+		oMark.style.display=oDiv2.style.display='block';
+	};
+	oDiv1.onmouseout=function(ev){
+		var oEvt=ev||event;
+		var toObj=oEvt.toElement||oEvt.relatedTarget;
+		if(toObj&&oDiv1.contains(toObj)){
+			return;
+		}
+		oMark.style.display=oDiv2.style.display='none';
+	};
+	oDiv1.onmousemove=function(ev){
+		var oEvt=ev||event;
+		
+		var l=oEvt.clientX- 50 -oMark.offsetWidth/2;  
+		var t=oEvt.clientY - oMark.offsetHeight/2;
+		
+		if(l<=0){l=0}
+		if(t<=0){t=0}
+		if(l>=oDiv1.offsetWidth-oMark.offsetWidth){l=oDiv1.offsetWidth-oMark.offsetWidth}
+		if(t>=oDiv1.offsetHeight-oMark.offsetHeight){t=oDiv1.offsetHeight-oMark.offsetHeight}
+		
+		oMark.style.left=l+'px';
+		oMark.style.top=t+'px';
+		
+		//控制大图
+		//img.left=mark.left/(div1.w-mark.w)*(img.w-div2.w)
+		
+		oImg.style.left=-l/(oDiv1.offsetWidth-oMark.offsetWidth)*(oImg.offsetWidth-oDiv2.offsetWidth)+'px';
+		oImg.style.top=-t/(oDiv1.offsetHeight-oMark.offsetHeight)*(oImg.offsetHeight-oDiv2.offsetHeight)+'px';
+		
+				
+	};
+	
+	var oText1 = document.getElementsByName("beginDate")[0];
+	var oText2 = document.getElementsByName("endDate")[0];
+	myCalendar(oText1);
+	myCalendar(oText2);
+	
+};
+</script>
+
+
+</head>
+
+<body>
+
+<div class="box">
+    <div id="div1">
+      <img src="images/pig3.jpg" />
+      <div id="mark"></div>
+    </div>
+    <div id="div2">
+       <img src="images/pig3.jpg" id="img"/>
+    </div>
+</div>
+</br>
+</br>
+<form>
+    开始时间：<input  name="beginDate" type="text" value="" />
+    结束时间：<input  name="endDate" type="text" value="" />
+    <input  type="submit"/>
+</form>
+
+
+
+</body>
+</html>

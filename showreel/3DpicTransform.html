@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="3D图片轮换" />
+<meta name="copyright" content="3D图片轮换" />
+<title>3D图片轮换</title>
+<style>
+
+*{margin:0;padding:0;list-style:none;}
+body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
+#ul1{ position:relative;width:480px; height:260px; margin:200px auto;}
+#ul1 li{position:absolute;left:0;top:0;width:100%;height:100%;display:none;transform:perspective(800px) rotateY(0deg);opacity:0;transition:1s all ease;}
+#ul1 li img{width:100%;height:100%;}
+
+#ul1 li.l2{display:block;transform:perspective(800px) translateX(-300px) rotateY(45deg);opacity:0.3;z-index:1;}
+#ul1 li.l1{display:block;transform:perspective(800px) translateX(-200px) rotateY(35deg);opacity:0.7;z-index:2;}
+#ul1 li.cur{ display:block; z-index:5;opacity:1;}
+#ul1 li.r1{display:block; transform: perspective(800px) translateX(200px) rotateY(-45deg);z-index:2;opacity:0.7;}
+#ul1 li.r2{display:block; transform: perspective(800px) translateX(300px) rotateY(-45deg);z-index:1; opacity:0.3;}
+
+</style>
+<script>
+
+window.onload = function(){
+	document.title = "3D图片轮换--童剑瑛";
+	var oPrev = document.getElementById("prev");
+	var oNext = document.getElementById("next");
+	var oUl = document.getElementById("ul1");
+	var aLi = oUl.children;
+	
+	var bReady = true;
+	
+	var aClass = [];
+	
+	for(var i = 0; i < aLi.length; i++){
+		aClass.push(aLi[i].className);
+	}
+	
+	oPrev.onclick = function(){
+		if(!bReady) return;
+		bReady = false;
+		
+		aClass.push(aClass.shift());
+		tab();
+	};
+	
+	oNext.onclick = function(){
+		if(!bReady) return;
+		bReady = false;
+		
+		aClass.unshift(aClass.pop());
+		tab();
+	};
+	
+	function tab(){
+		for(var i = 0; i < aLi.length; i++){
+			aLi[i].className = aClass[i];
+		}
+		
+		var oCur = document.querySelector(".cur");
+		
+		oCur.addEventListener("transitionend",function(){ //transitionend 动画结束事件 只能绑定
+			 bReady = true;
+		},false);	
+		
+	}
+	
+};
+</script>
+</head>
+
+<body>
+<input id="prev" type="button" value="上一个" />
+<input id="next" type="button" value="下一个" />
+<ul id="ul1">
+	<li class="l2"><img src="img1/catt1.jpg"/></li>
+	<li class="l1"><img src="img1/catt2.jpg"/></li>
+	<li class="cur"><img src="img1/catt3.jpg"/></li>
+	<li class="r1"><img src="img1/catt4.jpg"/></li>
+	<li class="r2"><img src="img1/catt5.jpg"/></li>
+	<li><img src="img1/catt6.jpg"/></li>
+	<li><img src="img1/catt7.jpg"/></li>
+	<li><img src="img1/catt8.jpg"/></li>
+	<li><img src="img1/catt9.jpg"/></li>
+	<li><img src="img1/catt10.jpg"/></li>
+	<li><img src="img1/catt11.jpg"/></li>
+	<li><img src="img1/catt12.jpg"/></li>
+</ul>
+
+</body>
+</html>

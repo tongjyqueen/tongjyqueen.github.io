@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="3D图片" />
+<meta name="copyright" content="3D图片" />
+<title>3D图片 - www.zhinengshe.com</title>
+<style>
+html{ overflow:hidden;}
+*{margin:0;padding:0;list-style:none;}
+
+body{ background:#000;}
+div{font-size:22px;font-weight:bold;color:#fff;}
+#ul1{position:relative;width:133px; height:200px; margin:200px auto;
+transform:perspective(800px)  rotateX(-15deg) rotateY(0deg) ;
+transform-style:preserve-3d;  
+
+}
+
+#ul1 li{ position:absolute;left:0;top:0;width:100%; height:100%;transition:1s all ease; transform: rotateY(0deg) translateZ(1px);border-radius:4px; box-shadow:0 0 10px #fff;}
+
+#ul1 li img{width:100%; height:100%;}
+
+#ul1:active{transform:perspective(800px) rotateY(360deg) rotateX(-15deg);}
+
+</style>
+<script>
+
+window.onload = function(){
+	document.title = "3D图片--童剑瑛";
+	var oUl = document.getElementById("ul1");
+	var aLi = oUl.children;
+	var len = aLi.length;
+	var i = len - 1;
+	var timer = null;
+	timer = setInterval(function(){
+		
+		aLi[i].style.transform = " rotateY("+360/len*i+"deg) translateZ(300px)";
+		
+		i--;
+		if(i == -1){
+			clearInterval(timer);
+		}	
+	},300);
+	
+	
+	
+	var speedX = 0;
+	var speedY = 0;
+	var lastx = 0;
+	var lasty = 0;
+	
+	var y = 0;
+	var x = 150;
+	var timer = null;
+	document.onmousedown = function(ev){
+		var disX = ev.clientX - y;
+		var disY = ev.clientY - x;	
+		clearInterval(timer);
+		
+		document.onmousemove = function(ev){
+			y = ev.clientX - disX;
+			x = ev.clientY - disY;
+			
+			if(x > 600){
+				x = 600;
+			} else if(x < -600){
+				x = -600;
+			}
+			
+			oUl.style.transform = "perspective(800px)  rotateX("+-x/10+"deg) rotateY("+y/10+"deg) "; 	
+			
+			speedX = x - lastx;
+			speedY = y - lasty;
+			
+			lastx = x;
+			lasty = y;
+			
+		};
+		
+		document.onmouseup = function(){
+			document.onmousemove = null;
+			document.onmouseup = null;	
+			
+			clearInterval(timer);
+			timer = setInterval(function(){
+				x += speedX;
+				y += speedY;
+				
+				speedX *= 0.95;
+				speedY *= 0.95; 
+				
+				if(x > 600){
+					x = 600;
+				} else if(x < -600){
+					x = -600;
+				}
+				
+				if(Math.abs(speedX) < 1){
+					speedX = 0;
+				}
+				if(Math.abs(speedY) < 1){
+					speedY = 0;
+				}
+				
+				if(speedX == 0 && speedY == 0){
+					clearInterval(timer);
+				}
+				 
+				oUl.style.transform = "perspective(800px)  rotateX("+-x/10+"deg) rotateY("+y/10+"deg) ";
+			
+			},30);
+			
+			 
+		};
+		return false;
+	}
+ 
+		
+	
+};
+
+</script>
+</head>
+
+<body>
+
+<div>可随意拖拽，甩动</div>
+<ul id="ul1">
+	<li><img src="img1/catt1.jpg"/></li>
+	<li><img src="img1/catt2.jpg"/></li>
+	<li><img src="img1/catt3.jpg"/></li>
+	<li><img src="img1/catt4.jpg"/></li>
+	<li><img src="img1/catt5.jpg"/></li>
+	<li><img src="img1/catt6.jpg"/></li>
+	<li><img src="img1/catt7.jpg"/></li>
+	<li><img src="img1/catt8.jpg"/></li>
+	<li><img src="img1/catt9.jpg"/></li>
+	<li><img src="img1/catt10.jpg"/></li>
+	<li><img src="img1/catt11.jpg"/></li>
+</ul>
+
+
+</body>
+</html>

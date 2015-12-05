@@ -1,0 +1,138 @@
+*{margin:0;padding:0;list-style:none;}
+html{font-size:32px;}
+body{ background:white;}
+.clearfix:after{clear: both;content:".";height: 0;display: block;visibility: hidden;}
+.title{width:10rem; height:1.578125rem; background:#fafafa; overflow:hidden;}
+.title .icon_back{width:1.890625rem; height:0.875rem; margin-left:0.53125rem; margin-top:0.328125rem; background:url(../images/icon_back.png) no-repeat; background-size:100% 100%;}
+
+.banner{ position:relative;width:10rem; height:4.953125rem;}
+
+.banner ul{ position:absolute;left:0;top:0;}
+.banner ul li{float:left;width:10rem; height:4.140625rem;}
+.banner ul li img{width:100%; height:100%;}
+
+.banner ol{ position:absolute;left:50%;bottom:0.328125rem; margin-left:-0.703125rem;width:1.40625rem; height:0.15625rem;}
+.banner ol li{float:left;width:0.15625rem; height:0.15625rem; border-radius:50%;background:#ccc; margin-right:0.15625rem;}
+.banner ol li.active{ background:#f40;}
+.banner ol li:nth-last-child(1){ margin-right:0;}
+.content1{width: 10rem;margin-top: 0.5rem;}
+.content1 ul{width: 9rem;margin: 0 auto;}
+.content1 ul li{text-align:center;line-height:0.9rem;width:1.6rem;height: 3rem;float: left;margin-right: 0.81rem;margin-bottom: 0.2rem;}
+.content1 ul li:nth-child(4){margin-right: 0rem;}
+.content1 ul li:nth-child(8){margin-right: 0rem;}
+.content1 ul li img{width:1.6rem;height: 1.6rem;}
+.content1 ul li span{font-size:0.5rem;color: #808080;margin-top: 0.2rem;}
+.content2{width: 10rem;}
+.content2_1{width: 9.375rem;height: 1.125rem;margin: 0 auto;border-bottom: 0.0625rem solid #dcdcdc;}
+.content2_1 h3{float:left;padding-left: 0.28125rem;margin-top:0.234375rem;font-size: 0.4375rem;width:3.125rem;height: 0.46875rem;line-height: 0.46875rem;color: #333333;border-left:0.0625rem solid #d51938;}
+.content2_1 span{float:right;width:1.515625rem;height: 100%;font-size: 0.4375rem;line-height: 1.125rem;color: #333333;margin-right: 0rem;font-weight: bold;}
+.content3{width:10rem;margin-top:0.484375rem}
+.content3 ul{width: 9.375rem;margin: 0 auto;}
+.content3 ul li{clear:both;margin-bottom: 0.3125rem;}
+.content3 ul li>span{display: block;height: 1.875rem;width: 0.9375rem;float: left;text-align: center;line-height: 1.875rem;font-size: 0.75rem;color: white;}
+.content3 ul li .s1{background: #e00202;}
+.content3 ul li .s2{background: #ff4800;}
+.content3 ul li .s3{background: #ff7300;}
+.content3 ul li .s4{background: #ff9d00;}
+.content3 ul li .s5{background: #ffa800;}
+.content3 ul li .s6{background: #ffb400;}
+.content3 ul li .s7{background: #ffba00;}
+.content3 ul li .s8{background: #fcd000;}
+.content3 ul li .s9{background: #ffd719;}
+.content3 ul li .s10{background: #ffe152;}
+
+.content3 ul li img{float:left;width:2.8125rem;height:1.875rem;}
+.content3 ul li div{float:left;font-weight:bold;width: 3.28125rem;height: 1.875rem;}
+.content3 ul li div p{padding-top:0.53125rem;width: 100%;height: 0.484375rem;line-height: 0.484375rem;text-align:center;color: #999999;font-size:0.375rem ;font-family: "微软雅黑";}
+.content3 ul li div p span:nth-child(1){display: inline-block;font-family: "微软雅黑";}
+.content3 ul li div p span:nth-child(1) em{color: #ca2e48;font-style:normal;}
+.content3 ul li div p span:nth-child(2){display: inline-block;padding-left: 0.390625rem;}
+.content3 ul li a{text-decoration: none;float:left;width: 1.5rem;display: inline-block;height:1rem;line-height:1rem;margin-top: 0.625rem;padding-right: 0.5rem;padding-left:0.3rem;background: url(../images/Rounded-Rectangle-4-copy1.png) no-repeat 1.4rem 0.2rem;color: #d51938;font-size: 0.5rem;background-size: 0.625rem 0.625rem;font-weight: bold;font-family: "Microsoft YaHei UI Light";}
+.content4{width: 10rem;height: 1.25rem;margin-top: 0.3125rem;margin-bottom:0.46875rem;}
+.content4 div{width: 9.375rem;height: 1.25rem;background: #f5f5f5;margin: 0 auto;}
+.content4 div span{display:block;padding: 0.375rem 2.96875rem;width: 3.4375rem;font-size: 0.4375rem;color:#666666;font-family: "微软雅黑";font-weight: 600;background: url(../images/Rounded-Rectangle-4-copy1.png) no-repeat right 0.3125rem top 0.40625rem;background-size:0.625rem 0.625rem;}
+.content5{width: 10rem;height: 5.53125rem;}
+.content5>div{position:relative;width: 9.375rem;height: 100%;margin: 0 auto;display: -webkit-box;}
+.content5>div div{width: 2.34375rem;font-size: 0.4375rem;font-family: "微软雅黑";color: white;text-align: center;line-height: 0.84375rem;background: #ff3900;}
+.content5>div img{width: 1.8125rem;height: 2.53125rem;position: absolute;left: 0;bottom: 0;}
+.content5>div ul{-webkit-box-flex: 1;}
+.content5 ul li{color:#cfcfcf;float:left;width: 2.296875rem;height: 1.34375rem;border-right: 0.03125rem solid #eeeeee;border-bottom: 0.03125rem solid #eeeeee;font-size: 0.4375rem;line-height: 1.34375rem;text-align: center;font-family: "微软雅黑";font-weight: 500;}
+.content5 ul li:nth-child(1){color: #d51942;border-left: 0.03125rem solid #eeeeee;border-top: 0.03125rem solid #eeeeee;}
+.content5 ul li:nth-child(2){border-top: 0.03125rem solid #eeeeee;}
+.content5 ul li:nth-child(3){border-top: 0.03125rem solid #eeeeee;}
+.content5 ul li:nth-child(4){border-left: 0.03125rem solid #eeeeee;}
+.content5 ul li:nth-child(6){color: #d51942;}
+.content5 ul li:nth-child(7){border-left: 0.03125rem solid #eeeeee;}
+.content5 ul li:nth-child(8){color: #d51942;}
+.content5 ul li:nth-child(10){border-left: 0.03125rem solid #eeeeee;}
+.content6{width: 10rem;height: 1.25rem;margin-top: 0.3125rem;margin-bottom:0.46875rem;}
+.content6 div{width: 9.375rem;height: 1.25rem;background: #f5f5f5;margin: 0 auto;}
+.content6 div span{display:block;padding: 0.375rem 2.96875rem;width: 3.4375rem;font-size: 0.4375rem;color:#666666;font-family: "微软雅黑";font-weight: 600;background: url(../images/Rounded-Rectangle-4-copy1.png) no-repeat right 0.3125rem top 0.40625rem;background-size:0.625rem 0.625rem;}
+.content7{width: 10rem;height: 5.53125rem;}
+.content7>div{position:relative;width: 9.375rem;height: 100%;margin: 0 auto;display: -webkit-box;}
+.content7>div div{width: 2.34375rem;font-size: 0.4375rem;font-family: "微软雅黑";color: white;text-align: center;line-height: 0.84375rem;background: #ff3900;}
+.content7>div img{width: 1.8125rem;height: 2.53125rem;position: absolute;left: 0;bottom: 0;}
+.content7>div ul{-webkit-box-flex: 1;}
+.content7 ul li{color:#cfcfcf;float:left;width: 2.296875rem;height: 1.34375rem;border-right: 0.03125rem solid #eeeeee;border-bottom: 0.03125rem solid #eeeeee;font-size: 0.4375rem;line-height: 1.34375rem;text-align: center;font-family: "微软雅黑";font-weight: 500;}
+.content7 ul li:nth-child(1){color: #d51942;border-left: 0.03125rem solid #eeeeee;border-top: 0.03125rem solid #eeeeee;}
+.content7 ul li:nth-child(2){border-top: 0.03125rem solid #eeeeee;}
+.content7 ul li:nth-child(3){border-top: 0.03125rem solid #eeeeee;}
+.content7 ul li:nth-child(4){border-left: 0.03125rem solid #eeeeee;}
+.content7 ul li:nth-child(6){color: #d51942;}
+.content7 ul li:nth-child(7){border-left: 0.03125rem solid #eeeeee;}
+.content7 ul li:nth-child(8){color: #d51942;}
+.content7 ul li:nth-child(10){border-left: 0.03125rem solid #eeeeee;}
+.content8{width: 10rem;height: 1.25rem;margin-top: 0.3125rem;margin-bottom:0.46875rem;}
+.content8 div{width: 9.375rem;height: 1.25rem;background: #f5f5f5;margin: 0 auto;}
+.content8 div span{display:block;padding: 0.375rem 2.96875rem;width: 3.4375rem;font-size: 0.4375rem;color:#666666;font-family: "微软雅黑";font-weight: 600;background: url(../images/Rounded-Rectangle-4-copy1.png) no-repeat right 0.3125rem top 0.40625rem;background-size:0.625rem 0.625rem;}
+.content9{width: 10rem;height: 5.53125rem;}
+.content9>div{position:relative;width: 9.375rem;height: 100%;margin: 0 auto;display: -webkit-box;}
+.content9>div div{width: 2.34375rem;font-size: 0.4375rem;font-family: "微软雅黑";color: white;text-align: center;line-height: 0.84375rem;background: #ff3900;}
+.content9>div img{width: 1.8125rem;height: 2.53125rem;position: absolute;left: 0;bottom: 0;}
+.content9>div ul{-webkit-box-flex: 1;}
+.content9 ul li{color:#cfcfcf;float:left;width: 2.296875rem;height: 1.34375rem;border-right: 0.03125rem solid #eeeeee;border-bottom: 0.03125rem solid #eeeeee;font-size: 0.4375rem;line-height: 1.34375rem;text-align: center;font-family: "微软雅黑";font-weight: 500;}
+.content9 ul li:nth-child(1){color: #d51942;border-left: 0.03125rem solid #eeeeee;border-top: 0.03125rem solid #eeeeee;}
+.content9 ul li:nth-child(2){border-top: 0.03125rem solid #eeeeee;}
+.content9 ul li:nth-child(3){border-top: 0.03125rem solid #eeeeee;}
+.content9 ul li:nth-child(4){border-left: 0.03125rem solid #eeeeee;}
+.content9 ul li:nth-child(6){color: #d51942;}
+.content9 ul li:nth-child(7){border-left: 0.03125rem solid #eeeeee;}
+.content9 ul li:nth-child(8){color: #d51942;}
+.content9 ul li:nth-child(10){border-left: 0.03125rem solid #eeeeee;}
+
+.content10{width: 10rem;height: 1.25rem;margin-top: 0.3125rem;margin-bottom:0.46875rem;}
+.content10 div{width: 9.375rem;height: 1.25rem;background: #f5f5f5;margin: 0 auto;}
+.content10 div span{display:block;padding: 0.375rem 2.96875rem;width: 3.4375rem;font-size: 0.4375rem;color:#666666;font-family: "微软雅黑";font-weight: 600;background: url(../images/Rounded-Rectangle-4-copy1.png) no-repeat right 0.3125rem top 0.40625rem;background-size:0.625rem 0.625rem;}
+.content11{width:10rem;height: 2.5rem;margin-top: 0.65625rem;}
+.content11 div{width: 9.375rem;height: 100%;margin: 0 auto;background: url(../images/intro_98.jpg);background-size:9.375rem 2.5rem;}
+.content12{display:-webkit-box;width: 10rem;height: 1.375rem;background: #f8f8f8;margin-top: 0.28125rem;font-size: 0.4375rem;font-family: "微软雅黑";font-weight: bold;}
+.content12 span{display: block;line-height:1.375rem;}
+.content12 span:nth-child(1){margin-left: 0.46875rem;margin-right: 0.75rem;}
+.content12 span:nth-child(2){-webkit-box-flex: 1;}
+.content12 span:nth-child(3){width: 1.96875rem;background: url(../images/intro_102.jpg) no-repeat right 0.3125rem top 0.578125rem;}
+.content13{width: 10rem;height: 2rem;background: #eeeeee;}
+.content13 div{width: 100%;height: 1.25rem;line-height: 1.25rem;font-size: 0.4375rem;text-align: center;font-weight: bold;}
+.content13 p{width: 100%;line-height:0.75rem;height:0.75rem;font-size: 0.34375rem;text-align: center;font-weight: 500;}
+.content14{width: 10rem;height: 3.359375rem;}
+.content14 div{width: 8.125rem;height:2.78125rem;margin: 0.25rem auto;background: url(../images/intro_110.jpg);background-size:8.125rem 2.78125rem ;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

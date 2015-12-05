@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="捕鱼达人" />
+<meta name="copyright" content="捕鱼达人" />
+<title>捕鱼达人</title>
+<style>
+body {background:black; text-align:center;}
+#c1 {background:url(images/img/game_bg_2_hd.jpg) no-repeat;}
+</style>
+<script src = "JS/common.js"></script>
+<script src = "JS/sprite.js"></script>
+<script src = "JS/fish.js"></script>
+<script src = "JS/cannon.js"></script>
+<script src = "JS/bullet.js"></script>
+<script>
+
+window.onload = function(){
+	document.title = "捕鱼达人--童剑瑛";
+	var oC=document.getElementById('c1');
+	var gd=oC.getContext('2d');
+	
+	loadImages({
+		fish1:		'images/img/fish1.png',
+		fish2:		'images/img/fish2.png',
+		fish3:		'images/img/fish3.png',
+		fish4:		'images/img/fish4.png',
+		fish5:		'images/img/fish5.png',
+		bottom:		'images/img/bottom.png',
+		cannon1:	'images/img/cannon1.png',
+		cannon2:	'images/img/cannon2.png',
+		cannon3:	'images/img/cannon3.png',
+		cannon4:	'images/img/cannon4.png',
+		cannon5:	'images/img/cannon5.png',
+		cannon6:	'images/img/cannon6.png',
+		cannon7:	'images/img/cannon7.png',
+		bullet:		'images/img/bullet.png',
+		
+	}, function (imgs){
+		
+		//炮台
+		var bottom = new Sprite(imgs.bottom);
+		
+		bottom.w = 765;
+		bottom.h = 70;
+		
+		bottom.x = 400;
+		bottom.y = 565;
+		
+		//炮塔
+		var cannon = new Cannon(imgs,7);
+		
+		cannon.x=440;
+		cannon.y=570;
+		
+		//鱼
+		var aFish=[];
+		setInterval(function (){
+			
+            var f=new Fish(imgs,rnd(1,6));
+			f.x=-100;
+			f.y=rnd(0,oC.height);
+			f.rotate=rnd(60,150);			
+			aFish.push(f);
+		},1000);
+		
+		setInterval(function(){
+			var f=new Fish(imgs,rnd(1,6));
+			f.x=900;
+			f.y=rnd(0,oC.height);
+			f.rotate=rnd(-30,-150);
+			aFish.push(f);
+		},1000);
+		
+		 
+		document.onmousemove = function(ev){
+			var a = ev.pageX - oC.offsetLeft - cannon.x;
+			var b = cannon.y - (ev.pageY - oC.offsetTop);
+			
+			var rotate = 90 - a2d(Math.atan2(b,a));
+			cannon.rotate = rotate;
+		};
+		
+		//炮弹
+		
+		var aBullet = []; 
+		
+		oC.onclick = function(){
+		    var b = new Bullet(imgs.bullet,cannon.type);
+			
+			b.x = cannon.x;
+			b.y = cannon.y;
+			
+			b.rotate=cannon.rotate;
+			
+			aBullet.push(b);
+			
+		};
+		
+
+		setInterval(function(){
+			gd.clearRect(0,0,oC.width,oC.height);
+			
+			
+			bottom.draw(gd);
+			
+			for(var i = 0; i < aFish.length; i ++){
+				
+			    aFish[i].draw(gd);
+				aFish[i].move();
+			}
+			
+			
+			for(var i = 0; i < aBullet.length; i ++){
+				
+				aBullet[i].draw(gd);
+			    aBullet[i].move(gd);
+				
+			}
+			
+			cannon.draw(gd);
+			
+			for(var i = 0; i < aBullet.length; i ++){
+				for(var j = 0; j < aFish.length; j ++){
+					if(aBullet[i].collTest(aFish[j])){
+						
+						aBullet.splice(i,1);
+							i--;
+						
+						aFish.splice(j,1);
+							j--;	
+						
+					}
+				}
+			}
+			
+			
+		},30);
+		
+	});
+	
+};
+
+</script>
+</head>
+
+<body>
+
+<canvas id="c1" width="800" height="600"></canvas>
+</body>
+</html>
+
+
+
+
+
+

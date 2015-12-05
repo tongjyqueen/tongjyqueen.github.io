@@ -8,13 +8,28 @@
 body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
 #stage{width: 500px;height: 500px;position: relative;margin: 0 auto;-webkit-perspective:800px ;transform-style: preserve-3d;transform-origin:center center;}
 #var{width: 500px;height: 500px;position: absolute;margin: 0 auto;transform-style: preserve-3d;-webkit-transform: rotateY(0deg);transition:1s all linear;}
-.div1{position: absolute;left: 50%;top:50%;margin-left: -100px;margin-top: -100px;width: 198px;height: 198px;border: 1px solid white;position: absolute;transform-style: preserve-3d;color:white;text-align: center;line-height: 198px;font-size: 40px;}
+.div1{position: absolute;left: 20%;top:50%;margin-left: -100px;margin-top: -100px;width: 198px;height: 198px;border: 1px solid white;position: absolute;transform-style: preserve-3d;color:white;text-align: center;line-height: 198px;font-size: 40px;}
 div.div1:nth-child(1){-webkit-transform: rotateY(90deg) translateZ(100px);background:url(images/19.jpg);}
 div.div1:nth-child(2){-webkit-transform: rotateY(180deg) translateZ(100px);background:url(images/1.jpg);}
 div.div1:nth-child(3){-webkit-transform: rotateY(270deg) translateZ(100px);background:url(images/21.jpg);}
 div.div1:nth-child(4){-webkit-transform: rotateY(360deg) translateZ(100px);background:url(images/2.jpg);}
 div.div1:nth-child(5){-webkit-transform: rotateX(90deg) translatez(100px);background:url(images/20.jpg);}
 div.div1:nth-child(6){-webkit-transform: rotateX(270deg) translatez(100px);background:url(images/3.jpg);}
+
+#div1{position: absolute;right: 15%;top:35%;width:200px; height:200px; line-height:200px; text-align:center; background:#ccc; margin:100px auto;transform:perspective(800px) rotateX(0deg) rotateY(0deg);transform-style:preserve-3d;}
+
+#div1 div{position:absolute;left:0;top:0;width:198px; height:198px; background:yellow; border:1px solid #000;}
+
+#div1 div.front{transform:translateZ(100px);}
+#div1 div.back{transform:translateZ(-100px);}
+
+#div1 div.left{ transform: rotateY(-90deg) translateZ(100px); }
+#div1 div.right{ transform: rotateY(90deg) translateZ(100px);}
+#div1 div.top{ transform: rotateX(90deg) translateZ(100px);}
+#div1 div.bottom{ transform: rotateX(-90deg) translateZ(100px);}
+
+#text{position:absolute;right:10%;top:35%;height:20px;color:#fff;font-size:30px;font-weight:bold;}
+
 </style>
 <script type="text/javascript">
 window.onload=function(){
@@ -24,7 +39,28 @@ window.onload=function(){
 	setInterval(function(){
 		n++;
 			oVar.style.transform = "rotateY("+(-n*60)+"deg) rotateX("+(n*60)+"deg) "
-	},1000)
+	},1000);
+	
+	var oDiv = document.getElementById("div1");	
+	
+	var y = 0;
+	var x = 0;
+	document.onmousedown = function(ev){
+		var disX = ev.clientX - y;
+		var disY = ev.clientY - x;
+		
+		document.onmousemove = function(ev){
+			y = ev.clientX - disX;
+			x = ev.clientY - disY;
+				
+			oDiv.style.transform = "perspective(800px) rotateX("+ -x+"deg) rotateY("+y+"deg)";
+		};
+		document.onmouseup = function(){
+			document.onmousemove = null;
+			document.onmouseup = null;
+		};
+		return false;
+	};
 }
 
 </script>
@@ -40,5 +76,15 @@ window.onload=function(){
 	 		<div class="div1">6</div>
 		</div>
 	</div>
+<div id="div1">
+	<div class="front">前面</div>
+	<div class="back">后面</div>
+	<div class="left">左面</div>
+	<div class="right">右面</div>
+	<div class="top">上面</div>
+	<div class="bottom">下面</div>
+    
+</div>
+<div id="text">可自行拖拽</div> 
 </body>
 </html>

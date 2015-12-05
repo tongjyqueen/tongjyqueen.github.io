@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="简易钢琴" />
+<meta name="copyright" content="简易钢琴" />
+<title>简易钢琴</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+body{background:url(images/bg_main.jpg);height:600px;overflow:hidden;}
+#ul1{ width:630px; height:500px; margin:70px auto;border:1px solid red;background:url(images/pineno.gif);background-size:cover;}
+li{ position:relative;float:left;width:90px;height:100%;cursor:pointer;transform:perspective(800px);transform-style:preserve-3d;transform-origin:8% 0%;}
+li img{position:absolute;left:20%;bottom:20%;transition:all 2s ease-in-out;opacity:1;-webkit-animation:imgA 1s ease-in-out;-moz-animation:imgA 1s ease-in-out;}
+
+
+@-webkit-keyframes imgA{
+	0%{transform:perspective(400px) scale(1) rotateY(0);opacity:0;}
+	30%{opacity:1;}
+	100%{bottom:30%;transform:perspective(-800px) rotateY(-35deg);opacity:0;}
+}
+
+@-moz-keyframes imgA{
+	0%{transform:rotateZ(-4deg);}
+	50%{transform:rotateZ(4deg);}
+	100%{transform:rotateZ(-4deg);}
+}
+
+</style>
+<script>
+
+window.onload = function(){
+	
+   document.title = "简易钢琴--童剑瑛";
+   var aLi = document.querySelectorAll("#ul1 li");
+   
+   for(var i = 0; i < aLi.length; i++){
+	   (function(index){
+		   aLi[i].onclick = function(){
+			    
+				var oA = new Audio();
+				oA.src = "mp3/"+(index+1)+".mp3";
+				oA.play();
+				var _this = this;
+				
+				var oImg = document.createElement("img");
+				oImg.src = "images/note"+(index+1)+".gif"; 
+				oImg.width = "40";
+
+				this.appendChild(oImg);
+				
+				setTimeout(function(){
+					 _this.innerHTML = "";
+				},1000);
+		   };
+	   })(i);
+   }
+   
+   
+};
+</script>
+</head>
+
+<body>
+<ul id="ul1">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+
+</body>
+</html>

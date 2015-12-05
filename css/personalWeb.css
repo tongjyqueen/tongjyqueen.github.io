@@ -153,6 +153,116 @@ ul.nav li:hover .back{transform:rotate3d(1,0,0,0deg);opacity:1;}
 
 .skill img.skill_clound{position:absolute;left:0;top:0;}
 
+.skin{position:absolute;right:5%;top:2%;
+    width:150px;height:200px;}
+.square{position:absolute;right:0;top:0;
+    width:150px;height:150px;
+    -webkit-transform:perspective(1000px) rotateX(0deg) rotateY(0deg); 
+    -moz-transform:perspective(1000px) rotateX(0deg) rotateY(0deg); 
+    transform:perspective(1000px) rotateX(0deg) rotateY(0deg); 
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+
+.skin .skinClick{position:absolute;right:0;bottom:0;cursor:pointer;text-align:center;line-height:30px;width:100%;height:30px;color:#fff;border-radius:10px;background:#3CF;font-size:14px;}
+/*-webkit-animation:时长 [延迟] 名称 动画类型 forwards inifinite alternate;*/
+.square{
+	cursor:pointer;
+    -webkit-animation:yudong 4s linear infinite;
+}
+@-webkit-keyframes yudong {
+from { transform:perspective(1000px) rotateY(0deg);}
+to { transform:perspective(1000px) rotateY(-360deg);}
+}
+@-moz-keyframes yudong {
+from { transform:perspective(1000px) rotateX(0deg) rotateY(0deg);}
+to { transform:perspective(1000px) rotateX(360deg) rotateY(360deg);}
+}
+@-webkit-keyframes x{
+    from { transform:perspective(1000px) rotateX(0deg);}
+    to { transform:perspective(1000px) rotateX(360deg);}
+}
+@-moz-keyframes x{
+    from { transform:perspective(1000px) rotateX(0deg);}
+    to { transform:perspective(1000px) rotateX(360deg);}
+}
+.square:hover{
+    -webkit-animation:x 5s linear infinite;
+}
+.square:hover .z_back{
+    transform:scale(1,-1) translateZ(-75px); background: #97c;
+}
+.square:hover .s_back{
+    transform:scale(1,-1) translateZ(-40px);
+}
+.square div{
+	cursor:pointer;
+    opacity: 0.5; width: 100%; height: 100%; position: absolute; left: 0 ; top: 0;
+    font-size:30px;line-height:150px;text-align:center;
+    color: #fff;
+}
+.square span{
+	background-size: cover;
+    width: 80px; height: 80px;  position: absolute; left: 50%; top: 50%;
+    margin-top: -40px; margin-left: -40px; opacity: 1;
+}
+.s_front{
+	background-size: cover;
+    transform:translateZ(40px); background: #c95;
+    background: url(../images/lispanbg0.jpg);
+}
+.s_back{
+	background-size: cover;
+    transform:scale(-1,1) translateZ(-40px); background: #97c;
+    background: url(../images/lispanbg1.jpg);
+}
+.s_left{
+    background-size: cover;
+    transform: rotateY(-90deg) translateZ(40px);
+    background: url(../images/lispanbg2.jpg);
+}
+.s_right{
+    background-size: cover;
+    transform: rotateY(90deg) translateZ(40px);
+    background: url(../images/lispanbg3.jpg);
+}
+.s_top{
+    background-size: cover;
+    transform: rotateX(90deg) translateZ(40px);
+    background: url(../images/lispanbg4.jpg);
+}
+.s_bottom{
+    background-size: cover;
+    transform:rotateX(-90deg) translateZ(40px);
+    background: url(../images/lispanbg5.jpg);
+}
+.z_front{
+    transform:translateZ(75px); background: #9CC;
+}
+.z_back{
+    transform:scale(-1,1) translateZ(-75px); background: #F9C;
+}
+.z_left{
+    background: #C9C;
+    transform: rotateY(-90deg) translateZ(75px);
+}
+.z_right{
+    background: #3FF;
+    transform: rotateY(90deg) translateZ(75px)
+}
+.z_top{
+    background: #CFC;
+    transform: rotateX(90deg) translateZ(75px);
+}
+.z_bottom{
+    background: #FFC;
+    transform:rotateX(-90deg) translateZ(75px);
+}
+
+
+
+
 .skill ul.skillControll{position:absolute;width:850px;height:500px;left:400px;top:200px;}
 .skill ul.skillControll li{position:absolute;left:0;top:0;width:150px;height:150px;float:left;border-radius:50%;transition: all .8s ease-in-out;}
 .skill ul.skillControll li span{position:absolute;left:0;top:0;width:150px;height:150px;float:left;border-radius:50%;background-image:radial-gradient(rgba(255,255,255,.2) 30%,rgba(204,153,255,.8));box-shadow:0 0 4px 4px rgba(255,102,255,.3);}
@@ -192,7 +302,7 @@ ul.nav li:hover .back{transform:rotate3d(1,0,0,0deg);opacity:1;}
 .showreel img.showreel_clound{position:absolute;left:0;top:0;}
 
 .showreel ol.showreel_nav{position:absolute;width:50%;height:75px;right:-1%;top:50px;}
-.showreel ol.showreel_nav li{position:relative;float:left;width:170px;height:65px;background:url(../images/bg-red-button.png) no-repeat;background-size:contain;margin-right:30px;overflow:hidden;}
+.showreel ol.showreel_nav li{position:relative;float:left;width:170px;height:65px;background:url(../images/bg-red-button.png) no-repeat;background-size:contain;margin-right:30px;overflow:hidden;cursor:pointer;}
 .showreel ol.showreel_nav li.moveBox{position:absolute;left:0;top:0;z-index:2;height:58px;border-radius: 6px;background:rgba(255,153,255,.3);box-shadow:5px 7px 7px rgba(204,51,51,.6);}
 
 
@@ -204,17 +314,66 @@ ul.nav li:hover .back{transform:rotate3d(1,0,0,0deg);opacity:1;}
 .showreel ul.showreel_body li.showreel_body_li{position:absolute;left:0;top:0;width:100%;height:100%;}
 
 .showreel ul.showreel_body li.showreel_body_li ol{position:absolute;left:2%;top:3%;width:100%;height:100%;}
-.showreel ul.showreel_body li.showreel_body_li ol li{float:left;margin:20px 0 0 20px;width:150px;height:150px;background:#FFC;border:2px solid #3F9;overflow:hidden;}
-.showreel ul.showreel_body li.showreel_body_li ol li span{ position:absolute;left:-150px;top:0;width:150px; height:150px; background:pink;}
+.showreel ul.showreel_body li.showreel_body_li ol li{position:relative;float:left;margin:20px 0 0 20px;width:150px;height:150px;background:#FFC;overflow:hidden;}
 
-.showreel ul.showreel_body li.showreel_body_li ol li span a{float:left;width:150px;height:150px;text-decoration:none;color:#333;}
+
+.showreel ul.showreel_body li.showreel_body_li ol li img{position:absolute;left:0;top:0;width:100%;height:100%;}
+
+.showreel ul.showreel_body li.showreel_body_li1 ol li{background:url(../images/catt1.jpg);background-size:cover;box-shadow:5px 5px 5px rgba(153,51,0,.8);}
+
+.showreel ul.showreel_body li.showreel_body_li2 ol li{background:url(../images/catt1.jpg);background-size:cover;box-shadow:5px 5px 5px rgba(153,51,0,.8);}
+
+.showreel ul.showreel_body li.showreel_body_li3 ol li{background:url(../images/photo.jpg);background-size:100% 100%;box-shadow:5px 5px 5px rgba(153,51,0,.8);}
+
+
+/*#showreel_body_li2 动画*/
+
+#showreel_body_li2 li img{position:absolute;left:50%;top:50%;width:32px; height:32px;margin-top:-16px;margin-left:-16px;opacity:0;}
+
+#showreel_body_li2 li:hover img{opacity:1; -webkit-animation:qq 1.5s linear infinite;z-index:99;}
+
+
+@-webkit-keyframes qq {
+0%{top:50%;}
+20%{top:0%;}
+40%{top:50%;}
+58%{top:30%;}
+70%{top:50%;}
+80%{top:40%;}
+85%{top:50%;}
+100%{top:50%;}
+}
+@-moz-keyframes qq {
+0%{top:50%;}
+20%{top:0%;}
+40%{top:50%;}
+58%{top:30%;}
+70%{top:50%;}
+80%{top:40%;}
+85%{top:50%;}
+100%{top:50%;}
+}
+
+
+.showreel ul.showreel_body li.showreel_body_li ol li span{ position:absolute;left:-150px;top:0;width:150px; height:150px; background:rgba(204,255,51,.6);z-index:3;}
+
+.showreel ul.showreel_body li.showreel_body_li2 ol li span{background:rgba(0,153,51,0.8);}
+
+.showreel ul.showreel_body li.showreel_body_li3 ol li span{background:rgba(255,255,255,.6);}
+
+.showreel ul.showreel_body li.showreel_body_li ol li span a{float:left;width:150px;height:150px;text-decoration:none;color:#fff;line-height:150px;font-size:18px;font-weight:bold;}
+
+.showreel ul.showreel_body li.showreel_body_li3 ol li span a{color:#F39;font-size:16px;}
+
 /*showreel结束*/
+
 
 /*contactMe开始*/
 .contactMe{position:absolute;left:0;top:0;width:1000px;height:665px;/*background:url(../images/sky4.jpg) no-repeat;background-size:cover;*/overflow:hidden;}
 .contactMe img.showreel_clound{position:absolute;left:0;bottom:0;}
-.contactMe .contant_mess{position:absolute;bottom:-120px;left:40%;width:1000px;height:700px;background:url(../images/tablet-preview.png);background-size:contain;}
-.contactMe .contant_mess ul{position:absolute;top:120px;left:230px;width:245px;height:200px;height:400px;}
+.contactMe .contant_mess{position:absolute;bottom:-120px;left:40%;width:1000px;height:700px;/*background:url(../images/tablet-preview.png);background-size:contain;*/z-index:-2;}
+.contactMe .contant_mess ul{position:absolute;top:85px;left:218px;width:256px;height:389px;padding:10px;z-index:-3;background:rgba(51,51,51,.6);}
+#c1{position:absolute;top:0;left:0;z-index:-1;}
 .contactMe .contant_mess ul li{width:245px;height:50px;line-height:50px;border-bottom:2px dotted #FFC;font-size:18px;color:#FFF;margin-bottom:10px;}
 .contactMe .walkingsheep{position:absolute;left:0;bottom:40px;width:120px;height:87px;}
 .contactMe .walkingsheep .sheep{position:absolute;left:0;bottom:0px;width:118px;height:87px;background:url(../images/walking-sheep.png);}

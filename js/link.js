@@ -50,13 +50,27 @@ function skillClound(){
 	var aSpan = oUl.getElementsByTagName("span");
 	//var aSpanTimer = null;
 	
+	
 	for (var i = 0; i < aSpan.length;i++) {
-			(function(index){
-				setInterval(function(){
-					spanMove(aSpan[index]);
-				},2550);
-			})(i);
+		
+		(function(oSpan){
+			oSpan.timer1 = setInterval(function(){
+					spanMove(oSpan);
+				},2500);
+				
+			oSpan.onmouseover = function(){
+				clearInterval(oSpan.timer1);
+			};
+			oSpan.onmouseout = function(){
+				oSpan.timer1 = setInterval(function(){
+					spanMove(oSpan);
+			    },2500);
+			};
+		})(aSpan[i]);
+		
 	}
+	
+
 	
 	
 	
@@ -153,6 +167,122 @@ function getStyle(obj,name){
 
 //showreel选项卡
 
+
+function pingBao(){
+	function rnd(n,m){
+	    return parseInt(Math.random()*(m-n) + n);
+    }
+    
+	var oC = document.getElementById("c1");
+	var gd = oC.getContext("2d");
+	 
+	var winW = 276;
+	var winH = 409;
+
+	//console.log(oC.width,oC.height)
+	var N = 6;
+	
+	var aPoint = []; //存N的坐标
+	
+	for(var i = 0; i < N; i++){
+		aPoint[i] = {
+			w:1,
+			h:1,
+			x:rnd(0,winW),
+			y:rnd(0,winH),
+			speedX:rnd(-10,10),
+			speedY:rnd(-10,10)
+		};
+	}
+	//console.log(aPoint);
+	
+	var oldPoint = [];
+	
+	setInterval(function(){
+	    
+		//清除画布
+		gd.clearRect(0,0,oC.width,oC.height);
+		
+		for(var i = 0; i < N; i++){
+			drawPoint(aPoint[i]);
+			//console.log(aPoint[i].x,aPoint[i].y);
+		   
+		   if(aPoint[i].x < 0){
+			   aPoint[i].x = 0;
+			   aPoint[i].speedX *= -1;
+		   }
+		   if(aPoint[i].x > winW){
+			   aPoint[i].x = winW;
+			   aPoint[i].speedX *= -1;
+		   }
+		   if(aPoint[i].y < 0){
+			   aPoint[i].y = 0;
+			   aPoint[i].speedY *= -1;
+		   }
+		   if(aPoint[i].y > winH){
+			   aPoint[i].y = winH;
+			   aPoint[i].speedY *= -1;
+		   }
+		   
+		   
+		  aPoint[i].x += aPoint[i].speedX;
+		  aPoint[i].y += aPoint[i].speedY;
+		
+		}
+	
+	    //连接
+		gd.beginPath();
+		gd.moveTo(aPoint[0].x,aPoint[0].y);
+		for(var i = 1; i < N; i++){
+			gd.lineTo(aPoint[i].x,aPoint[i].y);
+		}
+		gd.strokeStyle = "#fff";
+		gd.closePath();
+		gd.stroke();
+		
+		
+		//绘制影子
+		var arrPoint = []; //存当前的路径
+		
+		for(var i = 0; i < N; i ++){
+			arrPoint.push({x:aPoint[i].x,y:aPoint[i].y});
+		}
+		
+		oldPoint.push(arrPoint);
+		
+		while(oldPoint.length > 6){
+			oldPoint.shift();
+		}
+		//console.log(oldPoint)
+		//绘制
+		
+		for(var i = 0; i < oldPoint.length; i ++){
+			gd.beginPath();
+			gd.moveTo(oldPoint[i][0].x,oldPoint[i][0].y);
+			for(var j = 1; j < oldPoint[i].length; j ++){
+				gd.lineTo(oldPoint[i][j].x,oldPoint[i][j].y);
+				
+			}
+			var opacity = i*1/(oldPoint.length-1);
+			gd.strokeStyle = "rgba(255,"+rnd(0,255)+",255,"+opacity+")";
+			gd.closePath();
+			gd.stroke();
+			
+		}
+		
+	
+	},30);
+
+	function drawPoint(p){
+		gd.fillStyle = "#fff";
+		gd.fillRect(p.x,p.y,p.w,p.h);
+		gd.strokeRect(p.x,p.y,p.w,p.h);
+	} 
+	
+}
+
+
+
 function showreelClound(){
    oWalkingSheep = $(".walkingsheep .sheep").get([0]);
    var walkN = 0;
@@ -172,9 +302,6 @@ function showreelClound(){
    
    oImg3.style.left = 500 + "px";
    oImg3.style.top = 250 + "px";
-   
-   
-   
   
    var cloundTimer = null;
    
@@ -212,10 +339,15 @@ function showreelClound(){
 	   }
 	   
 	  walkN++;
+	  
+
    },80);
+   
 }
 
 function showreelTab(){
+	
+	
 	showreelClound();
 		
 	var aCardHead = $(".showreel_nav").get([0]).children;
@@ -272,7 +404,7 @@ function showreelTab(){
 			
 			
 			for(var i = 0; i < aShowreelBody.length; i++){
-				down(aShowreelBody[i]);
+				down(aShowreelBody[i],aShowreelBody[_this.index]);
 			}
 			
 			setTimeout(function(){
@@ -283,7 +415,7 @@ function showreelTab(){
 	}
 	
 	
-	function down(obj1){
+	function down(obj1,obj2){
 	var aLi = obj1.children;
 	var i=aLi.length-1;
 	var timer=setInterval(function(){
@@ -292,6 +424,8 @@ function showreelTab(){
 		})(i);
 		i--;
 		if(i==-1) {
+			obj1.style.display = "none";
+			obj2.style.display = "block";
 			
 			clearInterval(timer)
 			
@@ -301,14 +435,15 @@ function showreelTab(){
 }
 	
 function up(obj2,Index){
-	
+	obj2.style.opacity = "1";
 	var aLi = obj2.children;
-	console.log(aLi)
+	//console.log(aLi)
 	var i=aLi.length-1;
+	
 	var timer=setInterval(function(){
 		
 		(function(index){
-			
+			aLi[i].style.opacity = "1";
 			move(aLi[i],aLiPos[Index][i],{duration:500,complete:function(){
 			if(index==0) ready=true;	
 			obj2.parentNode.style.zIndex = zIndex++;	
@@ -328,7 +463,15 @@ function up(obj2,Index){
 
 
 //拉钩效果开始
+
+
 function Lagou(){
+	
+	var LagouLi = document.getElementById("showreel_body_li2");
+	var LagouUl = document.getElementById("showreel_body2");
+	
+	var allLi = LagouLi.children;
+	
 	
 	var $aParent = $(".showreel_body_li");;
 	
@@ -348,9 +491,9 @@ function Lagou(){
 	}
 	
 	function getDir(obj,oEvent){
-		var x = oEvent.clientX - obj.offsetLeft - obj.offsetWidth/2;
-		var y = obj.offsetTop + obj.offsetHeight/2 - oEvent.clientY;
-		
+		var x = oEvent.clientX - obj.offsetLeft - obj.offsetWidth/2 - LagouLi.offsetLeft - LagouUl.offsetLeft;
+		var y = obj.offsetTop + obj.offsetHeight/2 - oEvent.clientY + LagouLi.offsetTop + LagouUl.offsetTop;
+		//alert(x,y);
 		// n 0 左 1 下  2 右   3 上
 		return Math.round((Math.atan2(y,x)*180/Math.PI + 180)/90)%4;
 	}
@@ -367,7 +510,7 @@ function Lagou(){
 			
 			var oSpan = this.children[0];
 			var n = getDir(this,oEvent);
-			
+			//alert(n);
 			switch(n){
 				case 0:
 					oSpan.style.left = "-150px";
@@ -420,13 +563,10 @@ function Lagou(){
 				
 		};
 	
+	
 	}
 }
 //拉钩效果结束
-
-
-
-
 
 
 var speed = 0;
