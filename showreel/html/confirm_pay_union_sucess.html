@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/components.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/confirm_pay_union_sucess.css"/>
+    <script type="text/javascript" src="../vendor/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/APP.js"></script>
+    <script type="text/javascript" src="../js/component/form.js"></script>
+    <script type="text/javascript" src="../js/component/popover.js"></script>
+    <script type="text/javascript" src="../js/component/tipover.js"></script>
+    <script type="text/javascript" src="../js/component/common.js"></script>
+    <script type="text/javascript" src="../js/constant/storageKey.js"></script>
+    <script type="text/javascript" src="../js/service/config.js"></script>
+    <script type="text/javascript" src="../js/service/pageInit.js"></script>
+    <script type="text/javascript" src="../js/service/login.js"></script>
+    <script type="text/javascript" src="../js/service/router.js"></script>
+    <script type="text/javascript" src="../js/service/http.js"></script>
+    <script type="text/javascript" src="../js/service/timer.js"></script>
+    <script type="text/javascript" src="../js/service/utils.js"></script>
+    <script type="text/javascript" src="../js/controller/confirm_pay_union_sucess.js"></script>
+    <title>学平险</title>
+</head>
+<body>
+    <!-- 页面头部-->
+    <header>
+        <nav class="head-navigator clearfix">
+            <div class="head-navigator-left">
+                <button class="page-back" onclick="javascript:history.back();">
+                    <i class="iconfont icon-arrow-left"></i>
+                </button>      
+            </div>
+            <div class="head-navigator-center">
+                <h1 class="head-title">成功支付</h1>                                
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+
+        <!--标题-->
+        <div class="header">
+           	温馨提示
+        </div>
+
+        <!--内容-->
+        <div class="tips_content">
+        	<!--提示信息-->
+            <div class="tip-msg">感谢您的购买，您的电子表单即将生成，请注意查收邮箱。如有任何疑问，可电话咨询： 95500</div>
+	        <!--操作按钮-->
+	        <div class="operate_btn">
+				<div class="tip-btn" data-operate="detail-btn">保单详情</div>
+				<div class="tip-btn" data-operate="index-btn">返回首页</div>
+	        </div>
+	        <!--笑脸图标-->
+	        <div class="image_smile_face"></div>
+        </div>
+    </div>
+</body>
+</html>

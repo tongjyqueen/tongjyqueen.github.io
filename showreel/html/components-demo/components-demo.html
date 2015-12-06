@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>我的任务</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/components.css">
+        <script type="text/javascript" src="../vendor/zepto.min.js"></script>
+        <script type="text/javascript" src="../vendor/touch.js"></script>
+        <script type="text/javascript" src="../vendor/gmu.min.js"></script>
+        <script type="text/javascript" src="../js/APP.js"></script>
+        <script type="text/javascript" src="../js/service/config.js"></script>
+        <script type="text/javascript" src="../js/component/form.js"></script>
+        <script type="text/javascript" src="../js/service/router.js"></script>
+        <script type="text/javascript" src="../js/service/pageInit.js"></script>
+        <script type="text/javascript" src="../js/component/popover.js"></script>
+        <script type="text/javascript" src="../js/controller/components-demo.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="head-navigator clearfix">
+                <div class="head-navigator-left">
+                    <button class="page-back">
+                        <i class="iconfont icon-arrow-back"></i>
+                    </button>
+                    <button class="task-search">
+                        <i class="iconfont icon-magnifier"></i>                    
+                    </button>                
+                </div>
+                <div class="head-navigator-center">
+                    <h1 class="head-title">我的任务</h1>                                
+                </div>
+                <div class="head-navigator-right">
+                    <button class="menu-more right">
+                        <i class="iconfont icon-dot-more"></i>
+                    </button>                
+                </div>
+            </nav>
+        </header>
+        
+        <section class="main-page">
+            
+            <!-- forms -->
+            <!-- 表单组件中的下拉框、复选框、开关可以通过JS动态生成，具体用法见js/component/form.js -->
+            <div class="block">
+                
+                <!-- 输入框 -->
+                <!-- 直接使用HTML组件 -->
+                <div class="form-input">
+                    <input type="text" placeholder="表单默认值">                
+                </div>
+                <!-- 输入框 end -->
+                
+                
+                <!-- 下拉框 -->
+                <!-- 直接使用HTML组件 -->
+                <div id="" class="form-select clearfix">
+                    <select value="">
+                        <option>下拉选项1</option>
+                        <option>下拉选项2</option>
+                        <option>下拉选项3</option>
+                    </select>
+                    <button class="arrow-select">
+                        <i class="iconfont icon-triangle-down"></i>
+                    </button>
+                </div>
+                
+                <!-- 用JS动态加入组件 -->
+                <div id="selectDemo" class="form-select"></div>
+                <!-- 下拉框 end -->
+                
+                <!-- 搜索框 -->
+                <!-- 直接使用HTML组件 -->                
+                <div class="form-search clearfix">
+                    <input type="text" placeholder="请输入关键词进行搜索">
+                    <button>
+                        <i class="iconfont icon-magnifier"></i>
+                    </button>
+                </div>
+                <!-- 搜索框 end -->
+                
+                <!-- 开关 -->
+                <!-- 直接使用HTML组件，需要手动添加点击行为 -->
+                <div class="form-switch">
+                    <input class="" type="checkbox">
+                    <div class="switch">
+                        <div class="switch-button switch-button-on"></div>
+                    </div>
+                </div>
+                
+                <!-- 用JS动态加入组件，具体用法见js/component/form.js -->
+                <div class="form-switch" id="switchDemo"></div>
+                <!-- 开关 end -->
+                
+            </div>
+            <div class="block">
+                <!-- 复选框 -->
+                <!-- 直接使用HTML组件，需要手动添加点击行为 -->                
+                <div class="form-checkbox">
+                    <input type="checkbox">
+                </div>
+                
+                <div class="form-checkbox checked">
+                    <input type="checkbox">
+                </div>
+                
+                <!-- 用JS动态加入组件，具体用法见js/component/form.js -->
+                <div id="checkboxDemo" class="form-checkbox"></div>
+                <!-- 复选框 end -->
+            </div>
+            
+            <!-- forms end -->
+            
+            <!-- list view -->
+            
+            <ul class="list-view list-view-text">
+                <li class="clearfix">
+                    <h3 class="left">语音提醒</h3>
+                    <button class="list-view-more right">
+                        <i class="iconfont icon-arrow-listview"></i>
+                    </button>
+                </li>
+                <li><h3>WIFI自动上传录音文件</h3></li>
+            </ul>
+            
+            <!-- list view end -->
+            
+            <!-- tipover -->
+            <div class="tipover hide">
+                <nav class="navigator-attach">
+                    <ul>
+                        <li class="navigator-attach-item"><i class="iconfont icon-wheel"></i>系统设置</li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- tipover end -->
+            
+            
+        </section>
+        
+        <footer>
+            <div class="button-cta-group-3">
+                <button class="button-cta"><h2>完成</h2></button>
+                <button class="button-cta"><h2>调度错误</h2></button>
+                <button class="button-cta"><h2>改派</h2></button>
+            </div>
+        </footer>
+    </body>
+</html>

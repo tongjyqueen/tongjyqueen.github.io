@@ -1,0 +1,41 @@
+
+/**
+* constants
+*
+* color schema
+*   @highlight        #fa7f18
+*   @bg-main          #e7e7e7
+*   @bg-block         #ffffff
+*   @bg-header        #005bac
+*   @text-normal      #333333
+*   @text-blue        #3e76b7
+*   @text-button-blue #0061b2
+*   @text-headline-blue #0061b2
+*   @text-headline-gray #666666
+*   @text-silent        #8a8a8a
+*   @text-orange      #f36d00
+*   @border           #cecece
+*   @button-border    #b5b5b5
+*
+*   
+* font size
+*   @text-normal      20px      rem
+*   @text-head-title  38px      1.9rem
+*   @text-tabbar-title   25px   1.25rem
+*   @text-button-lg   36px      1.8rem
+*
+* layout size 
+*   @design-width     640px
+*   @width-block      600px/93%
+*   @height-navigator 90px      4.5rem
+*   @height-tabbar    64px      3.2rem
+*   @height-block-collapse  90px
+*/
+
+# 如何计算`rem`的值？
+该元素在PSD中的高度 / 18
+原理：在PSD中，默认字号就是18px，然后页面中会以如下公式初始化`rem`的值：18 * (window.innerWidth / 640)
+
+# 宽度统一使用百分比
+
+# 高度、字号统一使用`rem`

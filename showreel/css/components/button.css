@@ -1,0 +1,165 @@
+/**
+*   @file button.css
+*   @author zhaowei@ihandy.cn
+*/
+
+button {
+    text-align: center;
+}
+
+button a {
+  text-decoration: none;
+}
+
+.button-disabled {
+    color: #e0dbdb;    
+}
+
+/* call to action 底部大按钮 */
+.button-cta {
+    height: 4.8rem;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px #b5b5b5 solid;
+}
+
+.button-cta-full {
+    /* 通栏按钮 */
+    width: 100%;
+}
+
+.button-cta-group-2, .button-cta-group-3 {
+    /*  通栏按钮组 */
+    border-top: 1px #b5b5b5 solid;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.button-cta-group-2 .button-cta, .button-cta-group-3 .button-cta {
+    float: left;
+    border: none;
+}
+
+.button-cta-group-2 button:first-child {
+    width: 50%;
+    border-right: 1px #b5b5b5 solid;
+}
+
+.button-cta-group-2 button:last-child {
+    width: 50%;
+}
+
+.button-cta-group-3 button:first-child {
+    width: 30%;
+}
+
+.button-cta-group-3 button:last-child {
+    width: 30%;
+}
+
+.button-cta-group-3 button:nth-child(2) {
+    width: 40%;
+    border-left: 1px #b5b5b5 solid;
+    border-right: 1px #b5b5b5 solid;
+}
+
+.button-cta h2 {
+    font-size: 1.8rem;
+    line-height: 4.8rem;
+    text-align: center;
+    color: #0061b2;
+}
+
+.button-cta-disabled h2 {
+    color: #e0dbdb;    
+}
+
+/* outline button 轮廓按钮 */
+
+.button-outline {
+    border: 1px solid #757576;
+    border-radius: .5rem;
+    height: 2.6rem;
+    font-size: 1.1rem;
+    color:#444444;
+    background-color: #fff;
+    padding: 0 .7rem;
+    line-height: 2.6rem;
+}
+
+.button-outline a {
+    color:#444444;
+}
+
+.button-outline.button-disabled {
+    border-color: #e0dbdb;
+    color: #e0dbdb;
+}
+
+.button-outline-group button {
+    margin: 0 .3rem;
+}
+
+.button-outline-group button:first-child {
+    margin-left: 0;
+}
+
+.button-outline-group button:last-child {
+    margin-right: 0;
+}
+
+/*两个按钮选项切换*/
+.btn2groups {
+    min-width: 70%;
+    max-width: 80%;
+    margin: 0 auto;
+    border: 1px solid #36b134 ;
+    border-radius: .4rem;
+    overflow: hidden;
+}
+.btn2groups:after {
+    zoom:1;
+    clear: both;
+}
+.btn2groups .btn2 {
+    float: left;
+    width: 50%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #000;
+}
+.btn2groups .active {
+    background-color: #36b134;
+    color: #fff;
+}
+
+
+/*底部按钮样式*/
+.contorl-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+}
+.contorl-footer a {
+    display: block;
+    width: 97%;
+    margin: 1.5%;
+    max-height: 3rem;
+} 
+.contorl-footer a .save-btn {
+    width: 100%;
+    min-height: 3rem;
+    line-height: 3rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #fff;
+    text-align: center;
+}

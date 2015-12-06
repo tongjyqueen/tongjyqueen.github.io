@@ -1,0 +1,73 @@
+/**
+* @file product_introduct.css stylesheet for product_introduct.html
+* @author wangkui
+*/
+
+/* 图标样式 */
+.icon-key,.icon-account,.icon-accountant {
+    font-size: 1.5rem;
+    color: #f39801!important;
+}
+
+.icon-accountant {
+	font-size: 1rem;
+}
+
+/* .keys {
+	width: 1.3rem;
+	height: 1.3rem;
+	background: url(../image/icon_product_01.png) no-repeat;
+	background-size: 1.3rem 1.3rem;
+}
+.claim {
+	width: 1.3rem;
+	height: 1.3rem;
+	background: url(../image/icon_product_02.png) no-repeat;
+	background-size: 1.3rem 1.3rem;
+}
+.arithmetic {
+	width: 1.3rem;
+	height: 1.3rem;
+	background: url(../image/icon_product_03.png) no-repeat;
+	background-size: 1.3rem 1.3rem;
+} */
+
+/*标题栏样式*/
+.headline {
+	/* font-weight: 600; */
+	font-size: 1.2rem;
+	padding: 1.2rem;
+	margin: .8rem 0;
+	background-color: #fff;
+}
+
+/* 标题样式
+.bt{
+	margin-left: .6rem;
+    font-weight: 600;
+    font-size: 1rem;
+} */
+
+section p {
+	font-size: .9rem;
+	line-height: 1.6rem;
+	margin: 0 1.3rem .7rem;
+	font-weight: normal;
+	text-indent: 1.6rem;
+}
+
+/*赔付款橙色字体*/
+.oranText {
+	font-size: 1rem!important;
+	color: #f39801!important;
+	text-indent: 0!important;
+}
+
+
+/* .btn {
+	width: 90%;
+	margin: 1rem 5%;
+} */
+
+
+

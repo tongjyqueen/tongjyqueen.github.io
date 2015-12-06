@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no">
+    <link href="../css/common.css" rel="stylesheet" type="text/css" />
+	<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="../css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="../css/components.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="../css/order_detail.css" />
+    <script type="text/javascript" src="../vendor/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/APP.js"></script>
+    <script type="text/javascript" src="../js/component/form.js"></script>
+    <script type="text/javascript" src="../js/component/popover.js"></script>
+    <script type="text/javascript" src="../js/component/tipover.js"></script>
+	<script type="text/javascript" src="../js/component/common.js"></script>
+    <script type="text/javascript" src="../js/constant/storageKey.js"></script>
+    <script type="text/javascript" src="../js/service/config.js"></script>
+    <script type="text/javascript" src="../js/service/pageInit.js"></script>
+    <script type="text/javascript" src="../js/service/login.js"></script>
+    <script type="text/javascript" src="../js/service/router.js"></script>
+    <script type="text/javascript" src="../js/service/http.js"></script>
+    <script type="text/javascript" src="../js/service/timer.js"></script>
+    <script type="text/javascript" src="../js/service/utils.js"></script>
+
+	<title>产品详情</title>
+</head>
+<body>
+	<!-- 页面头部-->
+	<header>
+	
+        <nav class="head-navigator clearfix">
+            <div class="head-navigator-left">
+                <button class="page-back" onclick="javascript:history.back();">
+                    <i class="iconfont icon-arrow-left"></i>
+                </button>      
+            </div>
+            <div class="head-navigator-center">
+                <h1 class="head-title">投保单保障一览</h1>                                
+            </div>
+            <div class="head-navigator-right">
+<!--                 <button class="share right" onclick="alert(2)">
+                    <i class="iconfont icon-share"></i>
+                </button -->                
+            </div>
+        </nav>
+	</header>
+	
+	<!-- 页面图片部分 -->
+	<a href="http://www.baidu.com">
+		<img class="order-image "src="../image/header_tb.jpg"/>
+	</a>
+	
+	
+	<!-- 页面列表部分 -->
+	<div class="main">
+		<div class="list"> 
+			<label class="item">
+		    	<div class="input-label" >起保时间</div>
+		    	<div id="date" class="commons">2015-6-10 24:00</div>
+         	    <!-- <span class="icon ion-calendar"></span> -->
+		    </label>
+			<label class="item">
+		    	<div class="input-label">保险期限</div>
+		    	<div id="date-limit" class="commons">1年</div>
+		    	<!-- <span class="icon ion-chevron-right"></span> -->
+		    </label>
+      	    <label class="item">
+		    	<div class="input-label">我是被保险人的</div>
+		    	<div id="relation" class="commons">哥哥</div>
+		    </label>		
+      		<label class="item">
+		    	<div class="input-label">投保人</div>
+		    	<div id="toubaoren" class="commons">张小盒</div>
+		    </label>
+      		<label class="item">
+		    	<div class="input-label">被保险人</div>
+			    <div id="Totoubaoren" class="commons">张小小</div>
+		    </label>
+      		<label class="item">
+		    	<div class="input-label">受益人</div>
+		    	<div id="shouyiren" class="commons">法定受益人</div>
+		    </label>
+      		<label class="item item-input">
+		    	<div class="input-label">总价</div>
+		    	<div class="commons sales" id="buy">
+					购买<span id="count" class="count">一</span>份
+					<span id="price" class="total">￥150.00</span>
+				</div>
+		    </label>  	
+		</div>
+	</div>
+</body>
+</html>

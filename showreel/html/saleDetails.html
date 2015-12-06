@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="../css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="../css/components.css" rel="stylesheet" type="text/css" />
+	<link href="../css/common.css" rel="stylesheet" type="text/css" />
+	<link href="../css/saleDetails.css" rel="stylesheet" type="text/css" />
+	<title>学平险</title>
+	<script type="text/javascript" src="../vendor/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/APP.js"></script>
+    <script type="text/javascript" src="../js/component/form.js"></script>
+    <script type="text/javascript" src="../js/component/popover.js"></script>
+    <script type="text/javascript" src="../js/component/tipover.js"></script>
+	<script type="text/javascript" src="../js/component/common.js"></script>
+    <script type="text/javascript" src="../js/constant/storageKey.js"></script>
+    <script type="text/javascript" src="../js/service/config.js"></script>
+    <script type="text/javascript" src="../js/service/pageInit.js"></script>
+    <script type="text/javascript" src="../js/service/login.js"></script>
+    <script type="text/javascript" src="../js/service/router.js"></script>
+    <script type="text/javascript" src="../js/service/http.js"></script>
+    <script type="text/javascript" src="../js/service/timer.js"></script>
+    <script type="text/javascript" src="../js/service/utils.js"></script>
+	<script type="text/javascript" src="../js/component/button.js"></script>
+	<script type="text/javascript" src="../js/controller/saleDetails.js"></script>
+</head>
+<body>
+    <!-- 页面头部-->
+   <header>
+        <nav class="head-navigator clearfix">
+            <div class="head-navigator-left">
+                <button class="page-back" onclick="javascript:history.back();">
+                    <i class="iconfont icon-arrow-left"></i>
+                </button>      
+            </div>
+            <div class="head-navigator-center">
+                <h1 class="head-title">销售业绩</h1>                                
+            </div>
+            <div class="head-navigator-right">
+<!--                 <button class="share right" onclick="alert(2)">
+                    <i class="iconfont icon-share"></i>
+                </button -->                
+            </div>
+        </nav>
+    </header>
+	
+	<div id="sales_btn" class="btn2groups clearfix" style="margin: 1rem auto">
+		<div class="btn2 active">保险订单</div>
+		<div class="btn2 ">业绩汇总</div>
+	</div>
+	
+	<!-- 页面第一部分 -->
+	<div class="list" name="orderList">
+		<div class="list-header">
+			<div class="header-left">史带白领健康保障计划</div>
+		<!-- <div class="iconfont icon-arrow-right first_icon"></div> -->
+			<div class="header-right">代付款</div>
+		</div>
+		<div class="list-content">
+			<div class="content-image">
+				<img class="content-image" src="../image/header_tb.jpg"/>
+			</div>
+			<div class="content-left">
+				<div class="content-left-top">投保时间：06-11 11:12</div>
+				<div class="content-left-bottom">投/被保人：张三丰</div>
+			</div>
+			<div class="iconfont icon-arrow-right icon theme-color"></div>
+		</div>
+		<div class="list-footer">
+			<span>共1份</span>
+			<span class="totalSum">总保费：150</span>
+		</div>
+	</div>
+	<!-- 页面列表第二部分 -->
+    <div class="list" name="orderList">
+		<div class="list-header">
+			<div class="header-left">史带白领健康保障计划</div>
+			<!-- <div class="iconfont icon-arrow-right first_icon"></div> -->
+			<div class="header-right">已付款</div>
+		</div>
+		<div class="list-content">
+			<div class="content-image">
+				<img class="content-image" src="../image/header_tb.jpg"/>
+			</div>
+			<div class="content-left">
+				<div class="content-left-top">投保时间：06-11 11:12</div>
+				<div class="content-left-bottom">投/被保人：张三丰</div>
+			</div>
+		<div class="iconfont icon-arrow-right icon theme-color"></div>
+		</div>
+		<div id="hh" class="list-footer">
+			<span style="color:black">总保费：150</span>
+			<span class="totalSum">服务费：30</span>
+		</div>
+	</div>
+</body>
+</html>

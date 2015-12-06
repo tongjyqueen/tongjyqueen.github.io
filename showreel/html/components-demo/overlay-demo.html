@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>我的任务</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/components.css">
+        <script type="text/javascript" src="../vendor/zepto.min.js"></script>
+        <script type="text/javascript" src="../vendor/touch.js"></script>
+        <script type="text/javascript" src="../vendor/gmu.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="head-navigator clearfix">
+                <div class="head-navigator-left">
+                    <button class="page-back">
+                        <i class="iconfont icon-arrow-back"></i>
+                    </button>
+                    <button class="task-search">
+                        <i class="iconfont icon-magnifier"></i>                    
+                    </button>                
+                </div>
+                <div class="head-navigator-center">
+                    <h1 class="head-title">我的任务</h1>                                
+                </div>
+                <div class="head-navigator-right">
+                    <button class="menu-more right">
+                        <i class="iconfont icon-dot-more"></i>
+                    </button>                
+                </div>
+            </nav>
+        </header>
+        
+        <section class="main-page">
+            
+            <!-- popover -->
+            <div class="popover popover-comfirm">
+                <header>
+                    <h2 class="popover-title"></h2>
+                </header>
+                <div class="popover-content">
+                    <p class="popover-message">
+                        请确认是否要取消任务？
+                    </p>
+                </div>
+                <footer>
+                    <div class="button-cta-group-2 clearfix">
+                        <button class="button-cta"><h2>确定</h2></button>
+                        <button class="button-cta"><h2>取消</h2></button>
+                    </div>    
+                </footer>
+            </div>
+            
+            <div class="popover popover-alert">
+                <header>
+                    <h2 class="popover-title"></h2>
+                </header>
+                <div class="popover-content">
+                </div>
+                <footer>
+                    <button class="button-cta button-cta-full"><h2>确定</h2></button>
+                </footer>
+            </div>
+            
+            <!-- popover end -->
+            
+            <!-- forms -->
+            <div class="block">
+                
+                <div class="form-input">
+                    <input type="text" placeholder="表单默认值">                
+                </div>
+                
+                <div class="form-select clearfix">
+                    <select value="">
+                        <option>下拉选项1</option>
+                        <option>下拉选项2</option>
+                        <option>下拉选项3</option>
+                    </select>
+                    <button class="arrow-select">
+                        <i class="iconfont icon-triangle-down"></i>
+                    </button>
+                </div>
+                
+                <div class="form-search clearfix">
+                    <input type="text" placeholder="请输入关键词进行搜索">
+                    <button>
+                        <i class="iconfont icon-magnifier"></i>
+                    </button>
+                </div>
+                
+                <div class="form-switch">
+                    <input class="" type="checkbox">
+                    <div class="switch">
+                        <div class="switch-button switch-button-on"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="form-checkbox">
+                </div>
+                
+                <div class="form-checkbox checked">
+                </div>
+            </div>
+            
+            <!-- forms end -->
+            
+            <!-- list view -->
+            
+            <ul class="list-view list-view-text">
+                <li class="clearfix">
+                    <h3 class="left">语音提醒</h3>
+                    <button class="list-view-more right">
+                        <i class="iconfont icon-arrow-listview"></i>
+                    </button>
+                </li>
+                <li><h3>WIFI自动上传录音文件</h3></li>
+            </ul>
+            
+            <ul class="list-view list-view-text">
+                <li></li>
+                <li></li>
+            </ul>            
+            <!-- list view end -->
+            
+            <!-- tipover -->
+            <div class="tipover">
+                <nav class="navigator-attach">
+                    <ul>
+                        <li class="navigator-attach-item"><i class="iconfont icon-wheel"></i>系统设置</li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- tipover end -->
+            
+        </section>
+        
+        <footer>
+            <div class="button-cta-group-3">
+                <button class="button-cta"><h2>完成</h2></button>
+                <button class="button-cta"><h2>调度错误</h2></button>
+                <button class="button-cta"><h2>改派</h2></button>
+            </div>
+        </footer>
+            
+        <!-- overlay -->
+        <div id="overlay" class="hide">
+
+        </div>
+        <!-- overlay end -->   
+    </body>
+</html>

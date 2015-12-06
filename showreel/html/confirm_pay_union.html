@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/layout.css">
+		<link rel="stylesheet" type="text/css" href="../css/components.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/confirm_pay_union.css" />
+		
+		<script type="text/javascript" src="../vendor/zepto.min.js"></script>
+		<script type="text/javascript" src="../js/APP.js"></script>
+		<script type="text/javascript" src="../js/component/form.js"></script>
+		<script type="text/javascript" src="../js/component/popover.js"></script>
+		<script type="text/javascript" src="../js/component/tipover.js"></script>
+		<script type="text/javascript" src="../js/component/common.js"></script>
+		<script type="text/javascript" src="../js/constant/storageKey.js"></script>
+		<script type="text/javascript" src="../js/service/config.js"></script>
+		<script type="text/javascript" src="../js/service/pageInit.js"></script>
+		<script type="text/javascript" src="../js/service/login.js"></script>
+		<script type="text/javascript" src="../js/service/router.js"></script>
+		<script type="text/javascript" src="../js/service/http.js"></script>
+		<script type="text/javascript" src="../js/service/timer.js"></script>
+		<script type="text/javascript" src="../js/service/utils.js"></script>
+		<script type="text/javascript" src="../js/controller/confirm_pay_union.js"></script>
+		<style>
+		</style>
+		<title>学平险</title>
+	</head>
+
+	<body>
+		<!-- 页面头部 -->
+		<header>
+			<nav class="head-navigator clearfix">
+				<div class="head-navigator-left">
+					<button class="page-back" onclick="javascript:history.back();">
+						<i class="iconfont icon-arrow-left"></i>
+					</button>
+				</div>
+				<div class="head-navigator-center">
+					<h1 class="head-title">银联支付</h1>
+				</div>
+			</nav>
+		</header>
+
+		<!-- 页面主体部分 -->
+		<div class="main margin_header">
+			<div class="list">
+				<label class="input-item ">
+					<span class="item-left">客户姓名</span>
+					<span class="item-center"><input type="text" name="customName" readonly value="张三"></span>
+					<span class="item-right"></span>
+				</label>
+				<label class="input-item ">
+					<span class="item-left">支付金额</span>
+					<span class="item-center"><input type="text" name="payment" class="price theme-color" readonly value="￥150.00"></span>
+					<span class="item-right"></span>
+				</label>
+			</div>
+			<div class="list margin_header">
+				<label class="input-item ">
+					<span class="item-left">户名</span>
+					<span class="item-center"><input type="text" name="custom" readonly value="张三"></span>
+					<span class="item-right"></span>
+				</label>
+				<label class="input-item select-item">
+					<span class="item-left">证件类型</span>
+					<span class="item-center"><input type="text" name="idcardType" readonly placeholder="请选择"></span>
+					<span class="item-right"><i class=" iconfont icon-arrow-right"></i></span>
+				</label>
+				<label class="input-item ">
+					<span class="item-left">证件号码</span>
+					<span class="item-center"><input type="text" name="idcardNo" maxlength="25" placeholder="请输入证件号码"></span>
+					<span class="item-right"></span>
+				</label>
+				<label class="input-item ">
+					<span class="item-left">银行账号</span>
+					<span class="item-center"><input type="text" name="account" maxlength="19" placeholder="请输入银行账号"></span>
+					<span class="item-right"></span>
+				</label>
+			</div>
+		</div>
+
+		<!-- 底部按钮 -->
+		<div class="contorl-footer">
+			<a href="#">
+				<div class="save-btn button theme-back">确 定 支 付</div>
+			</a>
+		</div>
+
+		<!-- 弹出选择层 -->
+		<div class="div-popover hide"></div>
+	</body>
+
+</html>

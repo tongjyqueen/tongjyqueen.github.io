@@ -1,0 +1,39 @@
+.main .hot-tip {
+	padding:1.0rem 3.5rem ;
+	color:#b6b6b6;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+}
+.main .indent{
+	display: inline-block;
+	text-indent: 1.0rem;
+}
+.main .bar {
+	width: 88%;
+	margin: 1rem auto;
+	text-align: center;
+	line-height: 3.4rem;
+	font-size: 1.5rem;
+}
+.main i.orangeFont{
+	color:#f39800 !important;
+	font-size: 2.5rem !important;
+}
+.main input.phone{
+	width: 11.8rem !important;
+	height: 2.4rem;
+}
+.main input.code{
+	width: 4.4rem;
+	height: 2.4rem;
+}
+/**verification code**/
+#getCode{
+	font-weight: normal;
+	font-size: 1.2rem;
+	padding: 0.4rem 0.4rem;
+	border-radius: 2px;
+}
+.border{
+	border: 1px solid #dcdcdc !important;
+}

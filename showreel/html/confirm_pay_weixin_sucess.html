@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/components.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/recognizee_info.css"/>
+    <script type="text/javascript" src="../vendor/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/APP.js"></script>
+    <script type="text/javascript" src="../js/component/form.js"></script>
+    <script type="text/javascript" src="../js/component/popover.js"></script>
+    <script type="text/javascript" src="../js/component/tipover.js"></script>
+    <script type="text/javascript" src="../js/component/common.js"></script>
+    <script type="text/javascript" src="../js/constant/storageKey.js"></script>
+    <script type="text/javascript" src="../js/service/config.js"></script>
+    <script type="text/javascript" src="../js/service/pageInit.js"></script>
+    <script type="text/javascript" src="../js/service/login.js"></script>
+    <script type="text/javascript" src="../js/service/router.js"></script>
+    <script type="text/javascript" src="../js/service/http.js"></script>
+    <script type="text/javascript" src="../js/service/timer.js"></script>
+    <script type="text/javascript" src="../js/service/utils.js"></script>
+    <link href="../css/confirm_pay_weiXin_sucess.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/controller/confirm_pay_weixin_sucess.js"></script>
+	<title>学平险</title>
+</head>
+<body>
+
+    <!--标题头部——开始-->
+<!--       <div class="bar bar-header theme-back top_header">
+  <a href="product_detail.html?orig=2">
+  <button class="button button-icon icon ion-ios-arrow-left">返回</button> 
+  <h1 class="title">支付成功</h1>
+  <button class="button share theme-bor"></button>
+    </div> -->
+  <header>
+        <nav class="head-navigator clearfix">
+            <div class="head-navigator-left">
+                <button class="page-back" onclick="javascript:history.back();">
+                    <i class="iconfont icon-arrow-left"></i>
+                </button>      
+            </div>
+            <div class="head-navigator-center">
+                <h1 class="head-title">被保人信息</h1>                                
+            </div>
+            <div class="head-navigator-right">
+                <button class="share right" onclick="alert(2)">
+                    <i class="iconfont icon-share"></i>
+                </button>                
+            </div>
+        </nav>
+    </header>
+    <!--标题头部——结束-->
+
+     <!--支付成功文字部分-->
+      <div class="pay_success_text">
+        <i class="iconfont icon-success"></i> <span class="t_success">支付成功</span>
+      </div>
+
+<!--中间-->
+<div class="middle_box">
+<!--金额文本部分-->
+     <div class="t_account">
+          <span class="t_company">腾讯公司</span>
+          <div class="cash_t_and_icon">
+          <i class="cash_icon ion-social-yen"></i><span class="t_cash">150.00</span>
+          </div>
+      </div>
+         <!--  交易详细部分——开始 -->
+      <div class="trade_detail">
+       <ul class="ul_left">
+         <li class="t_goods">商&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;品</li>
+         <li class="t_time">交易时间</li>
+         <li class="t_type">交易方式 </li>
+         <li class="t_num">交易单号 </li>
+        </ul>
+      
+        <ul class="ul_right">
+          <li>保险费150元-手机号13567889900</li>
+          <li>2015-06-19  11:36:09</li>
+          <li>招商银行</li>
+          <li>12178910135150619819797594</li>
+        </ul>
+      </div>
+      <!--  
+      <div class="box-top">
+          <p class="campany">腾讯公司</p>
+          <p class="pay-amount"><i class="iconfont icon-rmb"></i>150.00</p>
+      </div>
+      <div class="content">
+          <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div> -->
+  </div>
+
+
+    <!--底部-->
+    <div class="t_weixin_pay">微信支付</div>
+
+
+
+</body>
+</html>

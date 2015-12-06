@@ -1,0 +1,13 @@
+.main {
+	padding: 1.0rem;
+}
+.main p {
+	font-size: 1.0rem;
+	line-height: 1.8rem;
+	color: #979797;
+	margin-bottom: 0.8rem;
+}
+.main a {
+	color: #ffa800;
+	text-decoration: underline !important;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/layout.css">
+		<link rel="stylesheet" type="text/css" href="../css/components.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/confirm_pay.css" />
+		<script type="text/javascript" src="../vendor/zepto.min.js"></script>
+		<script type="text/javascript" src="../js/APP.js"></script>
+		<script type="text/javascript" src="../js/component/form.js"></script>
+		<script type="text/javascript" src="../js/component/popover.js"></script>
+		<script type="text/javascript" src="../js/component/tipover.js"></script>
+		<script type="text/javascript" src="../js/component/common.js"></script>
+		<script type="text/javascript" src="../js/constant/storageKey.js"></script>
+		<script type="text/javascript" src="../js/service/config.js"></script>
+		<script type="text/javascript" src="../js/service/pageInit.js"></script>
+		<script type="text/javascript" src="../js/service/login.js"></script>
+		<script type="text/javascript" src="../js/service/router.js"></script>
+		<script type="text/javascript" src="../js/service/http.js"></script>
+		<script type="text/javascript" src="../js/service/timer.js"></script>
+		<script type="text/javascript" src="../js/service/utils.js"></script>
+		<script type="text/javascript" src="../js/controller/confirm_pay.js"></script>
+		<title>学平险</title>
+	</head>
+	<body>
+		<!-- 页面头部-->
+		<header>
+			<nav class="head-navigator clearfix">
+				<div class="head-navigator-left">
+					<button class="page-back" onclick="javascript:history.back();">
+						<i class="iconfont icon-arrow-left"></i>
+					</button>
+				</div>
+				<div class="head-navigator-center">
+					<h1 class="head-title">确定支付</h1>
+				</div>
+			</nav>
+		</header>
+		
+		<!-- 页面主体部分 -->
+		<div class="main margin_header">
+			<div class="list">
+				<label class="input-item-pay">
+					<span class="item-left blackfont">太平洋学生平安意外保险</span>
+					<span class="item-right"><img src="../image/cpic_logo.png">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				</label>
+				<label class="input-item-pay" id="toubaodan">
+					<span class="item-left">
+						<table>
+							<tr><td class="text-right">投保单号:</td><td class="noindent">123598439534</td></tr>
+							<tr><td class="text-right">份数:</td><td class="noindent">1</td></tr>
+						</table>
+					</span>
+					<span class="item-right"><p id="baofei" class="theme-color font-size12">保费:150000.00&nbsp;&nbsp;&nbsp;&nbsp;</p></span>
+				</label>
+				<a href="order_detail.html">
+				<label class="input-item-pay">
+					<span class="item-left font-size10">投保单保障一览</span>
+					<span class="item-right"><i class="iconfont icon-arrow-right"></i></span>
+				</label>
+				</a>
+			</div>
+		
+			<div class="list margin_header">
+				<label class="input-item ">
+					<span class="item-left center"><i class="iconfont icon-money-bag font-size30 orange"></i></span>
+					<a href="confirm_pay_union.html">
+					<span class="item-center">
+		    			<h6 class="orange font-size12">银联支付</h6>
+		    			<p class="font-size10">开通无需网银，银行卡号立即支付</p>
+	    			</span>
+					<span class="item-right"><i class=" iconfont icon-arrow-right"></i></span>
+					</a>
+				</label>
+				<label class="input-item" id="weixinpay">
+					<span class="item-left center"><i class=" iconfont icon-weixin font-size30"></i></span>
+					<span class="item-center">
+		    			<h6 class="orange font-size12">微信支付</h6>
+		    			<p class="font-size10">推荐已安装微信的用户使用</p>
+	    			</span>
+					<span class="item-right" id="relationType-click"><i class=" iconfont icon-arrow-right"></i></span>
+				</label>
+				<label class="input-item ">
+					<span class="item-left center"><i class=" iconfont icon-money-bag font-size30 orange"></i></span>
+					<span class="item-center">
+		    			<h6 class="orange font-size12">现金支付</h6>
+		    			<p class="font-size10">点击这里,我们的咨询顾问会联系您上门收费</p>
+	    			</span>
+					<span class="item-right" id="relationType-click"></span>
+				</label>
+			</div>
+		</div>
+	</body>
+</html>

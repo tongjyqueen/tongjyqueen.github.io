@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<title>学平险</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/layout.css">
+		<link rel="stylesheet" type="text/css" href="../css/components.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link href="../vendor/date/css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+		<link href="../vendor/date/css/mobiscroll.scroller.android-ics.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../css/confirm_pay_union_cardNo.css" />
+		
+		<script type="text/javascript" src="../vendor/zepto.min.js"></script>
+		<script type="text/javascript" src="../js/APP.js"></script>
+		<script type="text/javascript" src="../js/component/form.js"></script>
+		<script type="text/javascript" src="../js/component/popover.js"></script>
+		<script type="text/javascript" src="../js/component/tipover.js"></script>
+		<script type="text/javascript" src="../js/component/common.js"></script>
+		<script type="text/javascript" src="../js/constant/storageKey.js"></script>
+		<script type="text/javascript" src="../js/service/config.js"></script>
+		<script type="text/javascript" src="../js/service/pageInit.js"></script>
+		<script type="text/javascript" src="../js/service/login.js"></script>
+		<script type="text/javascript" src="../js/service/router.js"></script>
+		<script type="text/javascript" src="../js/service/http.js"></script>
+		<script type="text/javascript" src="../js/service/timer.js"></script>
+		<script type="text/javascript" src="../js/service/utils.js"></script>
+		<script src="../vendor/date/js/mobiscroll.zepto.js" type="text/javascript"></script>
+		<script src="../vendor/date/js/scrolldate.js" type="text/javascript"></script>
+		<script type="text/javascript" src="../js/controller/confirm_pay_union_cardno.js"></script>
+	</head>
+
+	<body>
+		<!-- 页面头部-->
+		<header>
+			<nav class="head-navigator clearfix">
+				<div class="head-navigator-left">
+					<button class="page-back" onclick="javascript:history.back();">
+						<i class="iconfont icon-arrow-left"></i>
+					</button>
+				</div>
+				<div class="head-navigator-center">
+					<h1 class="head-title">银联支付</h1>
+				</div>
+			</nav>
+		</header>
+		
+		<!-- 页面主体部分 -->
+		<div class="main margin_header">
+			<div class="list">
+				<label class="input-item ">
+					<span class="indent">招商银行信用卡</span>
+				</label>
+				<label class="input-item ">
+					<span class="item-left"><i class=" iconfont icon-card orangeFont"></i></span>
+					<span class="right">6220&nbsp;5187****4123</span>
+				</label>
+				<label class="input-item ">
+					<span class="item-left">有效期</span>
+					<span class="item-center">
+						<input id="birthday" type="text" readonly>
+                	</span>
+					<span class="item-right"><i class=" iconfont icon-calender"></i></span>
+				</label>
+				<label class="input-item ">
+					<span class="item-left">安全码</span>
+					<span class="item-center">
+						<input type="text" maxlength="10" class="border input-shadow">
+                	</span>
+					<span class="item-right"><i class="iconfont icon-help orangeFont"></i></span>
+				</label>
+			</div>
+			
+			<!-- 温馨提示层 -->
+			<div class="hot-tip">
+				<p>温馨提示：安全码不要泄露给其他人！</p>
+			</div>
+			
+			<!-- 下一步按钮 -->
+			<a href="confirm_pay_union_check.html">
+				<div class="bar theme-back">下 一 步</div>
+			</a>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,71 @@
+
+.div-popover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0,0,0,.5);
+}
+.div-popover .sexSelect .item {
+	padding: 9px !important;
+	padding-left: 20px !important;
+	text-align: left;
+}
+
+/*弹出时给选项加圆角效果*/
+.div-popover  .item:nth-child(1){
+	border-radius:4px 4px 0 0;
+}
+.div-popover  .item:last-child{
+	border-radius:0 0 4px 4px ;
+}
+
+.pop-time .zong {
+	height: 3rem;
+	line-height: 3rem;
+	text-indent: 1rem;
+	text-align: left;
+}
+.pop-time .hang {
+	border-top: 1px solid #ddd;
+
+}
+.hang .shijian {
+	margin: 0 auto;
+	width: 100%;
+    overflow: hidden;
+}
+.hang .shijian .shu{
+	  width: 33%;
+	  float: left;
+}
+.shijian .shu span {
+	display: inline-block;
+	  width: 80%;
+	  height: 3rem;
+	  line-height: 3rem;
+	  margin: 0 10%;
+	  border-bottom: 1px solid #36b134;
+	  padding: 5px 8px;
+	  text-align: center;
+}
+.shijian .shu span:nth-child(3) {
+	  border-bottom: none;
+}
+.pop-time li.bottom {
+		border-top: 1px solid #ddd;
+}
+.pop-time li.bottom button {
+		width: 50%;
+		height: 3rem;
+		font-size: 1.2rem;
+		color: #36b134;
+		background: #fff;
+		outline: none;
+}
+.pop-time li.bottom button:nth-child(1) {
+border-right: 1px solid #ddd;
+}

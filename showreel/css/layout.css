@@ -1,0 +1,187 @@
+/**
+*   @file layout.css 基础布局样式
+*   @author zhaowei@ihandy.cn
+*/
+
+/*** main layout ***/
+@import url(adapt.css);
+
+body {
+    background-color: #f4f4f4;
+    font-family: "Microsoft YaHei","Helvetica Neue", Arial, "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    color: #333;
+    padding-top: 4rem!important;
+    padding-bottom: 4rem!important;
+}
+
+body > header {
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    z-index: 2;
+}
+
+body > footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4.8rem;
+    position: fixed;
+    z-index: 2;
+}
+
+.main-page {
+    position: relative;
+    width: 100%;
+    top: 4.5rem;            /* avoiding overlayed by header */
+    /*margin-bottom: 5.2rem;  *//* avoiding overlayed by footer */
+    z-index: 1;
+}
+
+
+
+.block-highlight {
+    border-color: #fa7f18;
+}
+
+/***  head-navigator ***/
+.head-navigator {
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #36b134;
+    overflow: hidden;
+}
+
+.head-navigator-left {
+    width: 27%;
+    height: 100%;
+    float: left;
+}
+
+.head-navigator-center {
+    min-width: 46%;
+    height: 100%;
+    float: left;
+}
+
+.head-navigator-right {
+    width: 27%;
+    height: 100%;
+    float: right;
+}
+.head-navigator .iconfont {
+    font-size: 2rem;
+    color: #fff;
+}
+.head-title {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #fff;
+}
+
+.page-back, .share {
+    width: 5rem;
+    height: 4rem;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fff;
+}
+
+/*** color and size for header icons ***/
+header .icon-arrow-back,
+header .icon-magnifier, 
+header .icon-dot-more {
+    font-size: 1.6rem;
+    color: #fff;
+}
+/* 
+** tabbar **
+.tabbar {
+    height: 3.2rem;
+    background-color: #fff;
+    border-bottom: 1px #cecece solid;
+}
+
+.tabbar-item {
+    width: 30%;
+    height: 3.2rem;
+    text-align: center;
+    float: left;
+    line-height: 3.2rem;
+    color: #8a8a8a;
+}
+
+.tabbar-item h2 {
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.35rem;
+}
+
+.tabbar-item:first-child {
+    margin-left: 5%;
+}
+
+.tabbar-item:last-child {
+    margin-right: 5%;
+}
+
+.tabbar-item-active h2 {
+    color: #fa7f18;
+    border-bottom: .2rem solid #fa7f18;
+}
+ */
+ .list {
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;/* 
+    font-size: 100%; */
+}
+.list .item , .list .input-item {
+    display: block;
+    width: 100%;
+    min-height: 3.5rem;
+    line-height: 3.5rem;
+    padding: .5rem 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.3rem;
+    color: #979797;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.list .item:after , .list .input-item:after {
+    zoom: 1;
+    clear: both;
+} 
+.list .item-left, .list .item-center, .list .item-right {
+    float: left;
+} 
+.list .item .item-left ,.list .input-item .item-left {
+    width: 36%;
+    text-indent: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.list .item .item-center ,.list .input-item .item-center {
+    width: 50%;
+}
+.list .item .item-right ,.list .input-item .item-right {
+    width: 14%;
+    text-align: center;
+}
+.list .input-item .iconfont, .list .item .iconfont{
+    font-size: 1.5rem;
+    color: #36b134;
+} 
+.list .input-item input {
+    -webkit-appearance:none;
+    outline:none;
+    border: none;
+    overflow: hidden;
+     text-overflow: ellipsis;
+}

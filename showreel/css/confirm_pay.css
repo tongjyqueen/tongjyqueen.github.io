@@ -1,0 +1,106 @@
+/**上半部分布局**/
+.list .input-item-pay {
+    display: block;
+    width: 100%;
+    min-height: 3.5rem;
+    line-height: 3.5rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.3rem;
+    color: #979797;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.list .input-item-pay img{
+	width:5.9rem;
+	height:1.4rem;
+	vertical-align: middle;
+}
+.list .input-item-pay:after {
+    zoom: 1;
+    clear: both;
+} 
+.list .input-item-pay .item-left, .list .input-item-pay .item-right {
+    float: left;
+} 
+.list .input-item-pay .item-left {
+    width: 58%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-indent: 2.0rem;
+}
+.noindent{
+	text-indent:0;
+}
+.list .input-item-pay:last-child .item-left {
+    width: 85%;
+}
+.list .input-item-pay .item-right{
+    width: 42%;
+    text-align: right;
+}
+.list .input-item-pay:last-child .item-right {
+    width: 15%;
+    text-align: center;
+}
+.list .input-item-pay .iconfont{
+    font-size: 1.5rem;
+    color: #36b134;
+} 
+.blackfont{
+	color: #4d4d4d;
+	font-size: 1.2rem;
+}
+#toubaodan{
+	line-height: 1.8rem;
+	padding: 0.7rem 0rem;
+	font-size: 1.0rem;
+}
+#baofei{
+	margin-top: 2.1rem;
+}
+
+/**下半部分布局**/
+.list .input-item{
+	height: 4.5rem !important;
+	line-height: 4.5rem !important;
+	padding: 0 ;
+	text-
+}
+.list .input-item .item-left{
+	width: 15%;
+}
+.list .input-item .item-center{
+	line-height: 1.6rem;
+	width: 70%;
+	margin-top:0.4rem;
+	text-indent: 0.4rem;
+}
+.list .input-item .item-right{
+	width: 15%;
+}
+/**通用样式**/
+.font-size30{
+	font-size: 3.0rem !important;
+}
+.font-size12{
+	font-size: 1.2rem !important;
+}
+.font-size10{
+	font-size: 1.0rem !important;
+}
+.orange{
+	color:#f39800 !important;
+}
+.text-right{
+	text-align: right;
+}
+a:visited{
+	color:#979797;
+}
+
+
+
+
+

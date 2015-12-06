@@ -1,0 +1,67 @@
+/**
+* @file confirm_pay_union_sucess.css stylesheet for confirm_pay_union_sucess.html
+* @author wangkui
+*/
+
+
+/*标题*/
+.header {
+  height: 3.5rem;
+  line-height: 3.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+
+/*提示文字内容*/
+.tips_content {
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  line-height: 2rem;
+  background-color: #36b134;
+  color: #fff;
+  display: inline-block;
+}
+
+.tips_content .tip-msg {
+  width: 86%;
+  margin: 1.5rem 7% 2.5rem;
+  font-size: 1.3rem;
+}
+
+/*操作按钮部分*/
+.operate_btn {
+  width: 100%;
+  clear: both;
+}
+
+.tip-btn {
+    width: 49.5%;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    float: left;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #444;
+    background: #fff;
+}
+
+.operate_btn div:last-child {
+  border-left: 1px solid #ccc;
+}
+
+/*笑脸图标*/
+.image_smile_face{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    bottom: -2rem;
+    left: 50%;
+    margin-left: -2rem;
+    z-index: 99;
+    background: url(../image/smile.png) no-repeat;
+    background-size: 4rem 4rem; 
+}

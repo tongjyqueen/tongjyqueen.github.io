@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/components.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/product_introduce.css"/>
+    <script type="text/javascript" src="../vendor/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/APP.js"></script>
+    <script type="text/javascript" src="../js/component/form.js"></script>
+    <script type="text/javascript" src="../js/component/popover.js"></script>
+    <script type="text/javascript" src="../js/component/tipover.js"></script>
+    <script type="text/javascript" src="../js/component/common.js"></script>
+    <script type="text/javascript" src="../js/constant/storageKey.js"></script>
+    <script type="text/javascript" src="../js/service/config.js"></script>
+    <script type="text/javascript" src="../js/service/pageInit.js"></script>
+    <script type="text/javascript" src="../js/service/login.js"></script>
+    <script type="text/javascript" src="../js/service/router.js"></script>
+    <script type="text/javascript" src="../js/service/http.js"></script>
+    <script type="text/javascript" src="../js/service/timer.js"></script>
+    <script type="text/javascript" src="../js/service/utils.js"></script>
+    <script type="text/javascript" src="../js/controller/product_introduce.js"></script>
+	<title>学平险</title>
+</head>
+<body>
+    <!-- 页面头部-->
+    <!-- <div class="bar bar-header theme-back top_header">
+        <button class="button">
+            <i class="iconfont icon-arrow-left"></i>返回
+        </button> 
+        <h1 class="title">产品介绍</h1>
+        <button class="button share center"><i class="iconfont icon-share"></i></button>
+    </div> -->
+    <header>
+        <nav class="head-navigator clearfix">
+            <div class="head-navigator-left">
+                <button class="page-back" onclick="javascript:history.back();">
+                    <i class="iconfont icon-arrow-left"></i>
+                </button>      
+            </div>
+            <div class="head-navigator-center">
+                <h1 class="head-title">产品特色</h1>                                
+            </div>
+            <!-- <div class="head-navigator-right">
+                <button class="share right">
+                    <i class="iconfont icon-share"></i>
+                </button>                
+            </div> -->
+        </nav>
+    </header>
+    <section>
+        <div class="headline">
+            <i class="iconfont icon-key"></i>
+            <span>保险责任</span>
+        </div>
+        <p>
+            家长在投保时应了解保单的保险责任，<b>尤其要注意烧伤、烫伤等常见意外是否被列入保险责任</b>，以免理赔时产生不必要的纠纷。
+        </p>
+        <p>
+            责任免除则是指保单不保的范围，一般有三类：<b>故意行为、在购买前已存在的保险问题、保单列明的高风险活动项目，这些都是不赔的，如攀岩、潜水和故意的打架行为等</b>。
+        </p>
+    </section>
+    <section>
+        <div class="headline">
+            <i class="iconfont icon-account"></i>
+            <span>理赔赔付金额怎么算？大概是多少？</span>
+        </div>
+       
+        <p>
+            举例说，以小孩因意外受伤医疗费用，一般是先扣除免赔额，在保险金额范围内，剩余部分按80%的比例给付保险金。
+        </p>
+        <p>
+            现时大多数的学平险的免赔额为50元。例如小孩的治疗费用是200元（全部为医保范围）可凭医院的发票，向保险公司获得120元赔款。
+        </p>
+    </section>
+    <section>
+        <div class="headline">
+            <i class="iconfont icon-accountant"></i>
+            <span>具体算法</span>
+        </div>
+        
+        <p class="oranText">
+            赔付款 = （200 - 免赔额 50）* 80% 赔付比例 = 120元的理赔款。
+        </p>
+    </section>
+    <div class="shade hide"></div>
+</body>
+</html>

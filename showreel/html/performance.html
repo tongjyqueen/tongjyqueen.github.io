@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- Sets initial viewport load and disables zooming  -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no">
+        <!--DEVREF-->
+		<meta name="format-detection" content="telephone=no, email=no">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/components.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/performance.css" />
+		<script type="text/javascript" src="../vendor/zepto.min.js" ></script>
+        <script type="text/javascript" src="../js/APP.js"></script>
+        <script type="text/javascript" src="../js/constant/storageKey.js"></script>
+        <script type="text/javascript" src="../js/service/config.js"></script>
+        <script type="text/javascript" src="../js/service/pageInit.js"></script>
+        <script type="text/javascript" src="../js/service/login.js"></script>
+        <script type="text/javascript" src="../js/service/router.js"></script>
+        <script type="text/javascript" src="../js/service/http.js"></script>
+        <script type="text/javascript" src="../js/service/timer.js"></script>
+        <script type="text/javascript" src="../js/service/utils.js"></script>
+        <script type="text/javascript" src="../js/component/form.js"></script>
+        <script type="text/javascript" src="../js/component/popover.js"></script>
+        <script type="text/javascript" src="../js/component/tipover.js"></script>
+		<script type="text/javascript" src="../js/component/common.js"></script>
+        <script type="text/javascript" src="../js/component/Annulus.js"></script>
+        <script type="text/javascript" src="../js/component/button.js"></script>
+        <script type="text/javascript" src="../js/controller/performance.js"></script>
+        <!--/DEVREF-->
+        <!--<%= buildRefBegin %>
+        <%= iconfont %>
+        <%= commonCss %>
+        <%= pageCss %>
+        <%= zeptoJs %>
+        <%= cpicJs %>
+        <%= commonJs %>
+        <%= envJs %>
+        <%= pageJs %>
+        <%= buildRefEnd %>-->
+	<title>学平险</title>
+</head>
+<body>
+	<!-- 页面头部-->
+   <header>
+        <nav class="head-navigator clearfix">
+            <div class="head-navigator-left">
+                <button class="page-back" onclick="javascript:history.back();">
+                    <i class="iconfont icon-arrow-left"></i>
+                </button>      
+            </div>
+            <div class="head-navigator-center">
+                <h1 class="head-title">销售业绩</h1>                                
+            </div>
+            <div class="head-navigator-right">
+                <button class="share right" onclick="alert(2)">
+                    <i class="iconfont icon-share"></i>
+                </button>                
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+	    	
+	    <div id="sales_btn" class="btn2groups" style="margin: 1rem auto">
+			<div class="btn2 active">报销订单</div>
+			<div class="btn2 ">业绩汇总<i class="iconfont icon-icon-fly"></i></div>
+	    </div>
+	    <div class="prefor">
+	    	<canvas id="saleCanvas">
+	    		您的浏览器不支持canvas，请升级
+	    	</canvas>
+	    	<p class="desc">您击败了88%的业务员，综合得分90分</p>
+	    </div>
+		<div class="insurance-type">
+			<ul>
+				<li class="type student"><span>学生平安意外险</span> <span class="count theme-color">3单</span></li>
+				<li class="type starr"><span>史带意外医疗险</span> <span class="count theme-color">2单</span></li>
+				<li class="type cpic"><span>太平洋意外险</span>   <span class="count theme-color">1单</span></li>
+			</ul>
+		</div>
+    </div>
+    
+    
+<script>
+window.onload = function(){
+/*	//扇形
+CanvasRenderingContext2D.prototype.sector = function (x, y, radius, sDeg, eDeg) {
+// 初始保存
+this.save();
+// 位移到目标点
+this.translate(x, y);
+this.beginPath();
+// 画出圆弧
+this.arc(0,0,radius,sDeg, eDeg);
+// 再次保存以备旋转
+this.save();
+// 旋转至起始角度
+this.rotate(eDeg);
+// 移动到终点，准备连接终点与圆心
+this.moveTo(radius,0);
+// 连接到圆心
+this.lineTo(0,0);
+// 还原
+this.restore();
+// 旋转至起点角度
+this.rotate(sDeg);
+// 从圆心连接到起点
+this.lineTo(radius,0);
+this.closePath();
+// 还原到最初保存的状态
+this.restore();
+return this;
+}*/
+	/*
+var ctx = document.getElementById('saleCanvas').getContext('2d');
+ctx.sector(100,100,50,0,Math.PI*230/180).fill();*/
+
+
+	
+	
+	
+}
+
+
+
+</script>
+</body>
+</html>

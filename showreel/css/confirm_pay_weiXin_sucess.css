@@ -1,0 +1,125 @@
+
+
+/*支付成功提示文字*/
+.pay_success_text{
+  width: 100%;
+  margin-left: 1rem;
+  height:4.2rem;
+  line-height: 4.2rem;
+  clear:both;
+}
+
+/*勾图标*/
+.iconfont {
+  font-size: 2.2rem;
+  color: #36b134;
+}
+.t_success {
+  display: inline-block;
+  height: 4.2rem;
+  line-height: 4.2rem;
+  font-size: 1.5em;
+  color: #1BAF03;
+}
+
+/*中间盒子*/
+.middle_box {
+  width: 100%;
+  height: 19rem;
+  margin: 0 auto;
+  background-color: #fff;
+  border-top:2px solid #EBEBEB;
+  border-bottom:1px solid #EBEBEB;
+ /* padding: 1rem;*/
+}
+
+/*金额文本*/
+.t_account {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  height:8rem;
+  /*line-height: 8rem;*/
+  border-bottom: 1px solid #EBEBEB;
+
+}
+
+.t_company {
+  display: block;
+  padding-top: 1.8rem;
+  font-weight: bold;
+  font-size: 1.1em;
+  clear: both;
+}
+
+.cash_t_and_icon {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  margin-top:1.3rem;
+  clear: both;
+}
+
+.cash_icon {
+  font-size: 2.5em;
+  font-family:"Microsoft YaHei";
+}
+
+.t_cash {
+   font-size: 2.5em;
+   margin-left: 2%;
+   font-family:'Microsoft YaHei','黑体' !important;
+   font-weight:bold;
+}
+
+/*交易详细*/
+.trade_detail{
+
+  line-height: 2rem;
+  padding-top: 1.5rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  /* border-bottom: 1px solid #EBEBEB; */
+}
+
+.ul_left {
+  position: relative;
+  float:left;
+}
+
+.ul_left li {
+  color:#939393;
+  font-size: 1em;
+}
+
+.ul_right {
+  position: relative;
+  float:right;
+
+  text-align: right;
+}
+
+.ul_right li {
+  color:#939393;
+  font-size: 1em;
+}
+
+/*底部*/
+
+.page_footer {
+  width: 100%;
+  height: 8rem;
+    background-color: #F2F2F2;
+    text-align: bottom;
+}
+
+.t_weixin_pay {
+  display: block;
+  position: absolute;
+  bottom: 1rem;
+  color: #BDBDBE;
+  text-align: center;
+  width: 100%;
+/*  border: 1px solid red;*/
+}

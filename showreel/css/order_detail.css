@@ -1,0 +1,22 @@
+.commons {
+	color:black;
+	float:left;
+    width:60%;
+}
+.input-label {
+	width:40%;
+	float:left;
+	text-indent: 1rem;
+}
+.order-image {
+	width:100%;
+	margin-top:0px;
+}
+.total {
+	color:#36b134;
+	float:right;	
+	margin-right: 1rem;	
+}
+.sales {
+	color:#dcdcdc;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no">
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <link rel="stylesheet" type="text/css" href="../css/components.css">
+  <link rel="stylesheet" type="text/css" href="../css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../css/recognizee_info.css"/>
+  <script type="text/javascript" src="../vendor/zepto.min.js"></script>
+  <script type="text/javascript" src="../js/APP.js"></script>
+  <script type="text/javascript" src="../js/component/form.js"></script>
+  <script type="text/javascript" src="../js/component/popover.js"></script>
+  <script type="text/javascript" src="../js/component/tipover.js"></script>
+  <script type="text/javascript" src="../js/component/common.js"></script>
+  <script type="text/javascript" src="../js/constant/storageKey.js"></script>
+  <script type="text/javascript" src="../js/service/config.js"></script>
+  <script type="text/javascript" src="../js/service/pageInit.js"></script>
+  <script type="text/javascript" src="../js/service/login.js"></script>
+  <script type="text/javascript" src="../js/service/router.js"></script>
+  <script type="text/javascript" src="../js/service/http.js"></script>
+  <script type="text/javascript" src="../js/service/timer.js"></script>
+  <script type="text/javascript" src="../js/service/utils.js"></script>
+  <script type="text/javascript" src="../js/controller/recognizee_info.js"></script>
+	<script src="../vendor/date/js/mobiscroll.zepto.js" type="text/javascript"></script>
+	<script src="../vendor/date/js/scrolldate.js" type="text/javascript"></script>
+	<link href="../vendor/date/css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+	<link href="../vendor/date/css/mobiscroll.scroller.android-ics.css" rel="stylesheet" type="text/css" />
+  <title>学平险</title>
+</head>
+<body>
+<!-- 页面头部-->
+  <header>
+        <nav class="head-navigator clearfix">
+            <div class="head-navigator-left">
+                <button class="page-back" onclick="javascript:history.back();">
+                    <i class="iconfont icon-arrow-left"></i>
+                </button>      
+            </div>
+            <div class="head-navigator-center">
+                <h1 class="head-title">被保人信息</h1>                                
+            </div>
+            <div class="head-navigator-right">
+            </div>
+        </nav>
+    </header>
+<!-- 页面头部结束-->
+<!-- 页面主体-->
+	<div class="main margin_header">
+        <div class="list"> 
+            <label class="input-item ">
+                <span class="item-left">被保人姓名</span>
+                <span class="item-center"><input id="recognizee" type="text" placeholder="请输入" value="张三"></span>
+                <span class="item-right"></span>
+            </label>
+            <label class="input-item idcardTypeLabel">
+                <span class="item-left">证件类型</span>
+                <span class="item-center">
+                    <input id="idcardType" type="text" readonly placeholder="请选择">
+                </span>
+                <span class="item-right"><i class=" iconfont icon-arrow-right"></i></span>
+            </label>
+            <label class="input-item ">
+                <span class="item-left">证件号码</span>
+                <span class="item-center">
+                    <input type="text" placeholder="请输入证件号码">
+                </span>
+                <span class="item-right"></span>
+            </label>
+            <label class="input-item ">
+                <span class="item-left">出生日期</span>
+                <span class="item-center">
+                    <input id='birthday' type="text"  readonly placeholder="请选择">
+                </span>
+                <span class="item-right"><i class=" iconfont icon-calender"></i></span>
+            </label>
+            <label class="input-item sexLabel">   
+                <span  class="item-left">性别</span>
+                <span class="item-center">
+                    <input id="sex" type="text" readonly placeholder="请选择">
+                </span>
+                <span class="item-right"><i class=" iconfont icon-arrow-right"></i></span>
+            </label>
+        </div>  
+  </div>
+
+
+<!-- 底部按钮 -->
+<!-- 底部按钮 -->
+<div class="contorl-footer">
+  <a href="submit_order.html?orig=2" ><div class="save-btn theme-back" >保 &nbsp; &nbsp; 存</div></a>
+</div>
+<!-- 遮罩 -->
+<div class="div-popover hide"></div>
+<div class="shade hide"></div>
+</body>
+</html>

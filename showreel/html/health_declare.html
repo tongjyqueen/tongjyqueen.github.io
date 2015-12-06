@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/components.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/health_declare.css"/>
+    <script type="text/javascript" src="../vendor/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/APP.js"></script>
+    <script type="text/javascript" src="../js/component/form.js"></script>
+    <script type="text/javascript" src="../js/component/popover.js"></script>
+    <script type="text/javascript" src="../js/component/tipover.js"></script>
+	<script type="text/javascript" src="../js/component/common.js"></script>
+    <script type="text/javascript" src="../js/constant/storageKey.js"></script>
+    <script type="text/javascript" src="../js/service/config.js"></script>
+    <script type="text/javascript" src="../js/service/pageInit.js"></script>
+    <script type="text/javascript" src="../js/service/login.js"></script>
+    <script type="text/javascript" src="../js/service/router.js"></script>
+    <script type="text/javascript" src="../js/service/http.js"></script>
+    <script type="text/javascript" src="../js/service/timer.js"></script>
+    <script type="text/javascript" src="../js/service/utils.js"></script>
+	<script type="text/javascript" src="../js/controller/health_declare.js"></script>
+	<title>学平险</title>
+</head>
+<body>
+	<!-- 页面头部-->
+    <!-- <div class="bar bar-header theme-back top_header">
+        <button class="button">
+        	<i class="iconfont icon-arrow-left"></i>返回
+        </button> 
+        <h1 class="title">健康告知</h1>
+        <button class="button share center"><i class="iconfont icon-share"></i></button>
+    </div>  -->
+    <header>
+        <nav class="head-navigator clearfix">
+            <div class="head-navigator-left">
+                <button class="page-back" onclick="javascript:history.back();">
+                    <i class="iconfont icon-arrow-left"></i>
+                </button>      
+            </div>
+            <div class="head-navigator-center">
+                <h1 class="head-title">健康告知</h1>                                
+            </div>
+            <!-- div class="head-navigator-right">
+                <button class="share right">
+                    <i class="iconfont icon-share"></i>
+                </button>                
+            </div> -->
+        </nav>
+    </header>
+
+	<div class="headline">
+	    被保险人健康告知
+	</div>
+	<div class="content">
+
+		<section>
+			<p>
+				1、是否曾经患过或正在患有下面任一疾病：恶性肿瘤、心肌梗塞、恶性淋巴瘤、白血病、脑出血、脑梗塞、肾功能衰竭、高血压、糖尿病、肝炎、肾炎、冠心病。
+			</p>
+			<div class='btn-group'>
+				<button class="button button-small gray" data-opearate="show-remark">是</button>
+				<button class="button button-small right gray" data-opearate="hide-remark">否</button>
+			</div>
+			<div class="remark hide">
+				<span>针对如实告知第1项，请备注您的信息：</span><br>
+				<textarea autofocus="autofocus" placeholder= "必填，至少10个字。请按照实际情况提交备注信息哦，否则可能会影响赔付呢。"></textarea>
+			</div>
+		</section>
+		<section>
+			<p>
+				2、是否接受下列任一一项手术或治疗：器官移植、肾透析、冠状动脉搭桥手术、冠状动脉支架植入术。
+			</p>
+			<div class='btn-group'>
+				<button class="button button-small gray" data-opearate="show-remark">是</button>
+				<button class="button button-small right gray" data-opearate="hide-remark">否</button>
+			</div>
+			<div class="remark hide">
+				<span>针对如实告知第2项，请备注您的信息：</span><br>
+				<textarea autofocus="autofocus" placeholder= "必填，至少10个字。请按照实际情况提交备注信息哦，否则可能会影响赔付呢。"></textarea>
+			</div>
+		</section>
+		<section>
+			<p>
+				3、是否曾患下列一项身体障碍：听力障碍、言语障碍、智力障碍、脊柱残缺、胸廓畸形、四肢残缺、手、足、指残缺。
+			</p>
+			<div class='btn-group'>
+				<button class="button button-small gray" data-opearate="show-remark">是</button>
+				<button class="button button-small right gray" data-opearate="hide-remark">否</button>
+			</div>
+			<div class="remark hide">
+				<span>针对如实告知第3项，请备注您的信息：</span><br>
+				<textarea autofocus="autofocus" placeholder= "必填，至少10个字。请按照实际情况提交备注信息哦，否则可能会影响赔付呢。"></textarea>
+			</div>
+		</section>
+	</div>
+	
+	<div class="headline">
+	    续保客户被保险人健康告知
+	</div>
+
+	<!-- 健康告知列表 -->
+	<div class="health-list">
+		<P>A：被保险人上一保险年度未发生过理赔。</P>
+		<P>B：目前已处于原保单到期日前30天内。</P>
+		<P>C：本人已知晓若在上一保单到期日前已续保，而被保人在下一保单年度生效日前发生重大疾病或其他符合保险责任的意外伤害、疾病及其并发症，在下一年度内将视为责任免除。</P>
+		<P>D：在保险期间内，被保险人职业有所变更的，若所变更之职业不在该产品承保范围内，所发生的保险责任属于除外责任。</P>
+		<P>E：本人已清楚了解所购保险之保障内容，意外是指遭受外来的、突发的、非本意的、非疾病的客观事件直接致使身体受到的伤害，疾病死亡或猝死不在意外保障范围内。</P>
+		<p class="declaration">声明：本告知书以上各项回答均属实，并以此保险合同之依据。如上述资料不属实，任何据此告知书而缮发的保险将视作无效。</p>
+		<!-- <div class="btn"><button class="button button-block button-calm">下一步</button></div> -->
+		
+	</div>
+	<div class="contorl-footer">
+        <div class="save-btn button theme-back theme-bor" >下一步</div>
+	</div>
+	<div class="shade"></div>
+	<div class="prop">
+		<img src="../image/health_prop.gif"/>
+	</div>
+
+</body>
+</html>

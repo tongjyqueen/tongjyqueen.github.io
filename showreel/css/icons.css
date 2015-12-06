@@ -1,0 +1,47 @@
+/* icons.css */
+.icons {
+    display: inline-block;
+    background-image: url(../image/icons.png);
+    background-repeat: no-repeat;
+}
+.icon_product_03 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.icon_product_02 {
+  width: 1.5rem;
+  height: 1.45rem;
+  background-position: 0 -1.55rem;
+  
+}
+.icon_product_01 {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-position: 0 -3rem;
+
+}
+.wenhao {
+  width: 2.5rem;
+  height: 1.95rem;
+  background-position: -1.5rem 0;
+}
+.cards {
+  width: 2.45rem;
+  height: 1.95rem;
+  background-position: -1.5rem -2rem;
+}
+.cash {
+  width: 2.45rem;
+  height: 2.45rem;
+  background-position: -1.5rem -3.98rem;
+}
+.weixin {
+  width: 2.45rem;
+  height: 2.45rem;
+  background-position: -1.5rem -6.5rem;
+}
+.smile {
+  width: 5rem;
+  height: 5rem;
+  background-position: -3.99rem 0;
+}

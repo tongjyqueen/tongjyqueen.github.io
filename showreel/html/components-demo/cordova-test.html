@@ -1,0 +1,276 @@
+<!--
+         Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+-->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Cordova Tests</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/components.css">
+        <link rel="stylesheet" href="../css/my-task.css">
+      <style>
+body {
+    background:#222 none repeat scroll 0 0;
+    color:#666;
+    font-family:Helvetica;
+    font-size:72%;
+    line-height:1.5em;
+    margin:0;
+    border-top:1px solid #393939;
+  }
+
+  #info{
+    background:#ffa;
+    border: 1px solid #ffd324;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    clear:both;
+    margin:15px 6px 0;
+    width:295px;
+    padding:4px 0px 2px 10px;
+  }
+  
+  #info > h4{
+    font-size:.95em;
+    margin:5px 0;
+  }
+    
+  #stage.theme{
+    padding-top:3px;
+  }
+
+  /* Definition List */
+  #stage.theme > dl{
+    padding-top:10px;
+    clear:both;
+    margin:0;
+    list-style-type:none;
+    padding-left:10px;
+    overflow:auto;
+  }
+
+  #stage.theme > dl > dt{
+    font-weight:bold;
+    float:left;
+    margin-left:5px;
+  }
+
+  #stage.theme > dl > dd{
+    width:45px;
+    float:left;
+    color:#a87;
+    font-weight:bold;
+  }
+
+  /* Content Styling */
+  #stage.theme > h1, #stage.theme > h2, #stage.theme > p{
+    margin:1em 0 .5em 13px;
+  }
+
+  #stage.theme > h1{
+    color:#eee;
+    font-size:1.6em;
+    text-align:center;
+    margin:0;
+    margin-top:15px;
+    padding:0;
+  }
+
+  #stage.theme > h2{
+    clear:both;
+    margin:0;
+    padding:3px;
+    font-size:1em;
+    text-align:center;
+  }
+
+  /* Stage Buttons */
+  #stage.theme a.btn{
+    border: 1px solid #555;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-align:center;
+    display:block;
+    float:left;
+    background:#444;
+    width:150px;
+    color:#9ab;
+    font-size:1.1em;
+    text-decoration:none;
+    padding:1.2em 0;
+    margin:3px 0px 3px 5px;
+  }
+  #stage.theme a.btn.large{
+    width:308px;
+    padding:1.2em 0;
+  }
+
+  /* Stage Buttons */
+  #stage.theme button.btn{
+    border: 1px solid #555;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-align:center;
+    display:block;
+    float:left;
+    background:#444;
+    width:150px;
+    color:#9ab;
+    font-size:1.1em;
+    text-decoration:none;
+    padding:1.2em 0;
+    margin:3px 0px 3px 5px;
+  }
+#stage.theme button.btn.large{
+    width:308px;
+    padding:1.2em 0;
+  }      
+      </style>
+        <script type="text/javascript" src="../cordova/cordova.js"></script>
+        <script type="text/javascript" src="../cordova/api.js"></script>
+        <script type="text/javascript" src="../vendor/zepto.min.js"></script>
+        <script type="text/javascript" src="../vendor/touch.js"></script>
+        <script type="text/javascript" src="../vendor/gmu.min.js"></script>
+        <script type="text/javascript" src="../js/APP.js"></script>
+        <script type="text/javascript" src="../js/component/form.js"></script>
+        <script type="text/javascript" src="../js/component/popover.js"></script>
+        <script type="text/javascript" src="../js/component/tipover.js"></script>
+        <script type="text/javascript" src="../js/constant/storageKey.js"></script>
+        <script type="text/javascript" src="../js/service/config.js"></script>
+        <script type="text/javascript" src="../js/service/pageInit.js"></script>
+        <script type="text/javascript" src="../js/service/login.js"></script>
+        <script type="text/javascript" src="../js/service/router.js"></script>        
+        <script type="text/javascript" src="../js/service/http.js"></script>
+        <script type="text/javascript" src="../js/service/task.js"></script>
+        <script type="text/javascript" src="../js/service/timer.js"></script>
+        <script type="text/javascript" src="../js/service/date.js"></script>
+      <script>
+      
+        var success = function(message) {
+  			alert("Success>>" + JSON.stringify(message));  
+		};
+		
+		var error = function(message) {  
+  			alert("Error>>" + message.toString());  
+		};
+		
+        function exec(name,action,args) {
+			cordova.exec(success, error, name, action, args);
+		};
+      
+      function hasGesture() {
+          exec("MGesture", "hasGesture", ["13312341234"]);
+      };
+      
+     function clearGesture() {
+          exec("MGesture", "clearGesture", ["13312341234"]);
+      };
+      
+     function editGesture() {
+          exec("MGesture", "editGesture", ["13312341234"]);
+      };
+      
+      function verifyGesture() {
+          exec("MGesture", "verifyGesture", ["13312341234","iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpEQUYxOTdDOThCMjE2ODExQTRBM0Q5OTE3QTBBN0U3MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1MDU2NUQ0QzY2NDExMUUxOTU5MDhBQTE1OEY3MzJBNiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1MDU2NUQ0QjY2NDExMUUxOTU5MDhBQTE1OEY3MzJBNiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MkRGMkFDMDYzNTIyNjgxMUE0QTNEOTkxN0EwQTdFNzAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REFGMTk3Qzk4QjIxNjgxMUE0QTNEOTkxN0EwQTdFNzAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5rTCKvAAAT7klEQVR42uxbW2wc13n+Z3a5Fy6XN5GURMry/QK5gOMmMYIWTVGgfmpTFA5at4BdNEkDtHVa9JKHPrhvbYIULmKjRZuHwoCQtmjURnZs10abpEVdyKpryReJkihRpiSKtyW5F5J7n9mZfv+ZM7tnR3MjzVp5yMi/Z3Z25uw53/n+6znUbNumHx/Bh/5jCMKPpPeGaZp7besznU7nOzjXwco233DZqbKUr733vd8HfRf0rHpomnYHxvBdwzC+jOtdD2J6erq/Pe+P7AUg7ohlWe+gU5/yA8F7HXTPC4zfdRh4an8gn8flyY8KUNKv8T0czwCgT+m6fsuguT2/6yBwghgUh3We468g/w6p3lYbhEHPAJznXACUGbzlc9B1kKgTFnQOmVSmwp/vu5GO6rRXAMzfQjIue/YKUtT1HkH6fbaNtxOgXwA4nwub9R8BkF64XSqWAjjf8gPko4IUNfBdgvQY5E9uB0DfAEBHggD5KCBF2agokHyOZyEzH6eK/STA+YOwzu4HSHtVNx+wcpC//tgYBHCej9PJ/Va3vXo5efwy5Nd37aX3kIv9Md55LizyTSQSseKpRr1OZqfTjY/8gklE55TP5ymdToe2hSCVNjc3u+AEBJM3IPdCOnuOpCOOg5B5SD4osmVwdnZ26MqHC5RMJPkm2Z6B86D5ePCB+2gwkyED0XtQRD2QTNLc/FVaXl2jdCrttCfalGfLphqAvvvOo/QTxx6kUrnSnZwAkL4J+aM9R9IRx/MMjneW3GsGh48f/NcpOvna92l0eIhTELIEKDgDmI5t0db2Do2NjNDzX/tTGkilqINn3Lb4eXdQ3G52cJB++OZp+vrz36I7Zg477eAZBtkCOPxusVSiu44epde/83c0dWCcNkvlvn6pfcXxh5CXIW/uKVkNOZ6A/JrXoKsg8bGxsUFnz12iw4emKJlMCFD4GVMMrCMG126bNDN9iPJDOTDAIr821baPHpmh8fExGhkeluA4bTE4DNJIPkeXr92kfzz5On31mS/6tuMB6c8gn91PI81A/mVQYqie3zx9lqr1Jg1mM5RAdJ3QE8RRNrOLr1l4YGOjI/wSafguAzXLZrNCBsGYXC4nZGhoSLT58EP30/jIcJelDHwSqick4bQ/c3iKXn7jh7QCVRxH26pa+Rjun2Fbup8AfQNyV1g2z0dhfYPOXbpCY8OshbKDGv/H/1SGWHRgbFR8LsNmlMplKhaLMLJFwcB1tFMorNPaWgGGvCaeH0GbzJw+7+Y0KK7HobJz8wv09//yKqUy2cjQAAc7mof2w4txJPp2HBS/9/r36b//932awAw2W3VBf4vVAQMU6tCxxGCbbYNyYM3AQBLPtbuqxwA4auPaGEsKwa6UqNFoCtj7v2f7ZpIOh1BrGmBjik6++IJg1GaxHFVvOgF5MsxIx2FQrACLZ/y92TnM9JAAocsZzZlplUUDUItGs0lb8HZ1DJqlxmfcazRbAohGs+1ct1oCRFYnXe9nomCDvMHDZbW9cvU6/cN3X6NEMhUYeynnX42KjaIA+h3Ip+MA9NY771G93oIrHnCUS3SqpwaiP87/iM0yD3gwOyhslSNZIdlsGtK7l+N7YIUDhjs46gHlts/BDVg1fYht0X9APWGLoMZ+CuIB6S9kpL1rgI7ImCHyWIfdOD83TyMjQz2vJlnjdp48jHLn3e5ZK3mhSZGqwIBCjXS0I0oqmtuIywqtr73x0WG6eHmejp94BSFE2mkhPALncX59LwBxRS4dB6C3z34AtXDYI8al9ZDogqRJupOSRviZP1ulhguVM8iEp+bUZVM3MCQB5uGDU/RPJ/+VFm8u09TEgcgqAM6/B3nML/oPAuhzMneJPNYKBXoftiefd4JCwSCX17bkiIh+3dH3jKTlSSvYdrnXwsBb7rUlYxm9i1wfK3sWWDzHLLoEj/btf/4eaYlk3Jztb+Iy6OhuMl9he5g98Ei2qzR2T33E2aYuSFYfANJLdaRYjhfrsFdTPnO+xudEQhfCxprVrXd2xDVT/BtHpg/Sy6//gG4s3qRJsIht3sDAQNj5k4ixvhoZSVer1a9gAEcjq2VIEWq1KpUrW6IzaXy2XZ6TrbBJgUoCx+DwOYHZdZnTZZNFfZ/51bbB7jtNc1c+pNlLl2G0MwgwAY5gkC7VWhP3xD98PjgxThcuX6VX/+0/6Stf/g30tRbo7t1IGwnvk1NTU8+FAlSv1xd46YcHGJaRcwTLM82eptEypH0hxdN4Pitm2e2nyN26yaxFjnaqKuc8x/G0gVhnFYFj20DMo7e6KsgxFrPNsXN6F1j2aEO5Qahbnkqb6whIy6FLTvJeJZJB6PRpnNoAKBUGEFOaSxBM0TpSC93zrDfH8usUt+GyzlLtkNWvjrnBLF2Al1xcXsGgc9QxO+K7rroKcB1HINiH9zmWmkTieu+dd4hrZZGhDyTPvaU4yeqqlDsjimbQ3QSlkBcZ7RZ10gOhK6A22GZzJM0dUhLIrsG27FtmlAGA1tBOtUbXF5dE3mZB3Qifbdg8ayDVfVdwU3PKH3y0EFyy6o/BYHNQGrVgKasI70cChE5vQApxAGIV4YDOAO1Ns+P53up6bNERrvlAFW2AavNAMRC2GS7bLFnb6fNuuM9B48pqQeR5abxrIUJef/Buypc2KLVVog6Ut6e2Wl8BjZnHiW2r1erZxJAFS8hCHC+GCdbm41QEuX1RssA/wzTgbUxHAIYBwEwAZ2AmO/U61WeO0tov/hI1D0ySWW+AdW2IQW1IS56d6zbOjvB9LqYtIUNvgwUa3ms89lOUP/5Nsn7lSeq0AXq73c8++a/dMWDM02B4UkxeHzMtq+/aFXwuxI2D3onj4rlRNoTsbnlAAhjDcMASIJnUbjVox4K9euQR+rmH7yLroWNUx8BaGDDnWO2WBKPVluAY4h5/5gGsbxRFCSOF+dpKIPX47E/Ti/jtR3/2M1SYmCGr1ezFXTLmYjHRzsT4GOxkilyn4xpvFRRFWpDrkQBJ2/BBjMK9+LEMDDVHuE2oD3sYVjcepAAKZxMJZyk/TIenJ0X0OXj0CJUzg2QAIIclfuIwiWMfVq8qXLQOla2MjdP03XfRJ7lOMTFBtZlpEqm+DC0cT+gI9+3I9JTjbRVQvMxRmDULWY9bUVz3VOB8jS8HcCmkF+zBWM816nfPXMZgu9NCUjqWcbKW4XyOqgAohedFzNMXVTsezJIGfHt7h1YLG6LIZnFWPzJKY+Mjop2xHH5tYpJdnQRH6wXwuGDvyh7PrXdH2B6Wc7spubIutvBS2lsAV69Zt5lBKUSijWYDA9F6AR5viWF3zLYmOUBp+Us5PNvCZwbUFpBqXdfcDRpxzYHnRrFEO2DPABt1rhXBYOczqe5Clz405MSIbv5nd8QFg5xExM02iJms1rm9dW8FsOXYAAGUIuQSLj8Rti+HqZsbzFAulxWxEAPFnseWCarNhpptEa7dH0rgK95dZbCB1QxR+vAaTleKpbJzX9OdaBxApfRexzntgCsUDOZ2ZLwoVJMBHh4aFOrut73G69VkaBMNkPLSNcgngoI9lcpcJGvBWBrttAzaHJdrwaN1hDGGPZJttPAdG2c20rbWK2eoLOI2efmG0xgnYjdJ4wGBjXXTqTG0GGQ25LJ4b4tSiBOVN8HOA+OjdHByQtivAMZ4P1/Y1aoGGLQatS1OGHT8y0PXWd1aYrasXiLKxhEuvlbdoarluIRt06L6zraoNYvfgbo5sylTDcFAm0oApyPSHagygNHhGe1SiUoIEkFZ2kZ7ZnETgWObH0DbCZnWIIpGOHDsgXuFF3NzsIgAsQ6Zjc0g+fKHUVvfhCfDDLIrZXVrCkNNTn7EbGCAMIAG8qCNFjqS1WkFzDGgOm0MGAYC3on61IttXrNap52dqmAPuUs2UKdMqUgba3A0B++mwhbSm8IaiVBb0/v6xZHzFJJVVv1ypdzN8YJSHhxXcS7GKncoccG7XtD8gi0utGdhqNljseFl182uXsRAbH94FXV1leZLFWIfurS4Ssm1Ndy3RFjghASmcw3AuD02zOwh3QoipyaECHq0XKQlZPNcyTtzY5lGb94k5DvCNnUrlzIO4iSaglKYW13+mpcMcRYOz+EFDp7SfkC5Bw9wOD8kjCLnTOz2naxa1njw6PDaEl36n3fpdz//81Q+/TZlK5vwbDC8YJGmeC/HM5ow+I1u9dBJjDWur1AWOV/zjTfo2TvvofHXXqXxapFMXrOXiWhvkbIj6thBnstn0ldir6wqWW6J4yF8viNIvViYMXnENuxSVwoFGtbzgvK9WXJKr83XXqGbZ9+lAwvzZMGVcQ5FIivvrcuzVxIRNUIGHeplmlav/gqQOpkspeZm6fAzv006ADbh9slWy9m6cPUMKCepLltCgHHvvbdrgNyKqh9A6jXPFrMnjWyeZ36QF+0w+6wqbhIq+rh8kyauXsEgM2Ri8CK7l/Wc7iDxuYnIu1tLUgvPLlB4L8k+0U463Vce5OTXEDWqDM0cOoi2moGxj2dMN/YEEK7n0PCn/bbvqukGd4hjIAbIGIbN0ZxFQMejObrOK2VWOuOYCE4eLatvScap6JniPV1PBCs+G+5ENnCFl5NkXrU9dHASLr4eudVYXq8FAuTN2peW+mpGZyBP+wRVfQYvNZAUSSsv9LkbCqxuCcPqK4ZZXVfet3ghwgWuGpJn89SuNjuBuQzQocm8sItcKAvru/yMbJcWgvY4Jv28mHJcDEK/f5uKTpOIOdiTGaa7i8NTa1bqPX6rPG4dW9c/yrZJJ+jMio0TmvCgMXb9X+RNKXu1QateQ+f3I5zvTE0eEEV4Xj7WyONeuyzymBS/+CuCPVr4TgMBCrt4jqG4NhX25w/y+oNd7Q/ybBth3Qx19cKTIRg8wAyCx1pfL8IjJ5UKoaWsdmi+o9RuMcZ+32uhKLm3yltVmpychLNI02axQ2EORp5XdgWQqmKctDIFIY+GuUrOm6bQqRe+9mx3z6G7HmbLWk13uYzURcTeUpCtrD/7fd97333G7qtsuu9xwHlocpwKm8W4fwOyumcG3XPPPdqVK1cWAdqj3hWBPgYhM+etLI89+rD7lz+BEbjfnsWovwIKes97j2SdvLK9AyZtCzWL+mMYeOHz7tbBXQF03333aW7SGpDg9d1jF72CPClqwCHBWuxn4lwndL1PGwIAqjYajdmnnnpKO3nypB0rF+MXXXAkwvNq7qWeg0qY3tpORKkzlvitSlAEE2PINYAjdlk98cQTWiwG3X///eqDOhB+nykYFIl6Z5nTBU1zqO0Wy4MYEhbh7oYtYg+k7hTVRBxmWlE7y9x3C5IklgKSHcQgjfr3JYmtFGfPnr2EhppBjFHvc1TtLN+0xb0BseRiivtRGXXAMkwoo1gSEpyW4VQRTKMTi2FSO5bkOBOesXdJkghwnLr74qlTp4ynn376t9CZfKDhlZsZdqpVOnX6NC0sXKPz52eLX/jCb74AI//h448//gg6o8UxyLuxNedwfPFLX3qxsl3dKm3VH7h89ZpIYo9MHxKTFLSZ3L1utVrffumll84qrLG9kYMeYJdcFPVisagDnI3IWQdL2GvUaw0qVyoA6Px1gJKenZ1t4HvDj0V+jAlijt9vV8plrgRmTp9+a5k3cPGmTa5sut4rjD1yo8aaQgbNDw/dwx5NBUcyLAmkLwcstvWiaaiSWGoZGhL7bZDTLfK7/GcJyKpNP7UMAzyOQa/VaxwJJosb63WrYxazg9ludTMIFPXY2tralGPUPcTopXchEb0Lko6GPgjquDpQ10jz/cLa2hZ3Hp3VK5VKLcoD+oHj9736GeC35QATqytLC/zb/LcfTiUhGBipZo0zZ85c9wDjBYiiAHJWEdfXr0Wph/sHKuzxtiqVwurqyo4LMABqBqlYmApFbTioVqsd18CurxcK/MczDoOi/7QdzmP+xIkTZY8NtuOszXsf1jY3NwueerUvCwTlMItbW9tFVz15WzTerwfFS1HsCQNqZWWl5f7O4vVr61y044VMs9OJBAgJ9mUf46xFAaT17bR0zhacBUfTbT9w1DOJnagJWly8sSLBYUmBgS11sS7MGMdNPViWl1eYKrwxKbm5UajXqtWbXN3sxAAIDFrzGasvg+wAcLqgHT9+vIIGr7ibAIJjIYsNtXXxwuyS23GWWq1mRXnBOFG0+hw8UBsetuOylM/blfIG2yHLiv4bODiego+DcoHqXidDVKzPcC0vL7+Sz+d30LEy6JkEYCwDLO7nsdHR3IXZ89vlcrkl91gL0C9cuFA+duxYgY2qmh/hGqkeh0e25herKN/Z6ne5XG4A/akgyjfUyb544fwCjjH0ke2fAXvIYmLSxFleW4jZMnNzc2/5ea1QY6y4O11RkbSUDCQr9w0MSckpMii/d593GaQrrtTvN3dzqAy3pDCLTCk8MezZGnK1lKWqSE1KQwqXWw35TsfTZui6mOaTeqifLaVThuyYJu8b8oeTHsC1OEXBmCCpYLkDcoFqy/405dmU39l+mqEQw/LzZMkYM2V7ZkoFxFZmLqWwJuETne4XQEH9s5QJMpR+NhVpy/umfNYLttce+wLknRn1r0vce235gwMKMAlFtIAofb8PPzZ51a6tgGUoDDOUZywPc2wKsQcJ5X7CI0kf0UPCdS3AO+wHMFoASF5GdRQ1Mz3S8dge2wuWFpLNe/MyP1G/8yuf2P9PzAliEik20k/97BBAbOW93o7fEBXQAoyaFsA+7WMCY7eA2QEss32+u6UNbZfLT9pulql+hMDSgmxMBBP3bYBaWD5zm9ijhQAR+/g/AQYAn+7DzGmRY8UAAAAASUVORK5CYII="]);
+      };
+	  
+	  function getVersionNumber() {
+          exec("StartApp", "getVersionNumber", []);
+      };
+	  
+  	  function check() {
+          exec("StartApp", "check", ["com.cpic.mam"]);
+      };
+	  
+  	  function getDeviceInfo() {
+          exec("Device", "getDeviceInfo", [""]);
+      };
+	  
+  	  function SplashScreen_show() {
+          exec("SplashScreen", "show", [""]);
+      };
+	  
+  	  function getConnectionInfo() {
+          exec("NetworkStatus", "getConnectionInfo", [""]);
+      };
+      
+      function poiSearch() {
+          cordova.exec(success, error, "MGdmap", "PoiKeywordSearch", ["肯德基","上海","餐饮"]);
+      };
+      
+      function poiAround() {
+          cordova.exec(success, error, "MGdmap", "PoiAroundSearch", ["麦当劳","",""]);
+      };
+	  
+	  function Route() {
+          cordova.exec(cordovaSuccess, cordovaError, "MGdmap", "RouteKeyword", ["","","",APPPlace,"","",2,0,"上海",0]);
+      };
+
+	  function RouteLocation() {
+          cordova.exec(success, error, "MGdmap", "RouteLocation", [0,0, 31.170471,121.417582,1,0,"上海",0]);
+      };	  
+      
+	  function baiduLocation() {
+          cordova.exec(success, error, "MBDLocation", "getSimpleLoactionInfo", ["gcj02"]);
+      };	  
+      
+	  function baiduPush() {
+          cordova.exec(success, error, "MBDPush", "getPushInfo", []);
+      };	  
+	 
+	  
+      localStorage.lifecyclestatus = "";
+      localStorage.backgroundstatus = "";
+      </script>
+
+  </head>
+  <body onload="init();" id="stage" class="theme">
+    <h1>Cordova Android Native Tests</h1>
+    <div id="info">
+        <h4>Cordova: <span id="cordova"> &nbsp;</span></h4>
+        <h4>Deviceready: <span id="deviceready"> &nbsp;</span></h4>
+     </div>
+    <div id="info">
+        <h4>调用插件:</h4>
+    </div>
+    <button class="btn large" onclick="getVersionNumber();">获取版本名称</button>
+    <button class="btn large" onclick="check();">检查手机上是否有应用</button>
+    <button class="btn large" onclick="hasGesture();">是否有手势密码</button>
+    <button class="btn large" onclick="clearGesture();">清除手势密码</button>
+    <button class="btn large" onclick="editGesture();">设置手势密码</button>
+    <button class="btn large" onclick="verifyGesture();">验证手势密码</button>
+	
+	<div id="info">
+        <h4>以下是调用cordova官方插件:</h4>
+    </div>
+    <button class="btn large" onclick="getDeviceInfo();">Device.getDeviceInfo</button>
+    <button class="btn large" onclick="SplashScreen_show();">SplashScreen.show</button>
+    <button class="btn large" onclick="getConnectionInfo();">NetworkStatus.getConnectionInfo</button>
+	<button class="btn large" onclick="poiSearch();">高德地图关键字搜索</button>
+	<button class="btn large" onclick="poiAround();">高德地图附近的关键字搜索</button>
+    <button class="btn large" onclick="Route();">高德地图导航new</button>
+    <button class="btn large" onclick="RouteLocation();">高德地图精确目的地导航</button>
+    <button class="btn large" onclick="baiduLocation();">单次百度定位测试</button>
+    <button class="btn large" onclick="baiduPush();">获得推送信息</button>
+    
+  </body>
+</html>

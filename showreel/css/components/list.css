@@ -1,0 +1,37 @@
+/**
+* @file list.css listview components
+* @author zhaowei@ihandy.cn
+* @usage <ul class="list-view"><li></li></ul>
+*/
+.list-view {
+    width: 100%;
+    margin-top: 1.1rem;
+}
+
+.list-view > li {
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    padding: 0 2rem;
+}
+
+.list-view-text > li {
+    padding: 2rem;
+}
+
+.list-view > li h3 {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.list-view > li button {
+    width: 1.5rem;
+}
+
+.list-view > li button i.iconfont {
+    color: #d1d1d1;
+}
+
+.list-view-more i.iconfont {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,195 @@
+/**
+* @file tipover.css
+* @author zhaowei@ihandy.cn
+*/
+.popover {
+    width: 27.75rem;
+    margin: 1rem auto;
+    padding: 0;
+    background-color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+#popover-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+#popover-wrapper .popover {
+    position: relative;
+    top: 35%;
+}
+
+.popover > * {
+    width: 100%;
+}
+
+.popover-title {
+    text-align: center;
+    color: #555;
+    height: 3rem;
+    line-height: 3rem;
+    border-bottom: 1px #e0e0e0 solid;    
+}
+
+.popover button {
+    height: 4rem;
+    line-height: 4rem;
+}
+
+.popover .button-cta-group-2 button:first-child {
+    border-bottom-left-radius: .6rem;
+}
+
+.popover .button-cta-group-2 button:last-child {
+    border-bottom-right-radius: .6rem;
+}
+
+.popover .button-cta-full {
+    border-bottom-left-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+}
+
+.popover .button-cta h2 {
+    font-size: 1.5rem;    
+    height: 4rem;
+    line-height: 4rem;    
+}
+
+.popover .button-cta, 
+.popover .button-cta-group-2, 
+.popover .button-cta-group-2 button {
+    border-color: #e0e0e0;
+}
+
+.popover-content {
+    width: auto;
+    padding: 3rem 2rem;
+    color: #555;
+}
+
+.popover-message {
+    text-align: center;
+    font-size: 1.3rem;
+}
+/*手机吐司提示效果*/
+.popover-toast {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background:rgba(0,0,0,0);
+    
+}
+#floater {
+    float: left;
+    height: 46%;
+    width: 10%;    
+}
+.popover-toast p {
+    clear: both;
+    margin: auto;
+    width: 70%;
+    padding: .5rem 1rem;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    background: rgba(0,0,0,.8);
+    
+}
+
+/*页面加载等待效果*/
+.popover-loading {
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:100;
+    width:100%;
+    height:100%;
+    background: #8a8787;
+    opacity: .6;
+    text-align:center;
+    font-size:1.2rem
+}
+
+.popover-loading .load-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 6rem;
+    width: 7rem;
+    margin-left: -3.5rem;
+    margin-top: -3rem;
+    padding-top: 1rem; 
+    border-radius: 1rem;
+    background: #000 !important;
+    color: #fff;
+
+}
+
+.popover-loading .load-img img {
+    width: 3rem;
+    height: 3rem;
+}
+.popover-loading .load-img .load-msg {
+    font-size: 1.5rem;
+    height: 3rem;
+    line-height: 3rem;
+}
+/*旋转动画*/
+@keyframes rotate
+{
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@-moz-keyframes rotate /* Firefox */
+{
+    from {-moz-transform:rotate(0deg);}
+    to {-moz-transform:rotate(360deg);}
+}
+
+@-webkit-keyframes rotate /* Safari 和 Chrome */
+{
+    from {-webkit-transform:rotate(0deg);}
+    to {-webkit-transform:rotate(360deg);}
+}
+
+@-o-keyframes rotate /* Opera */
+{
+    from {-o-transform:rotate(0deg);}
+    to {-o-transform:rotate(360deg);}
+}
+
+/**弹出一个选择列表层**/
+.div-popover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+}
+.div-popover ul li {
+	line-height:3.5rem;
+	font-size: 1.3rem;
+	background-color: #fff;
+	border-bottom: 1px solid #dcdcdc;
+	text-align: left;
+	text-indent: 1.5rem;
+}
+.div-popover ul li:nth-child(1){
+	border-radius:4px 4px 0 0;
+}
+.div-popover ul li:last-child{
+	border-radius:0 0 4px 4px ;
+		border-bottom: none;
+}

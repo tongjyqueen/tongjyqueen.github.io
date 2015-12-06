@@ -1,0 +1,82 @@
+body {
+	background-color: #37af36;
+}
+
+.main {
+	color: #e3f3e4;
+	padding: 3.6rem 2.2rem 0 2.2rem;
+	font-weight: 200;
+}
+.main>form li {
+	line-height: 3.0rem;
+	margin-bottom: 1.9rem;
+	border-bottom: 1px solid #e3f3e4;
+}
+.main>form ul input {
+	height:2.6rem;
+	line-height: 2.6rem;
+	border: none;
+	max-width: 13.0rem;
+	vertical-align: middle;
+}
+.main>form i {
+	vertical-align: middle;
+	font-size: 1.8rem;
+}
+
+/**验证码框**/
+.main>form .identifyingCode {
+	height: 1.8rem;
+	border-radius: 0.2rem;
+	line-height: 1.8rem;
+	font-size: 0.9rem;
+	background-color: #e3f3e4;
+	color: #37af36;
+	padding: 0.3rem 0.2rem;
+	display: inline-block;
+	/*margin-top: 0.3rem;*/
+}
+
+/**登陆说明文字段落**/
+.main p.explain {
+	padding: 0 1.0rem;
+	font-size: 0.9rem;
+}
+#identifyingCode{
+	max-width:11.7rem ;
+}
+/**提交按钮**/
+#submit {
+	display: block;
+	margin: 2.3rem 0 1.2rem 0;
+	border: 1px solid #e3f3e4;
+	width: 100%;
+	border-radius: 0.6rem;
+	height: 3.8rem !important;
+	font-size: 1.9rem !important;
+	font-weight: bold;
+	color: #39b039;
+	background-color: #e3f3e4 !important;
+}
+
+/**placeholder css**/
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	font-size: 1.3rem;
+	color: #e3f3e4;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	font-size: 1.3rem;
+	color: #e3f3e4;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	font-size: 1.3rem;
+	color: #e3f3e4;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	font-size: 1.3rem;
+	color: #e3f3e4;
+}
