@@ -26,10 +26,9 @@ var shareData2 = {
 }
 
 $.ajax({
-	url:"http://uniqueevents.sinaapp.com/wx/getJsAPIA.php?callback=?",
+	url:"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx52ae58e2f5883acf&secret=0aee74639e6fbe6773cc8acf22298351",
 	dataType:"jsonp",
 	data:{
-		
 		url:location.href
 	}
 }).done(function(data) {
