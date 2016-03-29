@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/cookie.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/share.js"></script>
+<script>
+         //解析页面网址函数
+         function parseURL(url) {
+            
+             var a = document.createElement('a');
+             a.href = url;
+             return {
+                 source: url,
+                 protocol: a.protocol.replace(':', ''),
+                 host: a.hostname,
+                 port: a.port,
+                 query: a.search,
+                 params: (function () {
+                     var ret = {},
+                             seg = a.search.replace(/^\?/, '').split('&'),
+                             len = seg.length, i = 0, s;
+                     for (; i < len; i++) {
+                         if (!seg[i]) { continue; }
+                         s = seg[i].split('=');
+                         ret[s[0]] = s[1];
+                     }
+                     return ret;
+                 })(),
+                 file: (a.pathname.match(/\/([^\/?#]+)$/i) || [, ''])[1],
+                 hash: a.hash.replace('#', ''),
+                 path: a.pathname.replace(/^([^\/])/, '/$1'),
+                 relative: (a.href.match(/tps?:\/\/[^\/]+(.+)/) || [, ''])[1],
+                 segments: a.pathname.replace(/^\//, '').split('/')
+             };
+         
+         //通用函数结束  /////////////
+
+         //页面统计代码 开始  //////////////////////////////
+         var phase = '';  //网页所属部分，如果一个网站想分成几个部分来统计可以使用此变量区分
+
+         //hmsr代表媒体的种类，share代表分享的层级
+
+         //解析url
+         var hmsr, share;
+         var myURL = parseURL(location.href);
+         hmsr = myURL.params.hmsr;
+         share = parseInt(myURL.params.share, 10);
+         if (!isNaN(share)) {
+             share++;
+         }
+
+         //读取cookie
+         if (!hmsr) {
+             hmsr = Cookies.get('hmsr') ? Cookies.get('hmsr') : 0;
+         }
+         if (!share) {
+             share = Cookies.get('share') ? parseInt(Cookies.get('share'), 10) : 1;
+         }
+
+
+         //保存cookie，设置为当前目录当天有效
+         Cookies.set('hmsr', hmsr, { expires: 1, path: '' });
+         Cookies.set('share', share, { expires: 1, path: '' });
+
+         //生成监测的前缀
+
+
+         //改变分享的链接
+         /*shareData.link = shareData2.link = 'http://www.philips-campaign.com/shaver1602/?hmsr=' + hmsr + '&share=' + share;*/
+         shareData.link = shareData2.link = 'http://www.lvlvlaw.com';
+         /*//监测分享完成
+         shareData.success = shareData2.success = function (res) {
+             trackBaidu(media + '分享完成');*/
+         }
+
+    </script>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta property="og:description" content="谢邀~这是一些国外设计师或工作室设计的网站，有些是具有一些很典型的风格。1、Kenji Saito~立体效果超级好的横向漂浮的feel来自日本的开发和设计师，网站以特色的波浪效果让人印象深刻。Code Sketch 2、Robin Ait-el-alim Noguier~天才少年的作品设计师Robi…">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>问答页</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/AQPagePhone.css"/>
+    <link rel="stylesheet" type="text/css" href="css/AQleft2.css">
+    <link rel="stylesheet" type="text/css" href="css/comment2.css">
+    <!--<script src="js/touch.js"></script>-->
+    
+    <script src="js/common.js"></script>
+    <script src="js/AQPagePhone.js"></script>
+</head>
+<body>
+<header>
+    <h1><img src="images/222.png" alt=""/><span></span></h1>
+    <!--<nav><a href="login.html" target="_self">登录</a><span>|</span><a href="register.html" target="_self">注册</a></nav>-->
+    <div><img src="images/11.png" alt=""/><a href="javascript:;" target="_self" onclick="openApp()"  id="aOpenApp">打开应用
+    </a></div>
+</header>
+<div class="line"></div>
+<div class="container">
+    <h3 id="title">新时期信新时期信息诈骗呈现出一些新的趋势新时期信息诈骗呈现出一些新的趋势新时期信息诈骗呈现出一些新的趋势息诈骗呈现出一些新的趋势?</h3>
+    <p class="detail">
+        新时期信息诈骗呈现出一些新的趋势：犯罪分子能够精准锁定被骗人群并有针对性地设计诈骗场景，诈骗成功几率更高；虚拟运营商通讯成为诈骗犯罪新阵地；被骗人群向“高知”人群转向，比如公检法类诈骗，被骗人群往往是“高知人群”，个案金额特别高，社会危害更为严重
+    </p>
+    <!--<div class="reportBox"><img src="images/report.gif" alt=""/><span>举报</span></div>-->
+    <h2 class="answerTitle"><strong id="AnswerCount">4</strong>个回答</h2>
+    <ol class="conttentBody" id="answerList">
+        <li class="news">
+            <div class="newsRight">
+                <div class="userimg">
+                    <img src="images/userimg.png" height="41" width="42">
+                </div>
+                <div class="userName">DiDi<span>&nbsp;&nbsp;&nbsp;<i class="time">15.10.30 10:00</i></span></div>
+                <p>这个问题这个问题我也不是很清楚这个问题我也不是很清楚这个问题我也不是很清楚我也不是很清楚</p>
+                <div class="imgBox"><img src="images/city.gif" alt=""/></div>
+                <div class="imgBox"><img src="images/IMG_0043.JPG" alt=""/></div>
+                <ul class="footerMore">
+                    <li class="comment"><!-- <img src="images/mess.gif" alt=""/> --><span class="com">155</span>条评论</li>
+                    <li><!-- <img src="images/heart.gif" alt=""/> --><span class="agr">15</span>赞同</li>
+                </ul>
+                <div class="commentBox hide">
+                    <div class="arrowOut"></div>
+                    <div class="arrowIn"></div>
+                    <ul class="commentListTooltip">
+                        <li class="cases" id="CommentTemplateLi">
+                            <div class="headPortrait"><img src="images/userimg.png" height="40" width="40" alt=""></div>
+                            <div class="casesRight">
+                                <h2>
+                                    <a href="javascript:;">床前明月光</a><span>&nbsp;作者&nbsp;</span>
+                                                <span class="time">
+                                                    15.10.20 10:00
+                                                </span>
+                                </h2>
+                                <p>您好啊！~~~您好啊！</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                    
+                </div>
+            </div>
+        </li>
+    </ol>
+</div>
+<footer>
+    <img src="images/concern.gif" class="Attention"  onclick="openApp()"/>
+    <span><strong id="dscrption">1</strong>个人关注了该问题</span>
+</footer>
+<div id="CoverLayer">
+    <div id="PromptBox">
+        <h2 id="Friendship">
+                    选择打开方式
+            <img src="images/X.png" id="Img" />
+        </h2>
+        <div id="PromptBoxText">
+          <a href="#" title="" id="yes">在律律中打开</a>
+          <a href="#" title="" id="no">下载律律，并打开</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
